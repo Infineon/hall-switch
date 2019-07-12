@@ -1,0 +1,17 @@
+{  
+   "name":"Hall-Switch",
+   "keywords":"hall, sensor, magnetic, sensor2go",
+   "description":"This library provides an interface to interact with the Hall effect sensor switch family",
+   "repository":{  
+      "type":"git",
+      "url":"https://github.com/Infineon/hall-switch.git",
+      "branch":"master"
+   },
+   "version":"1.0.0",
+   "license":"MIT",
+   "frameworks":"arduino",
+   "platforms":[  
+      "infineonxmc",
+      "atmelavr"
+   ]
+}
