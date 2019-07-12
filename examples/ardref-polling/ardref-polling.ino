@@ -3,7 +3,7 @@
  * @brief       GPIO Polling Example for TLE4964-3M Shield2Go + XMC2Go
  *          
  *              Usage of the Arduino Reference Library Functions.
- *              How does it work? 
+ *              - How does it work? 
  *              In the presence of a magnetic field dots (".") will be 
  *              printed through the serial and the LED1 will be turned ON.
  * @copyright   Copyright (c) 2019 Infineon Technologies AG         
