@@ -18,6 +18,8 @@
 
 #ifdef XMC1100_XMC2GO
 #define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
+#else
+#define LED1 LED_BUILTIN
 #endif
 
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */

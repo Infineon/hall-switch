@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map For Hall Switch
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin   KEYWORD2
+enable	KEYWORD2
+disable KEYWORD2
+getStatus KEYWORD2
+readBField  KEYWORD2
+getBField   KEYWORD2
+callback   KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+HallSwitch  KEYWORD2
+HallSwitchIno KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+OK LITERAL1
+UNINITED LITERAL1

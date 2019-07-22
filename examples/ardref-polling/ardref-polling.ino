@@ -13,7 +13,10 @@
 
 #ifdef XMC1100_XMC2GO
 #define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
+#else
+#define LED1 LED_BUILTIN
 #endif
+
 
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
 
@@ -35,17 +38,23 @@ void setup()
     
 }
 
+int curValue = value;
+
 void loop()
 {
-	value = digitalRead(Q_OUTPUT_PIN);   
-
-	if(value == LOW)
+	curValue = digitalRead(Q_OUTPUT_PIN);   
+    if(curValue  != value)
     {
-		Serial.print(".");
-        digitalWrite(LED1, HIGH);
-	}
-    else if(value == HIGH)
-    {
-        digitalWrite(LED1, LOW);
-	}
+        value = curValue;
+        if(value == LOW)
+        {
+            Serial.println("B Field ON");
+            digitalWrite(LED1, HIGH);
+        }
+        else if(value == HIGH)
+        {
+            Serial.println("B Field OFF");
+            digitalWrite(LED1, LOW);
+        }
+    }
 }

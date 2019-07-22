@@ -1,0 +1,25 @@
+/**
+ * @defgroup    hallswitchhal Hardware Abstraction Layer
+ * @{
+ */
+
+/** @defgroup   hallswitchdatat  Data Types */
+/** @defgroup   hallswitchcpphal API */
+/** @defgroup   hallswitchinohal Arduino API */
+/** @defgroup   hallswitchhwi    Hardware Interfaces */
+
+/** @} */
+
+/**
+ * @defgroup hallswitchhwp Hardware Platforms
+ * @{
+ */
+
+/** @defgroup hallhwino Arduino Hardware Platforms 
+ * @{
+ */
+ /** @defgroup hallgpioino   Arduino GPIO */   
+ /** @defgroup tle49643ms2go TLE4964-3M Shield2Go */
+
+/** @} */
+/** @} */
