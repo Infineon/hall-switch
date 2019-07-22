@@ -1,3 +1,4 @@
+
 # Hall-Switch
 
 [![Build Status](https://travis-ci.com/Infineon/hall-switch.svg?branch=master)](https://travis-ci.com/Infineon/hall-switch)
