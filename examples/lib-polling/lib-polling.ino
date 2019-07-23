@@ -9,7 +9,13 @@
 #define LED1 LED_BUILTIN
 #endif
 
+#ifdef XMC1100_XMC2GO 
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
+#elif ((XMC1100_Boot_Kit) ||  \
+      (XMC4700_Relax_Kit) ||  \
+      (ARDUINO_AVR_UNO))
+#define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
+#endif
 
 HallSwitch::Status_t stat  = HallSwitch::Status_t::UNINITED;
 HallSwitch::Result_t field = HallSwitch::Result_t::B_FIELD_UNDEF;

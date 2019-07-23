@@ -1,10 +1,10 @@
 /**
  * @file        ardref-polling.ino
- * @brief       GPIO Polling Example for TLE4964-3M Shield2Go + XMC2Go
+ * @brief       GPIO Polling Example for TLE4964-3M Shield2Go
  *          
  *              Usage of the Arduino Reference Library Functions.
  *              - How does it work? 
- *              In the presence of a magnetic field dots (".") will be 
+ *              In the presence of a magnetic field B Field ON will be 
  *              printed through the serial and the LED1 will be turned ON.
  * @copyright   Copyright (c) 2019 Infineon Technologies AG         
  */
@@ -18,7 +18,13 @@
 #endif
 
 
+#ifdef XMC1100_XMC2GO 
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
+#elif ((XMC1100_Boot_Kit) ||  \
+      (XMC4700_Relax_Kit) ||  \
+      (ARDUINO_AVR_UNO))
+#define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
+#endif
 
 int     value = HIGH;       /**< Output Value */
 
