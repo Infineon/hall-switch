@@ -22,8 +22,7 @@ Infineon offers a great variety of single output hall-effect switches for consum
 
 Find the most suitable product for your system on the Infineon Hall Switches [website](https://www.infineon.com/cms/en/product/sensor/magnetic-sensors/magnetic-position-sensors/hall-switches/) and its product selection guide documentation.  
 
-<img src="docs/img/motor-ex-app.png" height="140px">
-<img src="docs/img/tle496x-xm-sot23.png" height="110px">
+<img src="docs/img/motor-ex-app.png" height="140px"> <img src="docs/img/tle496x-xm-sot23.png" height="110px">
 
 <a name="s-hw"></a>
 
