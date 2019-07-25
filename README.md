@@ -34,7 +34,7 @@ The library has been customized for the **TLE4964-3M** Shields2Go and the Arduin
 <img src="docs/img/tle4964-pcb-front-small.jpg" width="200px">
 
 The complete documentation as schematic and pinout diagram of the boards is included in the **Quick Start Guide**:
-* [TLE4964-3M S2Go]() (cooming soon)
+* [TLE4964-3M S2Go](https://www.infineon.com/dgdl/Infineon-Getting%20Started%20TLE4964-3M-GettingStarted-v01_00-EN.pdf?fileId=5546d4626c1f3dc3016c247703c10dfa)
 
 ### Verified Hardware Platforms
 
