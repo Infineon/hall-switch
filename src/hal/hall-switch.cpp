@@ -267,10 +267,11 @@ void HallSwitch::Interrupt::int3Handler()
     objPtrVector[3]->callback();
 }
 
-void* HallSwitch::Interrupt::fnPtrVector[GPIO_ARD_INT_PINS] = {int0Handler, 
-                                                  int1Handler, 
-                                                  int2Handler, 
-                                                  int3Handler};
+
+void *HallSwitch::Interrupt::fnPtrVector[GPIO_ARD_INT_PINS] = {(void *)int0Handler,
+                                                               (void *)int1Handler,
+                                                               (void *)int2Handler,
+                                                               (void *)int3Handler};
 
 /**
  * @brief       Register a hardware interrupt on the argument hall switch object

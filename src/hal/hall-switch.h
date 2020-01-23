@@ -200,6 +200,14 @@ class HallSwitch::GPIO
         virtual Error_t        init        () = 0;
         
         /**
+          * @brief       Deinitializes the GPIO
+          * @return      GPIO error code
+          * @retval      OK if success
+          * @retval      INIT_ERROR if deinitialization error
+         */
+         virtual Error_t       deinit      () = 0;
+
+        /**
          * @brief       Enables the hardware interrupt
          * @param[in]   *ptr HallSwith object pointer which holds the interrupt
          * @return      GPIO error code
@@ -212,7 +220,7 @@ class HallSwitch::GPIO
          * @brief       Disables the hardware interrupt
          * @return      GPIO error code
          * @retval      OK if success
-         * @retval      INIT_ERROR if deinitialization error
+         * @retval      INIT_ERROR if disable error
          */
         virtual Error_t        disableInt  () = 0;
 
@@ -260,6 +268,8 @@ class HallSwitch::GPIO
          * @retval      WRITE_ERROR if write error
          */
         virtual Error_t        disable     () = 0;
+
+
 };
 /** @} */
 
