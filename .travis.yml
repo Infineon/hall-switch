@@ -41,7 +41,7 @@ jobs:
             sources:
                 - ubuntu-toolchain-r-test
       install:
-        - git clone https://github.com/Infineon/InfineonDoxyGenerator.git --branch v.0.2.0
+        - git clone https://github.com/Infineon/InfineonDoxyGenerator.git --branch v.0.2.1
       script: 
         - cd InfineonDoxyGenerator
         - python doxyifx.py html
