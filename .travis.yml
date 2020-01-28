@@ -16,12 +16,6 @@ addons:
         - graphviz
         sources:
             - ubuntu-toolchain-r-test
-env:
-  jobs:
-    - PLATFORMIO_CI_SRC=examples/ardref-interrupt
-    - PLATFORMIO_CI_SRC=examples/ardref-polling
-    - PLATFORMIO_CI_SRC=examples/lib-interrupt
-    - PLATFORMIO_CI_SRC=examples/lib-polling
 
 jobs:
   include:
