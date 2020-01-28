@@ -48,6 +48,16 @@ GPIOIno::Error_t GPIOIno::init()
 }
 
 /**
+ * @brief   Deinitializes the Arduino GPIO
+ * @return  GPIO error code
+ * @retval  OK always
+ */
+GPIOIno::Error_t GPIOIno::deinit()
+{
+    return OK;
+}
+
+/**
  * @brief   Enables the Arduino GPIO interrupt
  * @return  GPIO error code
  * @retval  OK always

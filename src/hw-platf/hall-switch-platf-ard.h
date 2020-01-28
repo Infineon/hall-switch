@@ -25,6 +25,7 @@ class GPIOIno : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
                                      uint8_t mode, 
                                      VLogic_t logic);
         Error_t       init          ();            
+        Error_t       deinit          ();
         Error_t       enableInt     (HallSwitch *ptr);    
         Error_t       disableInt    ();
         IntEvent_t    intEvent      ();
