@@ -30,6 +30,7 @@ script:
 
 jobs:
   include:   
+    - stage: "Build Test"
     - stage: "Deploy" 
       name: "GitHub Pages Deployment"
       if: tag IS present
