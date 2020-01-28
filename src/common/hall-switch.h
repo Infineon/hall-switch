@@ -109,6 +109,7 @@ class HallSwitch
                                               GPIO       *power  = NULL);
                                 ~HallSwitch  ();
         HallSwitch::Error_t     begin        ();
+        HallSwitch::Error_t     end          ();
         HallSwitch::Error_t     enable       ();
         HallSwitch::Error_t     disable      ();
         HallSwitch::Status_t    getStatus    ();
@@ -200,6 +201,14 @@ class HallSwitch::GPIO
         virtual Error_t        init        () = 0;
         
         /**
+          * @brief       Deinitializes the GPIO
+          * @return      GPIO error code
+          * @retval      OK if success
+          * @retval      INIT_ERROR if deinitialization error
+         */
+         virtual Error_t       deinit      () = 0;
+
+        /**
          * @brief       Enables the hardware interrupt
          * @param[in]   *ptr HallSwith object pointer which holds the interrupt
          * @return      GPIO error code
@@ -212,7 +221,7 @@ class HallSwitch::GPIO
          * @brief       Disables the hardware interrupt
          * @return      GPIO error code
          * @retval      OK if success
-         * @retval      INIT_ERROR if deinitialization error
+         * @retval      INIT_ERROR if disable error
          */
         virtual Error_t        disableInt  () = 0;
 
@@ -260,6 +269,8 @@ class HallSwitch::GPIO
          * @retval      WRITE_ERROR if write error
          */
         virtual Error_t        disable     () = 0;
+
+
 };
 /** @} */
 
@@ -273,10 +284,10 @@ class HallSwitch::GPIO
 class HallSwitch::Interrupt
 {
     private:
-        #define             GPIO_ARD_INT_PINS       4           /**< Maximum hardware interrupt signals */
-        static uint8_t      idxNext;                            /**< Interrupt array allocation index*/
-        static HallSwitch   *objPtrVector[GPIO_ARD_INT_PINS];   /**< Hall switch object pointers vector */
-        static void         *fnPtrVector[GPIO_ARD_INT_PINS];    /**< Hall switch interrupt function handlers vector */
+        #define             GPIO_INT_PINS       4           /**< Maximum hardware interrupt signals */
+        static uint8_t      idxNext;                        /**< Interrupt array allocation index*/
+        static HallSwitch   *objPtrVector[GPIO_INT_PINS];   /**< Hall switch object pointers vector */
+        static void         *fnPtrVector[GPIO_INT_PINS];    /**< Hall switch interrupt function handlers vector */
         static void         int0Handler ();
         static void         int1Handler ();
         static void         int2Handler ();

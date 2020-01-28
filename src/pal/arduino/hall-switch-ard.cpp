@@ -1,5 +1,5 @@
 /** 
- * @file        hall-switch-platf-ard.cpp
+ * @file        hall-switch-ard.cpp
  * @brief       Hall Switch Arduino GPIO Hardware Interface
  * 
  *  Wraps the Arduino GPIO Reference Language calls
@@ -9,7 +9,7 @@
  */
 
 #include <Arduino.h>
-#include "hall-switch-platf-ard.h"
+#include "hall-switch-ard.h"
 
 /**
  * @addtogroup hallgpioino
@@ -44,6 +44,16 @@ GPIOIno::GPIOIno(uint8_t      pin,
 GPIOIno::Error_t GPIOIno::init()
 {   
     pinMode(this->pin, this->mode);
+    return OK;
+}
+
+/**
+ * @brief   Deinitializes the Arduino GPIO
+ * @return  GPIO error code
+ * @retval  OK always
+ */
+GPIOIno::Error_t GPIOIno::deinit()
+{
     return OK;
 }
 

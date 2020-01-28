@@ -9,8 +9,8 @@
 #define HALL_SWITCH_INO_H_
 
 #include <Arduino.h>
-#include "hal/hall-switch.h"
-#include "hw-platf/hall-switch-platf-ard.h"
+#include "common/hall-switch.h"
+#include "pal/arduino/hall-switch-ard.h"
 
 /**
  * @class HallSwitchIno

@@ -11,6 +11,7 @@
 #######################################
 
 begin   KEYWORD2
+end KEYWORD2
 enable	KEYWORD2
 disable KEYWORD2
 getStatus KEYWORD2
@@ -30,4 +31,9 @@ HallSwitchIno KEYWORD2
 #######################################
 
 OK LITERAL1
+INTF_ERROR  LITERAL1
+CONF_ERROR  LITERAL1   
 UNINITED LITERAL1
+INITED  LITERAL1
+POWER_ON    LITERAL1
+POWER_OFF   LITERAL1
