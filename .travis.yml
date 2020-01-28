@@ -10,7 +10,6 @@ sudo: required
         
 branches:
     - master
-    - cyp
     - /^v.*$/
 
 # Builds Test
