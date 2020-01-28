@@ -307,7 +307,7 @@ void *HallSwitch::Interrupt::fnPtrVector[GPIO_INT_PINS] = {(void *)int0Handler,
 
 /**
  * @brief       Register a hardware interrupt on the argument hall switch object
- * @param[in]   *objPrt Hall switch object pointer
+ * @param[in]   *objPtr Hall switch object pointer
  * @return      Pointer to allocated the interrupt function handler 
  */
 void *HallSwitch::Interrupt::isrRegister(HallSwitch *objPtr) 
