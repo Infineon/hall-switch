@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['hallswitch',['HallSwitch',['../d4/dbf/class_hall_switch.html',1,'']]],
-  ['hallswitchino',['HallSwitchIno',['../d9/d09/class_hall_switch_ino.html',1,'']]]
+  ['hallswitch',['HallSwitch',['../dd/db6/classHallSwitch.html',1,'']]],
+  ['hallswitchino',['HallSwitchIno',['../d8/d4c/classHallSwitchIno.html',1,'']]],
+  ['hallswitchwiced',['HallSwitchWiced',['../d5/de5/classHallSwitchWiced.html',1,'']]]
 ];

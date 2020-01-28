@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ardhwplatfpins_5ft',['ArdHwPlatfPins_t',['../dc/d7b/struct_ard_hw_platf_pins__t.html',1,'']]]
+  ['ardhwplatfpins_5ft',['ArdHwPlatfPins_t',['../dd/db1/structArdHwPlatfPins__t.html',1,'']]]
 ];

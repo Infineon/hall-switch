@@ -1,9 +1,11 @@
 var annotated_dup =
 [
-    [ "ArdHwPlatfPins_t", "dc/d7b/struct_ard_hw_platf_pins__t.html", "dc/d7b/struct_ard_hw_platf_pins__t" ],
-    [ "GPIO", "d4/dde/class_g_p_i_o.html", null ],
-    [ "GPIOIno", "df/def/class_g_p_i_o_ino.html", "df/def/class_g_p_i_o_ino" ],
-    [ "HallSwitch", "d4/dbf/class_hall_switch.html", "d4/dbf/class_hall_switch" ],
-    [ "HallSwitchIno", "d9/d09/class_hall_switch_ino.html", "d9/d09/class_hall_switch_ino" ],
-    [ "Interrupt", "da/dc3/class_interrupt.html", null ]
+    [ "ArdHwPlatfPins_t", "dd/db1/structArdHwPlatfPins__t.html", "dd/db1/structArdHwPlatfPins__t" ],
+    [ "GPIO", "d7/dde/classGPIO.html", null ],
+    [ "GPIOIno", "d6/dfc/classGPIOIno.html", "d6/dfc/classGPIOIno" ],
+    [ "GPIOWiced", "dd/dcb/classGPIOWiced.html", "dd/dcb/classGPIOWiced" ],
+    [ "HallSwitch", "dd/db6/classHallSwitch.html", "dd/db6/classHallSwitch" ],
+    [ "HallSwitchIno", "d8/d4c/classHallSwitchIno.html", "d8/d4c/classHallSwitchIno" ],
+    [ "HallSwitchWiced", "d5/de5/classHallSwitchWiced.html", "d5/de5/classHallSwitchWiced" ],
+    [ "Interrupt", "dc/dfd/classInterrupt.html", null ]
 ];

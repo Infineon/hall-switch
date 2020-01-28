@@ -1,15 +1,19 @@
 var hierarchy =
 [
-    [ "ArdHwPlatfPins_t", "dc/d7b/struct_ard_hw_platf_pins__t.html", null ],
-    [ "HallSwitch::GPIO", "df/dcd/class_hall_switch_1_1_g_p_i_o.html", [
-      [ "GPIOIno", "df/def/class_g_p_i_o_ino.html", null ]
+    [ "ArdHwPlatfPins_t", "dd/db1/structArdHwPlatfPins__t.html", null ],
+    [ "GPIO", "d7/dde/classGPIO.html", null ],
+    [ "HallSwitch::GPIO", "dd/d09/classHallSwitch_1_1GPIO.html", [
+      [ "GPIOIno", "d6/dfc/classGPIOIno.html", null ],
+      [ "GPIOWiced", "dd/dcb/classGPIOWiced.html", null ]
     ] ],
-    [ "GPIO", "d4/dde/class_g_p_i_o.html", null ],
-    [ "HallSwitch", "d4/dbf/class_hall_switch.html", [
-      [ "HallSwitchIno", "d9/d09/class_hall_switch_ino.html", null ]
+    [ "HallSwitch", "dd/db6/classHallSwitch.html", [
+      [ "HallSwitchIno", "d8/d4c/classHallSwitchIno.html", null ],
+      [ "HallSwitchWiced", "d5/de5/classHallSwitchWiced.html", null ]
     ] ],
-    [ "Interrupt", "da/dc3/class_interrupt.html", null ],
-    [ "HallSwitch::Interrupt", "df/d10/class_hall_switch_1_1_interrupt.html", [
-      [ "GPIOIno", "df/def/class_g_p_i_o_ino.html", null ]
-    ] ]
+    [ "Interrupt", "dc/dfd/classInterrupt.html", null ],
+    [ "HallSwitch::Interrupt", "d4/da3/classHallSwitch_1_1Interrupt.html", [
+      [ "GPIOIno", "d6/dfc/classGPIOIno.html", null ],
+      [ "GPIOWiced", "dd/dcb/classGPIOWiced.html", null ]
+    ] ],
+    [ "HallSwitchWiced::WICEDHwPlatf_t", "d7/d70/structHallSwitchWiced_1_1WICEDHwPlatf__t.html", null ]
 ];
