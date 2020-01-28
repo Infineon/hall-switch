@@ -11,17 +11,18 @@
 
 /** @} */
 
+
+/** @defgroup hallswitchpal PAL Frameworks
+ * @{
+ */
+/** @defgroup hallgpioino      Arduino GPIO */
+/** @defgroup hallgpiowiced    WICED GPIO */  
+/** @} */
+
 /**
  * @defgroup hallswitchhwp Hardware Platforms
  * @{
  */
-
-/** @defgroup hallhwino Arduino Hardware Platforms 
- * @{
- */
- /** @defgroup hallgpioino      Arduino GPIO */
- /** @defgroup hallgpiowiced    WICED GPIO */      
- /** @defgroup tle49643ms2go    TLE4964-3M Shield2Go */
-
+/** @defgroup tle49643ms2go    TLE4964-3M Shield2Go */
 /** @} */
-/** @} */
+
