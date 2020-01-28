@@ -2,7 +2,7 @@
  * @file        hall-switch-wiced.cpp
  * @brief       Hall Switch GPIO WICED Hardware Interface
  * 
- *  Wraps the WICED GPIO GPI library
+ *  Wraps the WICED GPIO library
  * 
  * @date        January 2020
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
@@ -27,7 +27,7 @@ GPIOWiced::GPIOWiced(wiced_gpio_t          pin,
 }
 
 /**
- * @brief   GPIO WICED default constructor
+ * @brief GPIO WICED default constructor
  */
 GPIOWiced::GPIOWiced()
 :pin(WICED_GPIO_1), config(INPUT_HIGH_IMPEDANCE), logic(POSITIVE)
@@ -75,7 +75,7 @@ inline GPIOWiced::Error_t GPIOWiced::enableInt(HallSwitch *ptr)
 {
     Error_t err = OK;
 
-    if(WICED_SUCCESS != wiced_gpio_input_irq_enable(pin,IRQ_TRIGGER_BOTH_EDGES, (wiced_gpio_irq_handler_t)(HallSwitch::Interrupt::isrRegister),ptr))
+    if(WICED_SUCCESS != wiced_gpio_input_irq_enable(pin,IRQ_TRIGGER_BOTH_EDGES, (wiced_gpio_irq_handler_t)(HallSwitch::Interrupt::isrRegister(ptr)),NULL))
         err = INIT_ERROR;
 
     return err;
@@ -266,6 +266,6 @@ HallSwitchWiced::HallSwitchWiced(WICEDHwPlatf_t &hwPlatf,
  */
 HallSwitchWiced::WICEDHwPlatf_t TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F =
 {
-    .output = WICED_GPIO_13,
+    .output = WICED_GPIO_9,
     .power  = UNUSED_PIN
 };

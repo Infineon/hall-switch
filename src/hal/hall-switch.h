@@ -109,6 +109,7 @@ class HallSwitch
                                               GPIO       *power  = NULL);
                                 ~HallSwitch  ();
         HallSwitch::Error_t     begin        ();
+        HallSwitch::Error_t     end          ();
         HallSwitch::Error_t     enable       ();
         HallSwitch::Error_t     disable      ();
         HallSwitch::Status_t    getStatus    ();
@@ -283,10 +284,10 @@ class HallSwitch::GPIO
 class HallSwitch::Interrupt
 {
     private:
-        #define             GPIO_ARD_INT_PINS       4           /**< Maximum hardware interrupt signals */
-        static uint8_t      idxNext;                            /**< Interrupt array allocation index*/
-        static HallSwitch   *objPtrVector[GPIO_ARD_INT_PINS];   /**< Hall switch object pointers vector */
-        static void         *fnPtrVector[GPIO_ARD_INT_PINS];    /**< Hall switch interrupt function handlers vector */
+        #define             GPIO_INT_PINS       4           /**< Maximum hardware interrupt signals */
+        static uint8_t      idxNext;                        /**< Interrupt array allocation index*/
+        static HallSwitch   *objPtrVector[GPIO_INT_PINS];   /**< Hall switch object pointers vector */
+        static void         *fnPtrVector[GPIO_INT_PINS];    /**< Hall switch interrupt function handlers vector */
         static void         int0Handler ();
         static void         int1Handler ();
         static void         int2Handler ();

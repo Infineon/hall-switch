@@ -77,7 +77,10 @@ HallSwitch::HallSwitch(GPIO         *output,
  */
 HallSwitch::~HallSwitch()
 {
-    disable();
+    if(status == POWER_ON)
+        disable();
+    if(status == POWER_OFF)
+        end();
 }
 
 /**
@@ -103,6 +106,35 @@ HallSwitch::Error_t  HallSwitch::begin()
 
     INTF_ASSERT(output->init());
     status = INITED;
+
+    return err;
+}
+
+/**
+ * @brief   Deinitializes the hardware interfaces
+ * @return  HallSwitch error code
+ * @retval  OK if success
+ * @retval  INTF_ERROR if hardware interface error
+ */
+HallSwitch::Error_t  HallSwitch::end()
+{
+    Error_t err = OK;
+
+    if(powerMode == SWITCH)
+    {
+        if(power == NULL)
+            return INTF_ERROR;
+
+        INTF_ASSERT(power->deinit());
+    }
+
+    if(output == NULL)
+      return INTF_ERROR;
+
+    INTF_ASSERT(output->deinit());
+
+    status    = UNINITED;
+    bfieldVal = B_FIELD_UNDEF;
 
     return err;
 }
@@ -232,7 +264,7 @@ void HallSwitch::callback()
 /** @} */
 
 
-HallSwitch*  HallSwitch::Interrupt::objPtrVector[GPIO_ARD_INT_PINS] = {NULL};
+HallSwitch*  HallSwitch::Interrupt::objPtrVector[GPIO_INT_PINS] = {NULL};
 uint8_t      HallSwitch::Interrupt::idxNext    = 0;
 
 /**
@@ -268,10 +300,10 @@ void HallSwitch::Interrupt::int3Handler()
 }
 
 
-void *HallSwitch::Interrupt::fnPtrVector[GPIO_ARD_INT_PINS] = {(void *)int0Handler,
-                                                               (void *)int1Handler,
-                                                               (void *)int2Handler,
-                                                               (void *)int3Handler};
+void *HallSwitch::Interrupt::fnPtrVector[GPIO_INT_PINS] = {(void *)int0Handler,
+                                                           (void *)int1Handler,
+                                                           (void *)int2Handler,
+                                                           (void *)int3Handler};
 
 /**
  * @brief       Register a hardware interrupt on the argument hall switch object
