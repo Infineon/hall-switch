@@ -5,6 +5,8 @@
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
  */
 
+#ifdef HALL_SWITCH_WICED_PLATFORM_ENABLED
+
 #ifndef HALL_SWITCH_WICED_H_
 #define HALL_SWITCH_WICED_H_
 
@@ -73,3 +75,5 @@ extern HallSwitchWiced::WICEDHwPlatf_t TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F;  
 /** @} */
 
 #endif /** HALL_SWITCH_WICED_H_ **/
+
+#endif

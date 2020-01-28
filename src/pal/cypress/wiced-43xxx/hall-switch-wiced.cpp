@@ -8,6 +8,8 @@
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
  */
 
+#ifdef HALL_SWITCH_WICED_PLATFORM_ENABLED
+
 #include "hall-switch-wiced.h"
 
 /**
@@ -269,3 +271,5 @@ HallSwitchWiced::WICEDHwPlatf_t TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F =
     .output = WICED_GPIO_9,
     .power  = UNUSED_PIN
 };
+
+#endif

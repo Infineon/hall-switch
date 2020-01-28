@@ -1,5 +1,5 @@
 /** 
- * @file        hall-switch-platf-ard.cpp
+ * @file        hall-switch-ard.cpp
  * @brief       Hall Switch Arduino GPIO Hardware Interface
  * 
  *  Wraps the Arduino GPIO Reference Language calls
@@ -9,7 +9,7 @@
  */
 
 #include <Arduino.h>
-#include "hall-switch-platf-ard.h"
+#include "hall-switch-ard.h"
 
 /**
  * @addtogroup hallgpioino

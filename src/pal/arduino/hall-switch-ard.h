@@ -1,15 +1,15 @@
 /** 
- * @file        hall-switch-platf-ard.h
+ * @file        hall-switch-ard.h
  * @brief       Hall Switch Arduino GPIO Hardware Interface
  * @date        July 2019
  * @copyright   Copyright (c) 2019 Infineon Technologies AG
  */
 
-#ifndef HALL_SWITCH_PLATF_ARD_H_
-#define HALL_SWITCH_PLATF_ARD_H_
+#ifndef HALL_SWITCH_ARD_H_
+#define HALL_SWITCH_ARD_H_
 
 #include <stdint.h>
-#include "../hal/hall-switch.h"
+#include "../../common/hall-switch.h"
 
 class GPIOIno : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt 
 {
@@ -52,4 +52,4 @@ typedef struct
 extern ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins;   /**< TLE4964 3M Shield 2Go Pins */
 /** @} */
 
-#endif /** HALL_SWITCH_PLATF_ARD_H_ **/
+#endif /** HALL_SWITCH_ARD_H_ **/
