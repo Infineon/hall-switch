@@ -14,7 +14,6 @@ branches:
     - /^v.*$/
 
 # Builds Test
-name: "Build Tests"
 
 env: 
   - PLATFORMIO_CI_SRC=examples/ardref-interrupt
@@ -32,7 +31,6 @@ script:
 
 jobs:
   include:   
-    - stage: "Test"
     - stage: "Deploy" 
       name: "GitHub Pages Deployment"
       if: tag IS present
