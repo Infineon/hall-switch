@@ -25,7 +25,7 @@ class GPIOIno : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
                                      uint8_t mode, 
                                      VLogic_t logic);
         Error_t       init          ();            
-        Error_t       deinit          ();
+        Error_t       deinit        ();
         Error_t       enableInt     (HallSwitch *ptr);    
         Error_t       disableInt    ();
         IntEvent_t    intEvent      ();
@@ -35,6 +35,20 @@ class GPIOIno : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
         Error_t       disable       ();
 };
 
+class TimerIno: virtual public HallSwitch::Timer
+{
+    public:
+                        TimerIno();
+                       ~TimerIno();
+        Error_t         init    ();
+        Error_t         start   ();
+        Error_t         elapsed (uint32_t &elapsed);
+        Error_t         stop    ();
+        Error_t         delay   (uint32_t timeout);
+
+    private:
+        uint32_t curTime;   /**< Current time */
+};
  
 /**
  * @brief Arduino Hardware Platform Pins
@@ -50,6 +64,7 @@ typedef struct
  * @{
  */ 
 extern ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins;   /**< TLE4964 3M Shield 2Go Pins */
+extern ArdHwPlatfPins_t TL4922_2GoKit_Pins;     /**< TLE4922 Kit 2Go Pins */ 
 /** @} */
 
 #endif /** HALL_SWITCH_ARD_H_ **/

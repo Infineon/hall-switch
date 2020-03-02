@@ -83,6 +83,18 @@ class HallSwitch
         /** @} */
 
         /**
+         * @name Speed units
+         * @{
+         */
+         enum SpeedUnit_t
+         {
+            HERTZ   = 0,    /**< cps - Hertz */
+            RADS    = 1,    /**< rads/s */  
+            RPM     = 2     /**< RPM */
+         };
+         /** @} */
+
+        /**
          * @brief       Callback function type for interrupt mode 
          * @param[in]   Result_t B field value. The interrupt read the B field value and will
          *              pass it to the callback
@@ -98,23 +110,33 @@ class HallSwitch
         class GPIO;
 
         /**
+         * @brief Timer Interface
+         */
+        class Timer;
+
+        /**
          * @brief   Interrupt Handler
          */
         class Interrupt;
-
 
                                 HallSwitch   ();
                                 HallSwitch   (GPIO       *output,
                                               CBack_t    cBack   = NULL,
                                               GPIO       *power  = NULL);
                                 ~HallSwitch  ();
+
         HallSwitch::Error_t     begin        ();
+        HallSwitch::Error_t     begin        (uint8_t polesNum,
+                                              SpeedUnit_t units = HERTZ);
         HallSwitch::Error_t     end          ();
         HallSwitch::Error_t     enable       ();
         HallSwitch::Error_t     disable      ();
         HallSwitch::Status_t    getStatus    ();
         HallSwitch::Result_t    readBField   ();
+        HallSwitch::Error_t     updateBField ();
+        HallSwitch::Error_t     updateSpeed  ();
         HallSwitch::Result_t    getBField    ();
+        HallSwitch::Result_t    getSpeed     ();
         void                    callback     ();
 
     protected:
@@ -125,6 +147,10 @@ class HallSwitch
         PowerMode_t powerMode;          /**< Power mode */
         Status_t    status;             /**< Status */
         Result_t    bfieldVal;          /**< Magnetic field value */
+        uint8_t     polesPair;          /**< Rotor poles pair number */
+        SpeedUnit_t sUnits;             /**< Speed units */
+        double      speed;              /**< Rotating speed */
+
 
     /**
      * @brief       Asserts the hall switch hardware interface functions 
@@ -269,10 +295,61 @@ class HallSwitch::GPIO
          * @retval      WRITE_ERROR if write error
          */
         virtual Error_t        disable     () = 0;
-
-
 };
 /** @} */
+
+class HallSwitch::Timer
+{
+    public: 
+        /**
+         * @name    Error codes
+         * @{
+         */
+        enum Error_t
+        {
+            OK           =  0,      /**< No error */
+            INTF_ERROR   = -1,      /**< Interface error */
+            CONF_ERROR   = -2,      /**< Configuration error */
+        };
+
+        /**
+         * @brief   Initialiazes the timer
+         * @return  Timer error code
+         * @retval  OK if success
+         * @retval  INIT_ERROR if hardware interface error
+         */
+        virtual Error_t         init    () = 0;
+        /**
+         * @brief   Starts the timer
+         * @return  Timer error code
+         * @retval  OK if success
+         * @retval  INIT_ERROR if hardware interface error
+         */
+        virtual Error_t         start   () = 0;
+        /**
+         * @brief       Elapsed time since the timer was started 
+         * @param[out]  elapsed Time in milliseconds 
+         * @return      Timer error code
+         * @retval      OK if success
+         * @retval      INIT_ERROR if hardware interface error    
+         */
+        virtual Error_t         elapsed (uint32_t &elapsed) = 0;
+        /**
+         * @brief   Stops the timer
+         * @return  Timer error code
+         * @retval  OK if success
+         * @retval  INIT_ERROR if hardware interface error
+         */
+        virtual Error_t         stop    () = 0;
+        /**
+         * @brief       Introduces a delay during the specified time    
+         * @param[in]   timeout    Delay time in milliseconds   
+         * @return      Timer error code
+         * @retval      OK if success
+         * @retval      INIT_ERROR if hardware interface error
+         */
+        virtual Error_t         delay   (uint32_t timeout) = 0;
+};
 
 /**
  * @class Interrupt

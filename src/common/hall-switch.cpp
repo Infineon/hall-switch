@@ -31,6 +31,9 @@ HallSwitch::HallSwitch()
     powerMode        = MAIN;
     status           = UNINITED;
     bfieldVal        = B_FIELD_UNDEF;
+    polesPair        = 0;
+    sUnits           = HERTZ;
+    speed            = 0;
 };
 
 /**

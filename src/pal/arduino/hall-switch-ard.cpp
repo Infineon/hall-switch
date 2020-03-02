@@ -165,6 +165,83 @@ inline GPIOIno::Error_t GPIOIno::disable()
 }
 
 /** @} */
+
+/**
+ * @addtogroup halltimerino
+ * @{
+ */
+
+TimerIno::TimerIno() : curTime(0)
+{
+
+}
+
+TimerIno::~TimerIno()
+{
+    curTime = 0;
+    //Nothing
+}
+
+/**
+ * @brief   Initialiazes the timer
+ * @return  Timer error code
+ * @retval  OK if success (always)
+ */
+inline TimerIno::Error_t TimerIno::init()
+{
+    curTime = 0;
+    return OK;
+    //Nothing
+}
+
+/**
+ * @brief   Starts the timer
+ * @return  Timer error code
+ * @retval  OK if success (always)
+ */
+inline TimerIno::Error_t TimerIno::start()
+{
+    curTime = millis();
+    return OK;
+}
+
+/**
+ * @brief       Elapsed time since the timer was started 
+ * @param[out]  elapsed Time in milliseconds 
+ * @return      Timer error code
+ * @retval      OK if success (always)
+ */
+inline TimerIno::Error_t TimerIno::elapsed(uint32_t &elapsed)
+{
+    elapsed = (millis() - curTime);
+    return OK;
+}
+
+/**
+ * @brief   Stops the timer
+ * @return  Timer error code
+ * @retval  OK if success
+ * @retval  OK if success (always)
+ */
+inline TimerIno::Error_t TimerIno::stop()
+{
+    //Nothing
+     return OK;
+}
+
+/**
+ * @brief       Introduces a delay during the specified time    
+ * @param[in]   timeout    Delay time in milliseconds   
+ * @return      Timer error code
+ * @retval      OK if success
+ * @retval      OK if success (always)
+ */
+inline TimerIno::Error_t TimerIno::delay(uint32_t timeout)
+{
+    delay(timeout);
+    return OK;
+} 
+/** @} */
  
 #ifdef XMC1100_XMC2GO                                       /**< xmc2go + Shield2Go  */ 
 ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins = {9, UNUSED_PIN};    /**< Pin connected to Q1 */                                                      
@@ -175,3 +252,5 @@ ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins = {3, UNUSED_PIN};    /**< Pin connected t
 #else
     # error "Board not yet defined. Please define the specific Arduino boards Pins"
 #endif
+
+ArdHwPlatfPins_t TL4922_2GoKit_Pins = {9, UNUSED_PIN};
