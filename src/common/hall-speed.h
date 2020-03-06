@@ -5,9 +5,12 @@
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  */
 
+#ifndef HALL_SPEED_H_
+#define HALL_SPEED_H_
+
 #include "hall-switch.h"
 
-class HallSpeed: protected HallSwitch
+class HallSpeed: public HallSwitch
 {           
     public:
         
@@ -28,6 +31,7 @@ class HallSpeed: protected HallSwitch
          */
         class Timer;
 
+                    HallSpeed   ();
                     HallSpeed   (GPIO        *output,
                                  Timer       *timer   = NULL,
                                  uint8_t     polesNum = 1,
@@ -41,19 +45,13 @@ class HallSpeed: protected HallSwitch
         Error_t     updateSpeed  ();
         double      getSpeed     ();
 
-    private:
-        Timer       *timer;             /**< Timer interface pointer */
-        bool        speedEnabled;       /**< Speed enabled flag */
-        uint8_t     polesPair;          /**< Rotor poles pair number */
-        SpeedUnit_t sUnits;             /**< Speed units */
-        double      speed;              /**< Rotating speed */
+    protected:
+        Timer       *timer;                  /**< Timer interface pointer */
+        uint8_t     polesPair;               /**< Rotor poles pair number */
+        SpeedUnit_t sUnits;                  /**< Speed units */
+        double      speed;                   /**< Rotating speed */
 
-        static const double speedCoeff[3] =
-        {
-            1000.0,  /**< Hertz - cps (1000 ms)*/
-            6283.2,  /**< Rad/s (2pi x 1000 ms) */
-            60000.0  /**< RPM  (60 x 1000 ms)*/
-        };
+        static double const speedCoeff[3];
 
         void        callback        ();
         void        calculateSpeed  ();
@@ -114,3 +112,5 @@ class HallSpeed::Timer
          */
         virtual  HallSwitch::Error_t         delay   (uint32_t timeout) = 0;
 };
+
+#endif /** HALL_SPEED_H_ **/

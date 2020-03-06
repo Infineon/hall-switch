@@ -7,6 +7,21 @@
 
 #include "hall-speed.h"
 
+double const HallSpeed::speedCoeff[] =
+{
+    1000.0,  /**< Hertz - cps (1000 ms)*/
+    6283.2,  /**< Rad/s (2pi x 1000 ms) */
+    60000.0  /**< RPM  (60 x 1000 ms)*/
+};
+
+HallSpeed::HallSpeed()
+{
+    timer     = NULL;
+    polesPair = 0;
+    sUnits    = 0;
+    speed     = 0.0;
+}
+
 /**
  * @brief       Hall Switch Constructor
  * 
@@ -149,6 +164,6 @@ void HallSpeed::calculateSpeed()
 {
     uint32_t elapsed = 0.0;
     timer->elapsed(elapsed);
-    speed = speedCoeff[sUnits]/((double)polesPair * (double)elapsed);
+    speed = HallSpeed::speedCoeff[sUnits]/((double)polesPair * (double)elapsed);
 }
 
