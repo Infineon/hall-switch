@@ -10,6 +10,8 @@
 
 #include <stdint.h>
 #include "../../common/hall-switch.h"
+#include "../../common/hall-speed.h"
+
 
 class GPIOIno : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt 
 {
@@ -35,16 +37,17 @@ class GPIOIno : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
         Error_t       disable       ();
 };
 
-class TimerIno: virtual public HallSwitch::Timer
+class TimerIno: virtual public HallSpeed::Timer
 {
     public:
-                        TimerIno();
-                       ~TimerIno();
-        Error_t         init    ();
-        Error_t         start   ();
-        Error_t         elapsed (uint32_t &elapsed);
-        Error_t         stop    ();
-        Error_t         delay   (uint32_t timeout);
+                                    TimerIno();
+                                   ~TimerIno();
+        HallSwitch::Error_t         init    ();
+        HallSwitch::Error_t         deinit  ();
+        HallSwitch::Error_t         start   ();
+        HallSwitch::Error_t         elapsed (uint32_t &elapsed);
+        HallSwitch::Error_t         stop    ();
+        HallSwitch::Error_t         delay   (uint32_t timeout);
 
     private:
         uint32_t curTime;   /**< Current time */

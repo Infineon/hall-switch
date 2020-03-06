@@ -24,16 +24,15 @@
  */
 HallSwitch::HallSwitch()
 {
+    status           = UNINITED;
     output           = NULL;
+    bfieldVal        = B_FIELD_UNDEF;
+
     cBack            = NULL;
     measMode         = POLLING;
+    
     power            = NULL;
     powerMode        = MAIN;
-    status           = UNINITED;
-    bfieldVal        = B_FIELD_UNDEF;
-    polesPair        = 0;
-    sUnits           = HERTZ;
-    speed            = 0;
 };
 
 /**
@@ -54,22 +53,21 @@ HallSwitch::HallSwitch(GPIO         *output,
                        CBack_t      cBack,
                        GPIO         *power)
 {
+    status              = UNINITED;
     this->output        = output;
+    bfieldVal           = B_FIELD_UNDEF;
+
+    this->cBack = cBack;
     if(cBack == NULL)
         this->measMode  = POLLING;
     else
         this->measMode  = INTERRUPT;
-
-    this->cBack = cBack;
 
     this->power         = power;
     if(this->power == NULL)
         this->powerMode = MAIN;
     else
         this->powerMode = SWITCH;
-
-    status              = UNINITED;
-    bfieldVal           = B_FIELD_UNDEF;
 }
 
 /**

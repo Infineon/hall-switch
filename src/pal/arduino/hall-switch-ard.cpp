@@ -179,7 +179,6 @@ TimerIno::TimerIno() : curTime(0)
 TimerIno::~TimerIno()
 {
     curTime = 0;
-    //Nothing
 }
 
 /**
@@ -187,11 +186,21 @@ TimerIno::~TimerIno()
  * @return  Timer error code
  * @retval  OK if success (always)
  */
-inline TimerIno::Error_t TimerIno::init()
+inline  HallSwitch::Error_t TimerIno::init()
 {
     curTime = 0;
-    return OK;
-    //Nothing
+    return HallSwitch::OK;
+}
+
+/**
+ * @brief   Deinitialiazes the timer
+ * @return  Timer error code
+ * @retval  OK if success (always)
+ */
+inline  HallSwitch::Error_t TimerIno::deinit()
+{
+    curTime = 0;
+    return HallSwitch::OK;
 }
 
 /**
@@ -199,10 +208,10 @@ inline TimerIno::Error_t TimerIno::init()
  * @return  Timer error code
  * @retval  OK if success (always)
  */
-inline TimerIno::Error_t TimerIno::start()
+inline HallSwitch::Error_t TimerIno::start()
 {
     curTime = millis();
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -211,10 +220,10 @@ inline TimerIno::Error_t TimerIno::start()
  * @return      Timer error code
  * @retval      OK if success (always)
  */
-inline TimerIno::Error_t TimerIno::elapsed(uint32_t &elapsed)
+inline HallSwitch::Error_t TimerIno::elapsed(uint32_t &elapsed)
 {
     elapsed = (millis() - curTime);
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -223,10 +232,10 @@ inline TimerIno::Error_t TimerIno::elapsed(uint32_t &elapsed)
  * @retval  OK if success
  * @retval  OK if success (always)
  */
-inline TimerIno::Error_t TimerIno::stop()
+inline HallSwitch::Error_t TimerIno::stop()
 {
     //Nothing
-     return OK;
+     return HallSwitch::OK;
 }
 
 /**
@@ -236,10 +245,10 @@ inline TimerIno::Error_t TimerIno::stop()
  * @retval      OK if success
  * @retval      OK if success (always)
  */
-inline TimerIno::Error_t TimerIno::delay(uint32_t timeout)
+inline HallSwitch::Error_t TimerIno::delay(uint32_t timeout)
 {
     delay(timeout);
-    return OK;
+    return HallSwitch::OK;
 } 
 /** @} */
  
