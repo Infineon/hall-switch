@@ -11,6 +11,10 @@
 
 #ifdef XMC1100_XMC2GO 
 #define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
+#elif ((XMC1100_Boot_Kit) ||  \
+      (XMC4700_Relax_Kit) ||  \
+      (ARDUINO_AVR_UNO))
+#define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
 #endif
 
 HallSwitch::Status_t stat  = HallSwitch::Status_t::UNINITED;
