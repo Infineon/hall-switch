@@ -67,7 +67,7 @@ typedef struct
  * @{
  */ 
 extern ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins;   /**< TLE4964 3M Shield 2Go Pins */
-extern ArdHwPlatfPins_t TL4922_2GoKit_Pins;     /**< TLE4922 Kit 2Go Pins */ 
+extern ArdHwPlatfPins_t TLE4922_2GoKit_Pins;     /**< TLE4922 Kit 2Go Pins */ 
 /** @} */
 
 #endif /** HALL_SWITCH_ARD_H_ **/

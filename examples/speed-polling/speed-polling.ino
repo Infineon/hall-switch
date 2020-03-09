@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <stdint.h>
-#include <hall-switch-ino.h>
+#include <hall-speed-ino.h>
 
 
 #ifdef XMC1100_XMC2GO
@@ -10,16 +10,12 @@
 #endif
 
 #ifdef XMC1100_XMC2GO 
-#define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
-#elif ((XMC1100_Boot_Kit) ||  \
-      (XMC4700_Relax_Kit) ||  \
-      (ARDUINO_AVR_UNO))
-#define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
+#define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
 #endif
 
 HallSwitch::Status_t stat  = HallSwitch::Status_t::UNINITED;
 double               speed = 0.0;
-HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::HERTZ);
+HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);
 
 /**
  * @brief       Prints the sensor data in JSON format 

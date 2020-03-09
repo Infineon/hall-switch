@@ -262,4 +262,4 @@ ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins = {3, UNUSED_PIN};    /**< Pin connected t
     # error "Board not yet defined. Please define the specific Arduino boards Pins"
 #endif
 
-ArdHwPlatfPins_t TL4922_2GoKit_Pins = {9, UNUSED_PIN};
+ArdHwPlatfPins_t TLE4922_2GoKit_Pins = {1, UNUSED_PIN};

@@ -11,6 +11,7 @@ sudo: required
 branches:
     - master
     - /^v.*$/
+    - speed
 
 # Builds Test
 
@@ -19,6 +20,8 @@ env:
   - PLATFORMIO_CI_SRC=examples/ardref-polling
   - PLATFORMIO_CI_SRC=examples/lib-interrupt
   - PLATFORMIO_CI_SRC=examples/lib-polling
+  - PLATFORMIO_CI_SRC=examples/speed-interrupt
+  - PLATFORMIO_CI_SRC=examples/speed-polling
 
 install: 
   - pip install -U platformio==4.1.0

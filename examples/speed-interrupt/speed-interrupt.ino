@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <stdint.h>
-#include <hall-switch-ino.h>
+#include <hall-speed-ino.h>
 
 
 #ifdef XMC1100_XMC2GO
@@ -23,27 +23,6 @@ double               speed = 0.0;
 
 void IntCBack(HallSwitch::Result_t result)
 {
-    static uint32_t i = 0; 
-//   HallSwitch::Status_t curStat  = stat;
-//   double               curSpeed = speed;
-//   curStat  = hs.getStatus();
-//   curSpeed = hs.getSpeed();
-
-//   if (curStat != stat || curSpeed != speed)
-//   {
-//     stat  = curStat;
-//     if(curSpeed > (speed + 5) )
-//     {
-//         digitalWrite(LED1, HIGH);
-//     }
-//     speed = curSpeed;
-    
-//     JSONPrint(stat, speed); 
-//   }
-    i++;
-    Serial.print("Iter: ");
-    Serial.print(i);
-    Serial.print(" ");
     Serial.println("Some event just happened and changed the speed");
 }
 

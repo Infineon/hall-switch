@@ -1,19 +1,18 @@
 /** 
- * @file        hall-switch-ino.cpp
- * @brief       Hall Switch Arduino Class
+ * @file        hall-speed-ino.cpp
+ * @brief       Hall Speed Arduino Class
  *                  
- *  Arduino wrapper for hall switch hardware abstraction layer
+ *  Arduino wrapper for hall speed hardware abstraction layer
  *      - Hardware Allocation using direct arduino pins
  *      - Predefined Arduino based hardware platforms: Shield2Go + (XMC Arduino / Arduino UNO)
  * 
- * @date        July 2019
- * @copyright   Copyright (c) 2019 Infineon Technologies AG
+ * @date        March 2020
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  */
 
-#include "hall-switch-ino.h"
-
+#include "hall-speed-ino.h"
 /**
- * @brief           Hall switch ino instance constructor with Arduino pins
+ * @brief           Hall speed ino instance constructor with Arduino pins
  *                  Mandatory arguments: 
  *                      - sensor output pin
  *                  Optional  arguments: 
@@ -25,15 +24,20 @@
  * @param[in]       powerPin    Hall switch power pin. When passed, enabled the sensor switch controlled mode.
  * @return          void         
  */
-HallSwitchIno::HallSwitchIno(uint8_t   outputPin, 
-                             CBack_t   cBack,
-                             uint8_t   powerPin)
-:HallSwitch(new GPIOIno(outputPin, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
-            cBack,
+HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
+                           uint8_t     polesNum,
+                           SpeedUnit_t units,
+                           CBack_t     cBack,
+                           uint8_t     powerPin)
+:HallSpeed(new GPIOIno(outputPin, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
+           new TimerIno(),
+           polesNum,
+           units,
+           cBack,
            (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(outputPin, OUTPUT, GPIO::VLogic_t::POSITIVE)){ }
 
 /**
- * @brief           Hall switch ino instance constructor with predefined Arduino hardware platform
+ * @brief           Hall speed ino instance constructor with predefined Arduino hardware platform
  *                  Mandatory arguments: 
  *                      - Hardware platform 
  *                  Optional  arguments: 
@@ -43,8 +47,10 @@ HallSwitchIno::HallSwitchIno(uint8_t   outputPin,
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
  * @return          void         
  */
-HallSwitchIno::HallSwitchIno(HwPlatf_t hwPlatf,
-                             CBack_t   cBack)
+HallSpeedIno::HallSpeedIno(HwPlatf_t   hwPlatf,
+                           uint8_t     polesNum,
+                           SpeedUnit_t units,
+                           CBack_t     cBack)
 {
     ArdHwPlatfPins_t *hp = NULL;
     switch(hwPlatf)
@@ -55,12 +61,20 @@ HallSwitchIno::HallSwitchIno(HwPlatf_t hwPlatf,
         }
         break;
 
+        case TLE4922_Speed_2GoKit:
+            hp = &TLE4922_2GoKit_Pins;
+        break;
+
         default:
         break;
     }
 
     this->output    = new GPIOIno(hp->output, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE);
-    this->cBack     = cBack;
+    this->timer     = new TimerIno();
+    this->polesPair = polesNum;
+    this->sUnits    = units;
+
+    this->cBack     = cBack; 
     if(this->cBack == NULL)
         this->measMode  = POLLING;
     else

@@ -300,4 +300,4 @@ class HallSwitch::Interrupt
 /** @} */
 
         
-#endif /** HALL_SWITCH_H_ **/
+#endif /** HALL_SWTICH_H_ **/

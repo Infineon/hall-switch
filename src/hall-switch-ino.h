@@ -10,7 +10,6 @@
 
 #include <Arduino.h>
 #include "common/hall-switch.h"
-#include "common/hall-speed.h"
 #include "pal/arduino/hall-switch-ard.h"
 
 /**
@@ -50,7 +49,8 @@ class HallSpeedIno: public HallSpeed
 
         enum HwPlatf_t
         {
-            TLE4964_3M_S2Go      /**< TLE4964-3M Shield 2Go */
+            TLE4964_3M_S2Go,      /**< TLE4964-3M Shield 2Go */
+            TLE4922_Speed_2GoKit,
         };
 
         HallSpeedIno(uint8_t     outputPin, 
