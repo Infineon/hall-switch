@@ -41,7 +41,7 @@ void IntCBack(HallSwitch::Result_t result)
     JSONPrint(stat, result);
 }
 
-HallSwitchIno hs(HallSwitchIno::HwPlatf_t::TLE4964_3M_S2Go, IntCBack);
+HallSwitchIno hs(TLE4964_3M_S2Go_XMC2Go, IntCBack);
 
 void setup()
 {      

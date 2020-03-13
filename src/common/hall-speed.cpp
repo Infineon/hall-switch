@@ -6,6 +6,8 @@
  */
 
 #include "hall-speed.h"
+#include "../pal/hall-pal-gpio.h"
+#include "../pal/hall-pal-timer.h"
 
 double const HallSpeed::speedCoeff[] =
 {
@@ -41,9 +43,9 @@ HallSpeed::HallSpeed(GPIO       *output,
                     Timer       *timer,
                     uint8_t     polesNum,
                     SpeedUnit_t units,
-                    CBack_t     cBack,
+                    CBackSpd_t  cBack,
                     GPIO        *power                               
-) : HallSwitch(output, cBack, power)
+) : HallSwitch(output, (HallSwitch::CBack_t)cBack, power)
 {
     this->timer = timer;
     this->polesPair = polesNum;
@@ -156,8 +158,8 @@ void HallSpeed::callback()
        bfieldVal = B_FIELD_ON;
     }
 
-    //TODO: enable external callback based on speed !
-    //cBack(bfieldVal);
+    CBackSpd_t callb = (CBackSpd_t)cBack;
+    callb(speed);
 }
 
 void HallSpeed::calculateSpeed()

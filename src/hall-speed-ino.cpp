@@ -27,7 +27,7 @@
 HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
                            uint8_t     polesNum,
                            SpeedUnit_t units,
-                           CBack_t     cBack,
+                           CBackSpd_t  cBack,
                            uint8_t     powerPin)
 :HallSpeed(new GPIOIno(outputPin, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
            new TimerIno(),
@@ -47,47 +47,13 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
  * @return          void         
  */
-HallSpeedIno::HallSpeedIno(HwPlatf_t   hwPlatf,
+HallSpeedIno::HallSpeedIno(Platform_t  hwPlatf,
                            uint8_t     polesNum,
                            SpeedUnit_t units,
-                           CBack_t     cBack)
-{
-    ArdHwPlatfPins_t *hp = NULL;
-    switch(hwPlatf)
-    {
-        case TLE4964_3M_S2Go:
-        {
-            hp = &TLE4964_3M_S2Go_Pins;
-        }
-        break;
-
-        case TLE4922_Speed_2GoKit:
-            hp = &TLE4922_2GoKit_Pins;
-        break;
-
-        default:
-        break;
-    }
-
-    this->output    = new GPIOIno(hp->output, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE);
-    this->timer     = new TimerIno();
-    this->polesPair = polesNum;
-    this->sUnits    = units;
-
-    this->cBack     = cBack; 
-    if(this->cBack == NULL)
-        this->measMode  = POLLING;
-    else
-        this->measMode = INTERRUPT;
-
-    if(hp->power == UNUSED_PIN)
-    {
-        this->power     = NULL;
-        this->powerMode = MAIN;
-    }           
-    else
-    {
-        this->power  =   new GPIOIno(hp->power, OUTPUT, GPIO::VLogic_t::POSITIVE);
-        this->powerMode = SWITCH;
-    }
-}
+                           CBackSpd_t  cBack)
+:HallSpeed(new GPIOIno(hwPlatf.output, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
+           new TimerIno(),
+           polesNum,
+           units,
+           cBack,
+           (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, GPIO::VLogic_t::POSITIVE)){ }

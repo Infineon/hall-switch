@@ -11,6 +11,7 @@
  */
 
 #include "hall-switch.h"
+#include "../pal/hall-pal-gpio.h"
 
 /**
  * @addtogroup hallswitchcpphal
@@ -99,13 +100,16 @@ HallSwitch::Error_t  HallSwitch::begin()
         if(power == NULL)
             return INTF_ERROR;
         
-        INTF_ASSERT(power->init());        
+        err = power->init();
+        if(err != OK) return err;        
     }
 
     if(output == NULL)
       return INTF_ERROR;
 
-    INTF_ASSERT(output->init());
+    err = output->init();
+    if(err != OK) return err;
+    
     status = INITED;
 
     return err;
@@ -126,13 +130,15 @@ HallSwitch::Error_t  HallSwitch::end()
         if(power == NULL)
             return INTF_ERROR;
 
-        INTF_ASSERT(power->deinit());
+        err = power->deinit();
+        if(err != OK) return err;
     }
 
     if(output == NULL)
       return INTF_ERROR;
 
-    INTF_ASSERT(output->deinit());
+    err = output->deinit();
+    if(err != OK) return err;
 
     status    = UNINITED;
     bfieldVal = B_FIELD_UNDEF;
@@ -154,10 +160,16 @@ HallSwitch::Error_t  HallSwitch::enable()
     Error_t err = OK;
 
     if(powerMode == SWITCH)
-        INTF_ASSERT(power->enable());
+    {
+        err = power->enable();
+        if(err != OK) return err;
+    }
 
     if(measMode == INTERRUPT)
-       INTF_ASSERT(output->enableInt(this));
+    {
+       err = output->enableInt(this);
+       if(err != OK) return err;
+    }
 
     status = POWER_ON;
 
@@ -177,11 +189,16 @@ HallSwitch::Error_t  HallSwitch::disable()
     Error_t err = OK;
 
     if(measMode == INTERRUPT)
-        INTF_ASSERT(output->disableInt());
+    {
+        err = output->disableInt();
+        if(err != OK) return err;
+    }
 
     if(powerMode == SWITCH)
-        INTF_ASSERT(power->disable());
-
+    {
+        err = power->disable();
+        if(err != OK) return err;
+    }
     status = POWER_OFF;
 
     return err;
@@ -199,7 +216,7 @@ HallSwitch::Error_t  HallSwitch::disable()
  * @retval  B_FIELD_ON if magnetic field present
  * @retval  B_FIELD_OFF if magnetic field NOT present
  */
-HallSwitch::Result_t HallSwitch::readBField()
+HallSwitch::Error_t HallSwitch::updateBField()
 {
 	GPIO::VLevel_t gpiolevel = output->read();   
 
@@ -212,7 +229,7 @@ HallSwitch::Result_t HallSwitch::readBField()
         bfieldVal = B_FIELD_OFF;
 	}
 
-    return bfieldVal;
+    return OK;
 }
 
 /**
@@ -265,54 +282,4 @@ void HallSwitch::callback()
 /** @} */
 
 
-HallSwitch*  HallSwitch::Interrupt::objPtrVector[GPIO_INT_PINS] = {NULL};
-uint8_t      HallSwitch::Interrupt::idxNext    = 0;
 
-/**
- * @brief   Interrupt 0 Handler
- */
-void HallSwitch::Interrupt::int0Handler() 
-{
-    objPtrVector[0]->callback();
-}
-
-/**
- * @brief   Interrupt 1 Handler
- */
-void HallSwitch::Interrupt::int1Handler()
-{
-    objPtrVector[1]->callback();
-}
-
-/**
- * @brief   Interrupt 2 Handler
- */
-void HallSwitch::Interrupt::int2Handler()
-{
-    objPtrVector[2]->callback();
-}
-
-/**
- * @brief   Interrupt 3 Handler
- */
-void HallSwitch::Interrupt::int3Handler()
-{
-    objPtrVector[3]->callback();
-}
-
-
-void *HallSwitch::Interrupt::fnPtrVector[GPIO_INT_PINS] = {(void *)int0Handler,
-                                                           (void *)int1Handler,
-                                                           (void *)int2Handler,
-                                                           (void *)int3Handler};
-
-/**
- * @brief       Register a hardware interrupt on the argument hall switch object
- * @param[in]   *objPtr Hall switch object pointer
- * @return      Pointer to allocated the interrupt function handler 
- */
-void *HallSwitch::Interrupt::isrRegister(HallSwitch *objPtr) 
-{
-    objPtrVector[HallSwitch::Interrupt::idxNext] = objPtr;
-    return fnPtrVector[HallSwitch::Interrupt::idxNext++];
-}

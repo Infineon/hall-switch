@@ -27,6 +27,13 @@ class HallSpeed: public HallSwitch
          /** @} */
 
         /**
+         * @brief       Callback function type for interrupt mode 
+         * @param[in]   speed The new speed change. 
+         * @return      void
+         */
+        typedef void (*CBackSpd_t)(double);
+
+        /**
          * @brief Timer Interface
          */
         class Timer;
@@ -36,7 +43,7 @@ class HallSpeed: public HallSwitch
                                  Timer       *timer   = NULL,
                                  uint8_t     polesNum = 1,
                                  SpeedUnit_t units    = HERTZ,
-                                 CBack_t     cBack    = NULL,
+                                 CBackSpd_t  cBack    = NULL,
                                  GPIO        *power   = NULL);
         Error_t     begin        ();
         Error_t     end          ();
@@ -55,62 +62,6 @@ class HallSpeed: public HallSwitch
 
         void        callback        ();
         void        calculateSpeed  ();
-};
-
-
-class HallSpeed::Timer
-{
-    public: 
-
-        /**
-         * @brief   Initialiazes the timer
-         * @return  Timer error code
-         * @retval  OK if success
-         * @retval  INIT_ERROR if hardware interface error
-         */
-        virtual  HallSwitch::Error_t         init    () = 0;
-
-        /**
-         * @brief   Deinitialiazes the timer
-         * @return  Timer error code
-         * @retval  OK if success
-         * @retval  INIT_ERROR if hardware interface error
-         */
-        virtual  HallSwitch::Error_t         deinit   () = 0;
-
-        /**
-         * @brief   Starts the timer
-         * @return  Timer error code
-         * @retval  OK if success
-         * @retval  INIT_ERROR if hardware interface error
-         */
-        virtual  HallSwitch::Error_t         start   () = 0;
-
-        /**
-         * @brief       Elapsed time since the timer was started 
-         * @param[out]  elapsed Time in milliseconds 
-         * @return      Timer error code
-         * @retval      OK if success
-         * @retval      INIT_ERROR if hardware interface error    
-         */
-        virtual  HallSwitch::Error_t         elapsed (uint32_t &elapsed) = 0;
-        
-        /**
-         * @brief   Stops the timer
-         * @return  Timer error code
-         * @retval  OK if success
-         * @retval  INIT_ERROR if hardware interface error
-         */
-         virtual  HallSwitch::Error_t         stop    () = 0;
-        
-        /**
-         * @brief       Introduces a delay during the specified time    
-         * @param[in]   timeout    Delay time in milliseconds   
-         * @return      Timer error code
-         * @retval      OK if success
-         * @retval      INIT_ERROR if hardware interface error
-         */
-        virtual  HallSwitch::Error_t         delay   (uint32_t timeout) = 0;
 };
 
 #endif /** HALL_SPEED_H_ **/

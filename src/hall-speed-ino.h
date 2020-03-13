@@ -10,7 +10,7 @@
 
 #include <Arduino.h>
 #include "common/hall-speed.h"
-#include "pal/arduino/hall-switch-ard.h"
+#include "framework/arduino/hall-pal-ino.h"
 
 /**
  * @class HallSpeedIno
@@ -20,21 +20,30 @@ class HallSpeedIno: public HallSpeed
 {
     public:
 
-        enum HwPlatf_t
+        // enum HwPlatf_t
+        // {
+        //     TLE4964_3M_S2Go,      /**< TLE4964-3M Shield 2Go */
+        //     TLE4922_Speed_2GoKit,
+        // };
+
+        /**
+         * @brief Hall Speed Arduino hardware platform
+         */
+        struct Platform_t
         {
-            TLE4964_3M_S2Go,      /**< TLE4964-3M Shield 2Go */
-            TLE4922_Speed_2GoKit,
+            uint8_t output;     /**< Output pin */
+            uint8_t power;      /**< Power pin */
         };
 
         HallSpeedIno(uint8_t     outputPin, 
                      uint8_t     polesNum = 1,
                      SpeedUnit_t units    = HERTZ,
-                     CBack_t     cBack    = NULL,
+                     CBackSpd_t  cBack    = NULL,
                      uint8_t     powerPin = UNUSED_PIN);
-        HallSpeedIno(HwPlatf_t   hwPlatf,
+        HallSpeedIno(Platform_t  hwPlatf,
                      uint8_t     polesNum = 1,
                      SpeedUnit_t units    = HERTZ,
-                     CBack_t     cBack    = NULL);
+                     CBackSpd_t  cBack    = NULL);
 };
 
 #endif /** HALL_SPEED_INO_H_ **/

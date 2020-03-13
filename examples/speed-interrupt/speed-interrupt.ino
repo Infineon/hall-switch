@@ -21,9 +21,10 @@ HallSwitch::Status_t stat  = HallSwitch::Status_t::UNINITED;
 double               speed = 0.0;
 
 
-void IntCBack(HallSwitch::Result_t result)
+void IntCBack(double speed)
 {
-    Serial.println("Some event just happened and changed the speed");
+    Serial.print(speed);
+    Serial.println(" Some event just happened and changed the speed");
 }
 
 HallSpeedIno hs(HallSpeedIno::HwPlatf_t::TLE4964_3M_S2Go, 1, HallSpeed::HERTZ, IntCBack);

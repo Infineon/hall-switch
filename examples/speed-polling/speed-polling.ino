@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <hall-speed-ino.h>
 
+#define HALL_SWITCH_WICED_PLATFORM_ENABLED
 
 #ifdef XMC1100_XMC2GO
 #define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
@@ -92,3 +93,4 @@ void loop()
     JSONPrint(stat, speed); 
   }
 }
+

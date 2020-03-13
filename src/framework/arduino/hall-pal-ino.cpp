@@ -9,7 +9,7 @@
  */
 
 #include <Arduino.h>
-#include "hall-switch-ard.h"
+#include "hall-pal-ino.h"
 
 /**
  * @addtogroup hallgpioino
@@ -41,10 +41,10 @@ GPIOIno::GPIOIno(uint8_t      pin,
  * @return  GPIO error code
  * @retval  OK always
  */
-GPIOIno::Error_t GPIOIno::init()
+HallSwitch::Error_t GPIOIno::init()
 {   
     pinMode(this->pin, this->mode);
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -52,9 +52,9 @@ GPIOIno::Error_t GPIOIno::init()
  * @return  GPIO error code
  * @retval  OK always
  */
-GPIOIno::Error_t GPIOIno::deinit()
+HallSwitch::Error_t GPIOIno::deinit()
 {
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -62,10 +62,10 @@ GPIOIno::Error_t GPIOIno::deinit()
  * @return  GPIO error code
  * @retval  OK always
  */
-GPIOIno::Error_t GPIOIno::enableInt(HallSwitch *ptr)
+HallSwitch::Error_t GPIOIno::enableInt(HallSwitch *ptr)
 {
     attachInterrupt(digitalPinToInterrupt(this->pin), HallSwitch::Interrupt::isrRegister(ptr), CHANGE);
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -73,10 +73,10 @@ GPIOIno::Error_t GPIOIno::enableInt(HallSwitch *ptr)
  * @return  GPIO error code
  * @retval  OK always
  */
-inline GPIOIno::Error_t GPIOIno::disableInt()
+inline HallSwitch::Error_t GPIOIno::disableInt()
 {
     detachInterrupt(digitalPinToInterrupt(this->pin));
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -116,10 +116,10 @@ inline GPIOIno::VLevel_t GPIOIno::read()
  * @retval      OK if success
  * @retval      WRITE_ERROR if write error
  */
-inline GPIOIno::Error_t GPIOIno::write(VLevel_t level)
+inline HallSwitch::Error_t GPIOIno::write(VLevel_t level)
 {
     digitalWrite(this->pin, GPIO_HIGH);
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -130,7 +130,7 @@ inline GPIOIno::Error_t GPIOIno::write(VLevel_t level)
  * @retval      OK if success
  * @retval      WRITE_ERROR if write error
  */
-inline GPIOIno::Error_t GPIOIno::enable()
+inline HallSwitch::Error_t GPIOIno::enable()
 {
     if(this->logic == POSITIVE)
     {
@@ -140,7 +140,7 @@ inline GPIOIno::Error_t GPIOIno::enable()
     {
         digitalWrite(this->pin, GPIO_LOW);
     }
-    return OK;
+    return HallSwitch::OK;
 }
 
 /**
@@ -151,7 +151,7 @@ inline GPIOIno::Error_t GPIOIno::enable()
  * @retval      OK if success
  * @retval      WRITE_ERROR if write error
  */
-inline GPIOIno::Error_t GPIOIno::disable()
+inline HallSwitch::Error_t GPIOIno::disable()
 {
    if(this->logic == POSITIVE)
     {
@@ -161,7 +161,7 @@ inline GPIOIno::Error_t GPIOIno::disable()
     {
         digitalWrite(this->pin, GPIO_HIGH);
     }
-    return OK;
+    return HallSwitch::OK;
 }
 
 /** @} */
@@ -252,14 +252,3 @@ inline HallSwitch::Error_t TimerIno::delay(uint32_t timeout)
 } 
 /** @} */
  
-#ifdef XMC1100_XMC2GO                                       /**< xmc2go + Shield2Go  */ 
-ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins = {9, UNUSED_PIN};    /**< Pin connected to Q1 */                                                      
-#elif ((XMC1100_Boot_Kit) \
-      || (XMC4700_Relax_Kit) \
-      || (ARDUINO_AVR_UNO))                                 /**< xmc arduino and arduino uno boards */  
-ArdHwPlatfPins_t TLE4964_3M_S2Go_Pins = {3, UNUSED_PIN};    /**< Pin connected to Q1 */
-#else
-    # error "Board not yet defined. Please define the specific Arduino boards Pins"
-#endif
-
-ArdHwPlatfPins_t TLE4922_2GoKit_Pins = {1, UNUSED_PIN};
