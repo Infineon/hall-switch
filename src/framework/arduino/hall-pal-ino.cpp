@@ -118,7 +118,7 @@ inline GPIOIno::VLevel_t GPIOIno::read()
  */
 inline HallSwitch::Error_t GPIOIno::write(VLevel_t level)
 {
-    digitalWrite(this->pin, GPIO_HIGH);
+    digitalWrite(this->pin, level);
     return HallSwitch::OK;
 }
 

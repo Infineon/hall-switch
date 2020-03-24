@@ -18,16 +18,6 @@
 #endif
 
 HallSwitch::Status_t stat  = HallSwitch::Status_t::UNINITED;
-double               speed = 0.0;
-
-
-void IntCBack(double speed)
-{
-    Serial.print(speed);
-    Serial.println(" Some event just happened and changed the speed");
-}
-
-HallSpeedIno hs(HallSpeedIno::HwPlatf_t::TLE4964_3M_S2Go, 1, HallSpeed::HERTZ, IntCBack);
 
 /**
  * @brief       Prints the sensor data in JSON format 
@@ -44,6 +34,13 @@ void JSONPrint(HallSwitch::Status_t stat,
   Serial.print(speed);
   Serial.println(" }");
 }
+
+void IntCBack(double speed)
+{
+    JSONPrint(stat, speed);
+}
+
+HallSpeedIno hs(TLE4964_3M_S2Go_XMC2Go, 1, HallSpeed::HERTZ, IntCBack);
 
 void setup()
 {      
@@ -76,7 +73,7 @@ void setup()
   Serial.println("Hall Speed enabled");
 
   stat = hs.getStatus();
-  JSONPrint(stat, speed);
+  JSONPrint(stat, 0.0);
 }
 
 void loop()

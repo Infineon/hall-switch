@@ -47,10 +47,10 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
  * @return          void         
  */
-HallSpeedIno::HallSpeedIno(Platform_t  hwPlatf,
-                           uint8_t     polesNum,
-                           SpeedUnit_t units,
-                           CBackSpd_t  cBack)
+HallSpeedIno::HallSpeedIno(PlatformIno_t  hwPlatf,
+                           uint8_t        polesNum,
+                           SpeedUnit_t    units,
+                           CBackSpd_t     cBack)
 :HallSpeed(new GPIOIno(hwPlatf.output, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
            new TimerIno(),
            polesNum,

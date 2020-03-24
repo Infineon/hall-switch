@@ -8,8 +8,8 @@
  *              generate a Q output signal level change: either high to low 
  *      	    (for no B field to B field), or low to high (for B field to
  *              no B field). The interrupt occurs for any of both events.
- *              The interrupt handler function determines which of the event
- *              has ocurred, and print the event on through the serial.
+ *              The interrupt handler function determines which of the events
+ *              have ocurred, and print the event through the serial.
  *              In the presence of magnetic field, the LED1 is turned ON.
  * @copyright   Copyright (c) 2019 Infineon Technologies AG         
  */

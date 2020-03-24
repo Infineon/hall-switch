@@ -1,6 +1,6 @@
 #ifdef HALL_SWITCH_WICED_PLATFORM_ENABLED
 
-#include "../../framework/cypress/wiced-43xx/hall-wiced-43xxx-platf.h"
+#include "../../framework/wiced-43xxx/hall-switch-wiced.h"
 
 /**
  * @addtogroup tle49643m

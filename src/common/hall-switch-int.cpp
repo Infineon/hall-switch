@@ -1,4 +1,3 @@
-
 #include "hall-switch.h"
 #include "hall-switch-int.h"
 

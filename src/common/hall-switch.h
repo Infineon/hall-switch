@@ -127,7 +127,7 @@ class HallSwitch
         GPIO        *power;             /**< Power switch controller mode GPIO hardware interface pointer */
         PowerMode_t powerMode;          /**< Power mode */
 
-        void        callback     ();
+        virtual void callback   ();
       
 };
 
