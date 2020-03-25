@@ -8,7 +8,7 @@
 #ifndef HALL_PAL_GPIO_H_
 #define HALL_PAL_GPIO_H_
 
-#include "../common/hall-switch.h"
+#include "../corelib/hall-switch.h"
 
 /**
  * @class GPIO

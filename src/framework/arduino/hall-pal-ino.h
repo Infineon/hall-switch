@@ -9,9 +9,9 @@
 #define HALL_SWITCH_ARD_H_
 
 #include <stdint.h>
-#include "../../common/hall-switch.h"
-#include "../../common/hall-speed.h"
-#include "../../common/hall-switch-int.h"
+#include "../../corelib/hall-switch.h"
+#include "../../corelib/hall-speed.h"
+#include "../../corelib/hall-switch-int.h"
 #include "../../pal/hall-pal-gpio.h"
 #include "../../pal/hall-pal-timer.h"
 

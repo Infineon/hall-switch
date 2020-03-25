@@ -8,7 +8,7 @@
 #ifndef HALL_PAL_TIMER_H_
 #define HALL_PAL_TIMER_H_
 
-#include "../common/hall-speed.h"
+#include "../corelib/hall-speed.h"
 
 class HallSpeed::Timer
 {
