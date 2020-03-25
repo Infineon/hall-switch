@@ -45,12 +45,13 @@ class HallSpeed: public HallSwitch
                                  SpeedUnit_t units    = HERTZ,
                                  CBackSpd_t  cBack    = NULL,
                                  GPIO        *power   = NULL);
-        Error_t     begin        ();
-        Error_t     end          ();
-        Error_t     enable       ();
-        Error_t     disable      ();                         
-        Error_t     updateSpeed  ();
-        double      getSpeed     ();
+                   ~HallSpeed   ();
+        Error_t     init        ();
+        Error_t     deinit      ();
+        Error_t     enable      ();
+        Error_t     disable     ();                         
+        Error_t     updateSpeed ();
+        double      getSpeed    ();
 
     protected:
         Timer       *timer;                  /**< Timer interface pointer */

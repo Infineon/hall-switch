@@ -53,11 +53,19 @@ HallSpeed::HallSpeed(GPIO       *output,
     this->speed  = 0.0;
 }
 
-HallSwitch::Error_t HallSpeed::begin()
+HallSpeed::~HallSpeed()
+{
+    if(status == POWER_ON)
+        disable();
+    if(status == POWER_OFF)
+        deinit();
+}
+
+HallSwitch::Error_t HallSpeed::init()
 {
     Error_t err = OK;
     
-    err = HallSwitch::begin();
+    err = HallSwitch::init();
     if(err != OK) return err;
 
     if(timer == NULL)
@@ -71,11 +79,11 @@ HallSwitch::Error_t HallSpeed::begin()
     return err;
 }
 
-HallSwitch::Error_t HallSpeed::end()
+HallSwitch::Error_t HallSpeed::deinit()
 {
     Error_t err = OK;
 
-    err = HallSwitch::end();
+    err = HallSwitch::deinit();
     if(err != OK) return err;
 
     err = timer->deinit();

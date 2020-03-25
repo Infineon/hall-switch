@@ -17,7 +17,7 @@
  * @class HallSwitchIno
  */
 
-class HallSwitchIno: public HallSwitch
+class HallSwitchIno
 {
     public:
         /**
@@ -25,12 +25,19 @@ class HallSwitchIno: public HallSwitch
          * @{
          */
 
-        HallSwitchIno(uint8_t       outputPin, 
-                      CBack_t       cBack      = NULL,
-                      uint8_t       powerPin   = UNUSED_PIN);
-        HallSwitchIno(PlatformIno_t hwPlatf,
-                      CBack_t       cBack      = NULL);
+                    HallSwitchIno   (uint8_t                outputPin, 
+                                     HallSwitch::CBack_t    cBack      = NULL,
+                                     uint8_t                powerPin   = UNUSED_PIN);
+                    HallSwitchIno   (PlatformIno_t          hwPlatf,
+                                     HallSwitch::CBack_t    cBack      = NULL);
+                   ~HallSwitchIno   ();
+        int         begin           ();
+        int         end             ();
+        int         getBField       ();
         /** @} */
+
+    private:
+        HallSwitch sw;
 };
 
 #endif /** HALL_SWITCH_INO_H_ **/

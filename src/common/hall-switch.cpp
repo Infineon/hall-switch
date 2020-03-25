@@ -82,7 +82,7 @@ HallSwitch::~HallSwitch()
     if(status == POWER_ON)
         disable();
     if(status == POWER_OFF)
-        end();
+        deinit();
 }
 
 /**
@@ -91,7 +91,7 @@ HallSwitch::~HallSwitch()
  * @retval  OK if success
  * @retval  INTF_ERROR if hardware interface error
  */
-HallSwitch::Error_t  HallSwitch::begin()
+HallSwitch::Error_t  HallSwitch::init()
 {
     Error_t err = OK;
 
@@ -121,7 +121,7 @@ HallSwitch::Error_t  HallSwitch::begin()
  * @retval  OK if success
  * @retval  INTF_ERROR if hardware interface error
  */
-HallSwitch::Error_t  HallSwitch::end()
+HallSwitch::Error_t  HallSwitch::deinit()
 {
     Error_t err = OK;
 

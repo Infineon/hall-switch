@@ -26,15 +26,16 @@
  */
 HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
                            uint8_t     polesNum,
-                           SpeedUnit_t units,
-                           CBackSpd_t  cBack,
+                           HallSpeed::SpeedUnit_t units,
+                           HallSpeed::CBackSpd_t  cBack,
                            uint8_t     powerPin)
-:HallSpeed(new GPIOIno(outputPin, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
-           new TimerIno(),
-           polesNum,
-           units,
-           cBack,
-           (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(outputPin, OUTPUT, GPIO::VLogic_t::POSITIVE)){ }
+:sp(new GPIOIno(outputPin, INPUT_PULLUP, HallSwitch::GPIO::VLogic_t::POSITIVE), 
+    new TimerIno(),
+    polesNum,
+    units,
+    cBack,
+    (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(outputPin, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
+
 
 /**
  * @brief           Hall speed ino instance constructor with predefined Arduino hardware platform
@@ -49,11 +50,48 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
  */
 HallSpeedIno::HallSpeedIno(PlatformIno_t  hwPlatf,
                            uint8_t        polesNum,
-                           SpeedUnit_t    units,
-                           CBackSpd_t     cBack)
-:HallSpeed(new GPIOIno(hwPlatf.output, INPUT_PULLUP, GPIO::VLogic_t::POSITIVE), 
-           new TimerIno(),
-           polesNum,
-           units,
-           cBack,
-           (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, GPIO::VLogic_t::POSITIVE)){ }
+                           HallSpeed::SpeedUnit_t    units,
+                           HallSpeed::CBackSpd_t     cBack)
+:sp(new GPIOIno(hwPlatf.output, INPUT_PULLUP, HallSwitch::GPIO::VLogic_t::POSITIVE), 
+    new TimerIno(),
+    polesNum,
+    units,
+    cBack,
+    (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
+
+
+HallSpeedIno::~HallSpeedIno()
+{
+    sp.~HallSpeed();
+}
+
+int HallSpeedIno::begin()
+{
+    int err = 0;
+    
+    if(HallSpeed::OK != sp.init())
+        err = -1;
+    if(HallSpeed::OK != sp.enable())
+        err = -1;
+    
+    return err;
+}
+
+int HallSpeedIno::end()
+{
+    int err = 0;
+    
+    if(HallSpeed::OK != sp.disable())
+        err = -1;
+    if(HallSwitch::OK != sp.deinit())
+        err = -1;
+    
+    return err;
+}
+
+double HallSpeedIno::getSpeed()
+{
+    sp.updateSpeed();
+    
+    return sp.getSpeed();
+}

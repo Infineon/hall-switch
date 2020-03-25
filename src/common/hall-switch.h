@@ -107,8 +107,8 @@ class HallSwitch
                                   CBack_t     cBack   = NULL,
                                   GPIO        *power  = NULL);
                    ~HallSwitch   ();
-        Error_t     begin        ();
-        Error_t     end          ();
+        Error_t     init         ();
+        Error_t     deinit       ();
         Error_t     enable       ();
         Error_t     disable      ();
         Status_t    getStatus    ();

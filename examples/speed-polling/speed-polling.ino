@@ -18,29 +18,23 @@
 #define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
 #endif
 
-HallSwitch::Status_t stat  = HallSwitch::Status_t::UNINITED;
-double               speed = 0.0;
-HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);
+HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);   /**< Hall Speed object */
+double               speed = 0.0;                         
 
 /**
  * @brief       Prints the sensor data in JSON format 
- * @param[in]   stat  status
  * @param[in]   speed Speed value
-
  */
-void JSONPrint(HallSwitch::Status_t stat,
-               double speed)
+void JSONPrint(double speed)
 {
-  Serial.print("{ \"status\" : ");
-  Serial.print(stat);
-  Serial.print(", \"speed\" : ");
+  Serial.print("{ \"speed\" : ");
   Serial.print(speed);
   Serial.println(" }");
 }
 
 void setup()
 {      
-  HallSwitch::Error_t errCode = HallSwitch::Error_t::OK;
+  int err = 0;
 
   delay(1000);
 
@@ -50,47 +44,32 @@ void setup()
   pinMode(LED1, OUTPUT);
   Serial.println("LED1 Initialized");
 
-  /* Begin switch hardware interfaces */ 
-  errCode = hs.begin();
-  if(errCode != HallSwitch::Error_t::OK)
-  {
-      Serial.print("Hall Speed error: ");
-      Serial.println(errCode);
-  }
-  Serial.println("Hall Speed initialized");
+  err = hs.begin();
+  if(0 > err ){ Serial.print("Hall Speed error");}
 
-  /* Enable the switch */
-  errCode = hs.enable();
-  if(errCode != HallSwitch::Error_t::OK)
-  {
-      Serial.print("Hall Speed error: ");
-      Serial.println(errCode);
-  }
-  Serial.println("Hall Speed enabled");
+  Serial.println("Hall Speed started");
 
-  JSONPrint(stat, speed);
+  JSONPrint(speed);
 }
 
-HallSwitch::Status_t curStat  = stat;
-double               curSpeed = speed;
+double curSpeed = speed;
 
 void loop()
-{
-  hs.updateSpeed();
- 
-  curStat  = hs.getStatus();
+{ 
   curSpeed = hs.getSpeed();
 
-  if (curStat != stat || curSpeed != speed)
+  /** Only update LED and data when speed changes */
+  if (curSpeed != speed)
   {
-    stat  = curStat;
-    if(curSpeed > (speed + 5) )
-    {
-        digitalWrite(LED1, HIGH);
-    }
     speed = curSpeed;
-    
-    JSONPrint(stat, speed); 
+  
+    digitalWrite(LED1, HIGH);
+  
+    JSONPrint(speed); 
   }
+  else
+  {
+    digitalWrite(LED1, LOW);
+  }  
 }
 
