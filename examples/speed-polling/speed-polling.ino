@@ -5,17 +5,10 @@
 #define HALL_SWITCH_WICED_PLATFORM_ENABLED
 
 #ifdef XMC1100_XMC2GO
+#define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
 #define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
 #else
 #define LED1 LED_BUILTIN
-#endif
-
-#ifdef XMC1100_XMC2GO 
-#define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
-#elif ((XMC1100_Boot_Kit) ||  \
-      (XMC4700_Relax_Kit) ||  \
-      (ARDUINO_AVR_UNO))
-#define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
 #endif
 
 HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);   /**< Hall Speed object */

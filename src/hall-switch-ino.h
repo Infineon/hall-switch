@@ -9,7 +9,7 @@
 #define HALL_SWITCH_INO_H_
 
 #include <Arduino.h>
-#include "common/hall-switch.h"
+#include "corelib/hall-switch.h"
 #include "framework/arduino/hall-pal-ino.h"
 #include "platform/xmc/hall-xmc-platf.h"
 

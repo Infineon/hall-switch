@@ -9,7 +9,7 @@
 #define HALL_SPEED_INO_H_
 
 #include <Arduino.h>
-#include "common/hall-speed.h"
+#include "corelib/hall-speed.h"
 #include "framework/arduino/hall-pal-ino.h"
 #include "platform/xmc/hall-xmc-platf.h"
 
