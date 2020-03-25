@@ -3,12 +3,7 @@
 #include <hall-switch-ino.h>
 
 
-#ifdef XMC1100_XMC2GO
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
-#define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
-#else
-#define LED1 LED_BUILTIN
-#endif
 
 HallSwitchIno        hs(Q_OUTPUT_PIN);  /**< Hall Switch object */
 int                  bfield = 0;        /**< B Field value: (0) no field, (1) field present */
@@ -33,7 +28,7 @@ void setup()
   Serial.begin(115200);
   Serial.println("Serial initialized");
 
-  pinMode(LED1, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.println("LED1 initialized");
 
   err = hs.begin();
@@ -56,11 +51,11 @@ void loop()
     bfield = curbfield;
     if(1 == bfield)
     {
-        digitalWrite(LED1, HIGH);
+        digitalWrite(LED_BUILTIN, HIGH);
 	  }
     else if(0 == bfield)
     {
-        digitalWrite(LED1, LOW);
+        digitalWrite(LED_BUILTIN, LOW);
 	  }
     else if(0 > bfield)
     {

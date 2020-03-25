@@ -2,13 +2,6 @@
 #include <stdint.h>
 #include <hall-speed-ino.h>
 
-
-#ifdef XMC1100_XMC2GO
-#define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
-#else
-#define LED1 LED_BUILTIN
-#endif
-
 /**
  * @brief       Prints the sensor data in JSON format 
  * @param[in]   speed Speed value
@@ -31,7 +24,7 @@ void setup()
   Serial.begin(115200);
   Serial.println("Serial initialized");
 
-  pinMode(LED1, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.println("LED1 Initialized");
 
   err = hs.begin();

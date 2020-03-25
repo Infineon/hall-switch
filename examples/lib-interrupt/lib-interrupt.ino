@@ -2,13 +2,6 @@
 #include <stdint.h>
 #include <hall-switch-ino.h>
 
-
-#ifdef XMC1100_XMC2GO
-#define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
-#else
-#define LED1 LED_BUILTIN
-#endif
-
 /**
  * @brief       Prints the sensor data in JSON format 
  * @param[in]   field B field value
@@ -24,16 +17,15 @@ void IntCBack(HallSwitch::Result_t result)
 {
 	if(result == HallSwitch::Result_t::B_FIELD_ON)
     {
-        digitalWrite(LED1, HIGH);
+        digitalWrite(LED_BUILTIN, HIGH);
 	}
     else if(result == HallSwitch::Result_t::B_FIELD_OFF)
     {
-        digitalWrite(LED1, LOW);
+        digitalWrite(LED_BUILTIN, LOW);
 	}
 
     JSONPrint(result);
 }
-
 
 HallSwitchIno hs(TLE4964_3M_S2Go_XMC2Go, IntCBack);  /**< Hall Switch object */
 
@@ -46,7 +38,7 @@ void setup()
     Serial.begin(115200);
     Serial.println("Serial initialized");
 
-    pinMode(LED1, OUTPUT);
+    pinMode(LED_BUILTIN, OUTPUT);
     Serial.println("LED1 initialized");
 
     err = hs.begin();
@@ -54,7 +46,6 @@ void setup()
 
     Serial.println("Hall Switch started");
 }
-
 
 void loop()
 {
