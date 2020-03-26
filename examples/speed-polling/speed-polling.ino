@@ -4,7 +4,6 @@
 
 #define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
 
-
 HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);   /**< Hall Speed object */
 double               speed = 0.0;                         
 

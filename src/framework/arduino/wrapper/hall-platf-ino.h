@@ -1,6 +1,4 @@
-#include "../../hall-switch-ino.h"
-#include "../../hall-speed-ino.h"
-#include "../../framework/arduino/hall-pal-ino.h"
+#include "../pal/hall-pal-ino.h"
 
 /**
  * @addtogroup Arduino Platforms

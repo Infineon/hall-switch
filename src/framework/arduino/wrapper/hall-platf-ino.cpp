@@ -12,7 +12,8 @@
 
 // ArdHwPlatfPins_t TLE4922_2GoKit_Pins = {1, UNUSED_PIN};
 
-#include "hall-xmc-platf.h"
+#include "hall-platf-ino.h"
+
 /**
  * @addtogroup Arduino Platforms
  */

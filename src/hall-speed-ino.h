@@ -10,8 +10,8 @@
 
 #include <Arduino.h>
 #include "corelib/hall-speed.h"
-#include "framework/arduino/hall-pal-ino.h"
-#include "platform/xmc/hall-xmc-platf.h"
+#include "framework/arduino/pal/hall-pal-ino.h"
+#include "framework/arduino/wrapper/hall-platf-ino.h"
 
 /**
  * @class HallSpeedIno
