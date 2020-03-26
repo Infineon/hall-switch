@@ -1,7 +1,7 @@
 
-#ifdef HALL_SWITCH_WICED_PLATFORM_ENABLED
+#include "hall-platf-wiced.h"
 
-#include "hall-cypress-platf.h"
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
 /**
  *  TLE4964 3M Shield 2Go + MyIOT Adapter + CYW943907AEVAL1F Eval Kit
@@ -12,4 +12,4 @@ HallSwitchWiced::WICEDHwPlatf_t TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F =
     .power  = UNUSED_PIN
 };
 
-#endif
+#endif /** HALL_SWITCH_FRAMEWORK **/

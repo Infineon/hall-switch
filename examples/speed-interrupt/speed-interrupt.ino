@@ -3,6 +3,10 @@
 #include <hall-speed-ino.h>
 
 /**
+ * Plug & Play hw platform --> XMC2Go with TLE4964-3M 2GoShield
+ */
+
+/**
  * @brief       Prints the sensor data in JSON format 
  * @param[in]   speed Speed value
  */

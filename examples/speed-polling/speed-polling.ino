@@ -2,6 +2,10 @@
 #include <stdint.h>
 #include <hall-speed-ino.h>
 
+/**
+ * Plug & Play hw platform --> TLE4922 Speed Sensor 2GoKit Output Pin
+ */
+
 #define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
 
 HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);   /**< Hall Speed object */

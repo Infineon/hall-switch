@@ -8,8 +8,12 @@
  * @copyright   Copyright (c) 2019 Infineon Technologies AG
  */
 
-#include <Arduino.h>
 #include "hall-pal-ino.h"
+
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
+
+#include <Arduino.h>
+#include "../../../corelib/hall-switch-int.h"
 
 /**
  * @addtogroup hallgpioino
@@ -166,6 +170,7 @@ inline HallSwitch::Error_t GPIOIno::disable()
 
 /** @} */
 
+#if (HALL_SPEED_ENABLED == 1)
 /**
  * @addtogroup halltimerino
  * @{
@@ -252,3 +257,5 @@ inline HallSwitch::Error_t TimerIno::delay(uint32_t timeout)
 } 
 /** @} */
  
+ #endif /** HALL_SPEED_ENABLED */
+ #endif /** HALL_SWITCH_FRAMEWORK **/

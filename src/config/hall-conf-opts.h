@@ -1,0 +1,8 @@
+
+#ifndef HALL_CONF_OPTS_H_
+#define HALL_CONF_OPTS_H_
+
+#define HALL_SWITCH_FRMWK_ARDUINO   0x00U
+#define HALL_SWITCH_FRMWK_WICED     0x01U
+
+#endif /** HALL_CONF_OPTS_H_ **/

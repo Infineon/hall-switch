@@ -8,9 +8,9 @@
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
  */
 
-#ifdef HALL_SWITCH_WICED_PLATFORM_ENABLED
+#include "hall-pal-wiced.h"
 
-#include "hall-switch-wiced.h"
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
 /**
  * @addtogroup hallgpiowiced
@@ -263,4 +263,4 @@ HallSwitchWiced::HallSwitchWiced(WICEDHwPlatf_t &hwPlatf,
     }
 }
 
-#endif
+#endif /** HALL_SWITCH_FRAMEWORK **/

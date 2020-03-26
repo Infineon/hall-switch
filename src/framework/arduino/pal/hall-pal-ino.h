@@ -8,12 +8,12 @@
 #ifndef HALL_SWITCH_ARD_H_
 #define HALL_SWITCH_ARD_H_
 
-#include <stdint.h>
-#include "../../corelib/hall-switch.h"
-#include "../../corelib/hall-speed.h"
-#include "../../corelib/hall-switch-int.h"
-#include "../../pal/hall-pal-gpio.h"
-#include "../../pal/hall-pal-timer.h"
+#include "../../../config/hall-conf.h"
+
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
+
+#include "../../../pal/hall-pal-gpio.h"
+#include "../../../pal/hall-pal-timer.h"
 
 
 class GPIOIno : virtual public HallSwitch::GPIO //, public HallSwitch::Interrupt 
@@ -40,6 +40,8 @@ class GPIOIno : virtual public HallSwitch::GPIO //, public HallSwitch::Interrupt
         HallSwitch::Error_t     disable       ();
 };
 
+#if (HALL_SPEED_ENABLED == 1)
+
 class TimerIno: virtual public HallSpeed::Timer
 {
     public:
@@ -56,13 +58,6 @@ class TimerIno: virtual public HallSpeed::Timer
         uint32_t curTime;   /**< Current time */
 };
 
-/**
- * @brief Arduino Hardware Platform Pins
- */
-typedef struct 
-{
-    uint8_t output;     /**< Output pin */
-    uint8_t power;      /**< Power pin */
-}PlatformIno_t;
-
+#endif /** HALL_SPEED_ENABLED */
+#endif /** HALL_SWITCH_FRAMEWORK **/
 #endif /** HALL_SWITCH_ARD_H_ **/

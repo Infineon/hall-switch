@@ -5,10 +5,12 @@
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
  */
 
-#ifdef HALL_SWITCH_WICED_PLATFORM_ENABLED
-
 #ifndef HALL_SWITCH_WICED_H_
 #define HALL_SWITCH_WICED_H_
+
+#include "../../../config/hall-conf.h"
+
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
 #include <stdint.h>
 #include "hall-switch.h"
@@ -40,6 +42,6 @@ class HallSwitchWiced : public HallSwitch
         /** @} */
 };
 
-#endif /** HALL_SWITCH_WICED_H_ **/
+#endif /** HALL_SWITCH_FRAMEWORK **/
 
 #endif

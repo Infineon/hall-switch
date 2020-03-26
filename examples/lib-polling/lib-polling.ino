@@ -2,6 +2,9 @@
 #include <stdint.h>
 #include <hall-switch-ino.h>
 
+/**
+ * Plug & Play hw platform --> XMC2Go with TLE4964-3M 2GoShield
+ */
 
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
 

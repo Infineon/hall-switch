@@ -11,6 +11,13 @@
  */
 
 #include "hall-speed-ino.h"
+
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
+#if (HALL_SPEED_ENABLED == 1)
+
+#include <Arduino.h>
+#include "framework/arduino/pal/hall-pal-ino.h"
+
 /**
  * @brief           Hall speed ino instance constructor with Arduino pins
  *                  Mandatory arguments: 
@@ -95,3 +102,6 @@ double HallSpeedIno::getSpeed()
     
     return sp.getSpeed();
 }
+
+#endif /** HALL_SPEED_ENABLED */
+#endif /** HALL_SWITCH_FRAMEWORK **/

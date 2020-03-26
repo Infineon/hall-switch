@@ -5,8 +5,12 @@
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  */
 
+
 #ifndef HALL_SPEED_H_
 #define HALL_SPEED_H_
+
+#include "../config/hall-conf.h"
+#if (HALL_SPEED_ENABLED == 1)
 
 #include "hall-switch.h"
 
@@ -65,4 +69,5 @@ class HallSpeed: public HallSwitch
         void        calculateSpeed  ();
 };
 
+#endif /** HALL_SPEED_ENABLED */
 #endif /** HALL_SPEED_H_ **/

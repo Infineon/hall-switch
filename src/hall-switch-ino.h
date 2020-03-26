@@ -8,9 +8,11 @@
 #ifndef HALL_SWITCH_INO_H_
 #define HALL_SWITCH_INO_H_
 
-#include <Arduino.h>
+#include "config/hall-conf.h"
+
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
+
 #include "corelib/hall-switch.h"
-#include "framework/arduino/pal/hall-pal-ino.h"
 #include "framework/arduino/wrapper/hall-platf-ino.h"
 
 /**
@@ -40,4 +42,5 @@ class HallSwitchIno
         HallSwitch sw;
 };
 
+#endif /** HALL_SWITCH_FRAMEWORK **/
 #endif /** HALL_SWITCH_INO_H_ **/

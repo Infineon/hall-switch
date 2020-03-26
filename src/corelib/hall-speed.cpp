@@ -6,6 +6,9 @@
  */
 
 #include "hall-speed.h"
+
+#if (HALL_SPEED_ENABLED == 1)
+
 #include "../pal/hall-pal-gpio.h"
 #include "../pal/hall-pal-timer.h"
 
@@ -177,3 +180,4 @@ void HallSpeed::calculateSpeed()
     speed = HallSpeed::speedCoeff[sUnits]/((double)polesPair * (double)elapsed);
 }
 
+#endif /** HALL_SPEED_ENABLED */

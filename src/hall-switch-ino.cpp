@@ -11,6 +11,11 @@
 
 #include "hall-switch-ino.h"
 
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
+
+#include <Arduino.h>
+#include "framework/arduino/pal/hall-pal-ino.h"
+
 /**
  * @brief           Hall switch ino instance constructor with Arduino pins
  *                  Mandatory arguments: 
@@ -83,3 +88,5 @@ int HallSwitchIno::getBField()
 
     return (int)(sw.getBField());
 }
+
+#endif /** HALL_SWITCH_FRAMEWORK **/

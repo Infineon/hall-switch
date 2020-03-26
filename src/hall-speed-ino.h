@@ -8,9 +8,12 @@
 #ifndef HALL_SPEED_INO_H_
 #define HALL_SPEED_INO_H_
 
-#include <Arduino.h>
+#include "config/hall-conf.h"
+
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
+#if (HALL_SPEED_ENABLED == 1)
+
 #include "corelib/hall-speed.h"
-#include "framework/arduino/pal/hall-pal-ino.h"
 #include "framework/arduino/wrapper/hall-platf-ino.h"
 
 /**
@@ -38,4 +41,6 @@ class HallSpeedIno
         HallSpeed sp;
 };
 
+#endif /** HALL_SPEED_ENABLED */
+#endif /** HALL_SWITCH_FRAMEWORK **/
 #endif /** HALL_SPEED_INO_H_ **/

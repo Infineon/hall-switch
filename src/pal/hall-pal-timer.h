@@ -8,6 +8,9 @@
 #ifndef HALL_PAL_TIMER_H_
 #define HALL_PAL_TIMER_H_
 
+#include "../config/hall-conf.h"
+#if (HALL_SPEED_ENABLED == 1)
+
 #include "../corelib/hall-speed.h"
 
 class HallSpeed::Timer
@@ -65,4 +68,5 @@ class HallSpeed::Timer
         virtual  HallSwitch::Error_t         delay   (uint32_t timeout) = 0;
 };
 
+#endif /** HALL_SPEED_ENABLED **/
 #endif /** HALL_PAL_TIMER_H_ **/

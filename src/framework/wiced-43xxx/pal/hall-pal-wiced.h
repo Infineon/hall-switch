@@ -1,6 +1,6 @@
+#include "../../../config/hall-conf.h"
 
-
-
+#if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
 class GPIOWiced : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
 {
@@ -25,3 +25,5 @@ class GPIOWiced : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
         Error_t       enable        ();
         Error_t       disable       ();
 };
+
+#endif /** HALL_SWITCH_FRAMEWORK **/
