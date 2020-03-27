@@ -1,12 +1,10 @@
 /** 
  * @file        hall-switch-ino.cpp
- * @brief       Hall Switch Arduino Class
- *                  
- *  Arduino wrapper for hall switch hardware abstraction layer
- *      - Hardware Allocation using direct arduino pins
- * 
- * @date        July 2019
+ * @brief       Hall Switch Arduino API 
+ * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #include "hall-switch-ino.h"
@@ -16,19 +14,7 @@
 #include <Arduino.h>
 #include "framework/arduino/pal/hall-pal-ino.h"
 
-/**
- * @brief           Hall switch ino instance constructor with Arduino pins
- *                  Mandatory arguments: 
- *                      - sensor output pin
- *                  Optional  arguments: 
- *                      - interrupt callback. By default NULL. Required to enable interrupt mode.
- *                      - sensor power pin (only for switch powered mode platform). By default it is UNUSED.
- *                 
- * @param[in]       outputPin   Hall switch output pin
- * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
- * @param[in]       powerPin    Hall switch power pin. When passed, enabled the sensor switch controlled mode.
- * @return          void         
- */
+
 HallSwitchIno::HallSwitchIno(uint8_t               outputPin, 
                              HallSwitch::CBack_t   cBack,
                              uint8_t               powerPin)

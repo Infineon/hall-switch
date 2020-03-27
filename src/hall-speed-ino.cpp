@@ -1,13 +1,10 @@
 /** 
  * @file        hall-speed-ino.cpp
  * @brief       Hall Speed Arduino Class
- *                  
- *  Arduino wrapper for hall speed hardware abstraction layer
- *      - Hardware Allocation using direct arduino pins
- *      - Predefined Arduino based hardware platforms: Shield2Go + (XMC Arduino / Arduino UNO)
- * 
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #include "hall-speed-ino.h"

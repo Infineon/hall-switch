@@ -3,6 +3,8 @@
  * @brief       Hall Switch Speed Sensor
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ *
+ * SPDX-License-Identifier: MIT
  */
 
 #include "hall-speed.h"
@@ -19,6 +21,12 @@ double const HallSpeed::speedCoeff[] =
     60000.0  /**< RPM  (60 x 1000 ms)*/
 };
 
+/**
+ * @brief   Hall Speed Default Constructor
+ *          - Hardware interfaces pointers set to NULL
+ *          - All speed parameters set to zero  
+ * @pre     None  
+ */
 HallSpeed::HallSpeed()
 {
     timer     = NULL;
@@ -28,10 +36,12 @@ HallSpeed::HallSpeed()
 }
 
 /**
- * @brief       Hall Switch Constructor
+ * @brief       Hall Speed Constructor
  * 
  *   Mandatory arguments: 
- *      - sensor output GPIO pointer
+ *      - GPIO PAL pointer
+ *      - Timer PAL interface pointer
+
  * 
  *   Optional  arguments: 
  *      - interrupt callback. By default NULL. Required to enable interrupt mode.
@@ -40,6 +50,8 @@ HallSpeed::HallSpeed()
  * @param[in]   *output Sensor output GPIO interface pointer
  * @param[in]   cBack   Callback for interrupt mode. When passed, it enables interrupt mode
  * @param[in]   *power  Sensor switch poewr controller GPIO interface pointer. Default NULL will set power mode to MAIN
+ * 
+ * @pre None
  */
 
 HallSpeed::HallSpeed(GPIO       *output,

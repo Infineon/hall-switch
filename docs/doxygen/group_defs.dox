@@ -1,28 +1,36 @@
 /**
- * @defgroup    hallswitchhal Hardware Abstraction Layer
+ * @defgroup hscorelib      Core Library
  * @{
  */
 
-/** @defgroup   hallswitchdatat     Data Types */
-/** @defgroup   hallswitchcpphal    API */
-/** @defgroup   hallswitchinohal    Arduino API */
-/** @defgroup   hallswitchwicedhal  WICED API */
-/** @defgroup   hallswitchhwi       Hardware Interfaces */
+/** @defgroup hspal         Platform Abstraction Layer */
 
 /** @} */
 
-
-/** @defgroup hallswitchpal PAL Frameworks
- * @{
+/** @defgroup hsfrmw        Frameworks
+ *  @{
  */
-/** @defgroup hallgpioino      Arduino GPIO */
-/** @defgroup hallgpiowiced    WICED GPIO */  
+
+/** @defgroup hsino         Arduino 
+ *  @{
+ */
+
+/** @defgroup hsinoapi      API */
+/** @defgroup hsinopal      PAL */
+/** @defgroup hsinohw       HW Platforms */
+
 /** @} */
 
-/**
- * @defgroup hallswitchhwp Hardware Platforms
- * @{
+/** @defgroup hswiced       WICED 
+ *  @{
  */
-/** @defgroup tle49643ms2go    TLE4964-3M Shield2Go */
+
+/** @defgroup hswicedapi   API */
+/** @defgroup hswicedpal   PAL */
+/** @defgroup hswicedhw    HW Platforms */
+
 /** @} */
+
+/** @} */
+
 

@@ -1,8 +1,10 @@
 /** 
  * @file        hall-switch-ino.h
- * @brief       Hall Switch Arduino Class
+ * @brief       Hall Switch Arduino API
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef HALL_SWITCH_INO_H_
@@ -16,16 +18,14 @@
 #include "framework/arduino/wrapper/hall-platf-ino.h"
 
 /**
- * @class HallSwitchIno
+ * @addtogroup hsinoapi
+ * @{
  */
 
 class HallSwitchIno
 {
     public:
-        /**
-         * @addtogroup hallswitchinohal
-         * @{
-         */
+ 
 
                     HallSwitchIno   (uint8_t                outputPin, 
                                      HallSwitch::CBack_t    cBack      = NULL,
@@ -36,11 +36,13 @@ class HallSwitchIno
         int         begin           ();
         int         end             ();
         int         getBField       ();
-        /** @} */
+
 
     private:
         HallSwitch sw;
 };
+
+/** @} */
 
 #endif /** HALL_SWITCH_FRAMEWORK **/
 #endif /** HALL_SWITCH_INO_H_ **/

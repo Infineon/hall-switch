@@ -3,6 +3,8 @@
  * @brief       Hall Switch GPIO Platform Abstraction Layer
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef HALL_PAL_GPIO_H_
@@ -11,12 +13,10 @@
 #include "../corelib/hall-switch.h"
 
 /**
- * @class GPIO
- */
-/**
- * @addtogroup hallswitchhwi
+ * @addtogroup hspal
  * @{
- */ 
+ */
+
 class HallSwitch::GPIO
 {    
     public:  
@@ -132,6 +132,7 @@ class HallSwitch::GPIO
          */
         virtual HallSwitch::Error_t     disable     () = 0;
 };
+
 /** @} */
 
 #endif /** HALL_PAL_GPIO_H_ **/

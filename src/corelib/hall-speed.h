@@ -1,10 +1,11 @@
 /** 
  * @file        hall-speed.h
- * @brief       Hall Switch Speed Sensor
+ * @brief       Hall Speed Sensor
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ *
+ * SPDX-License-Identifier: MIT
  */
-
 
 #ifndef HALL_SPEED_H_
 #define HALL_SPEED_H_
@@ -13,6 +14,11 @@
 #if (HALL_SPEED_ENABLED == 1)
 
 #include "hall-switch.h"
+
+/**
+ * @addtogroup hscorelib
+ * @{
+ */ 
 
 class HallSpeed: public HallSwitch
 {           
@@ -28,7 +34,7 @@ class HallSpeed: public HallSwitch
             RADS    = 1,    /**< rads/s */  
             RPM     = 2     /**< RPM */
          };
-         /** @} */
+        /** @} */
 
         /**
          * @brief       Callback function type for interrupt mode 
@@ -68,6 +74,8 @@ class HallSpeed: public HallSwitch
         void        callback        ();
         void        calculateSpeed  ();
 };
+
+/** @} */
 
 #endif /** HALL_SPEED_ENABLED */
 #endif /** HALL_SPEED_H_ **/

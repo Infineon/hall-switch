@@ -1,10 +1,10 @@
 /** 
  * @file        hall-conf-dfl.h
  * @brief       Hall Switch Default Library Configuration
- *              Preprocessor library configuration. 
- *              Enables conditional compiling of relevant library modules.
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 

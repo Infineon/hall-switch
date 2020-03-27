@@ -1,27 +1,20 @@
 /** 
  * @file        hall-switch.cpp
- * @brief       Hall Switch Hardware Abstraction Layer
- *              Features: 
- *              - Polling or interrupt based measuring mode
- *              - GPIO controlled power-on/off interface available
- *              - Flexible hardware platform configuration
- * 
+ * @brief       Hall Switch API
  * @date        July 2019
  * @copyright   Copyright (c) 2019 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #include "hall-switch.h"
 #include "../pal/hall-pal-gpio.h"
 
 /**
- * @addtogroup hallswitchcpphal
- * @{
- */
-
-/**
  * @brief   Hall Switch Default Constructor
  *          - Hardware interfaces pointers set to NULL
  *          - Default modes polling (for measure mode) and main (for switch power mode)      
+ * @pre    None
  */
 HallSwitch::HallSwitch()
 {
@@ -49,6 +42,8 @@ HallSwitch::HallSwitch()
  * @param[in]   *output Sensor output GPIO interface pointer
  * @param[in]   cBack   Callback for interrupt mode. When passed, it enables interrupt mode
  * @param[in]   *power  Sensor switch poewr controller GPIO interface pointer. Default NULL will set power mode to MAIN
+ *
+ * @pre    None
  */
 HallSwitch::HallSwitch(GPIO         *output,
                        CBack_t      cBack,
@@ -76,6 +71,7 @@ HallSwitch::HallSwitch(GPIO         *output,
  *          Disables the sensor:
  *              - If "interrupt measuring mode" is enabled, the interrupt is disabled
  *              - If "switch power mode" is configured, the sensor power is disabled          
+ * @pre    Call constructor HallSwitch()
  */
 HallSwitch::~HallSwitch()
 {
@@ -279,7 +275,6 @@ void HallSwitch::callback()
     cBack(bfieldVal);
 }
 
-/** @} */
 
 
 

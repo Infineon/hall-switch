@@ -1,3 +1,12 @@
+/** 
+ * @file        hall-conf.h
+ * @brief       Hall Switch Library Configuration
+ * @date        March 2020
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ *              
+ * SPDX-License-Identifier: MIT
+ */
+
 #ifndef HALL_CONF_H_
 #define HALL_CONF_H_
 

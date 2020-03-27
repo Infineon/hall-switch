@@ -1,8 +1,9 @@
 /** 
  * @file        hall-switch.h
- * @brief       Hall Switch Hardware Abstraction Layer
+ * @brief       Hall Switch API
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
  * SPDX-License-Identifier: MIT
  */
 
@@ -12,17 +13,15 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+
 /**
- * @class HallSwitch
+ * @addtogroup hscorelib
+ * @{
  */
 
 class HallSwitch
 {
     public:
-        /**
-         * @addtogroup hallswitchdatat
-         * @{
-         */
 
         /**
          * @name    Error codes
@@ -91,8 +90,6 @@ class HallSwitch
          */
         typedef void (*CBack_t)(Result_t);
 
-        /** @} */
-
         /**
          * @brief   GPIO Hardware Interface
          */
@@ -131,5 +128,7 @@ class HallSwitch
         virtual void callback   ();
       
 };
+
+/** @} */
 
 #endif /** HALL_SWTICH_H_ **/

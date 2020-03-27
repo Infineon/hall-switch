@@ -1,8 +1,10 @@
 /** 
- * @file        hall-switch-ard.h
- * @brief       Hall Switch Arduino GPIO Hardware Interface
+ * @file        hall-pal-ino.h
+ * @brief       Hall Switch Arduino PAL 
  * @date        July 2019
- * @copyright   Copyright (c) 2019 Infineon Technologies AG
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef HALL_SWITCH_ARD_H_
@@ -15,8 +17,12 @@
 #include "../../../pal/hall-pal-gpio.h"
 #include "../../../pal/hall-pal-timer.h"
 
+/**
+ * @addtogroup hsinopal
+ * @{
+ */
 
-class GPIOIno : virtual public HallSwitch::GPIO //, public HallSwitch::Interrupt 
+class GPIOIno : virtual public HallSwitch::GPIO 
 {
     private:
         #define   UNUSED_PIN    0xFF    /**< Unused pin */
@@ -59,5 +65,8 @@ class TimerIno: virtual public HallSpeed::Timer
 };
 
 #endif /** HALL_SPEED_ENABLED */
+
+/** @} */
+
 #endif /** HALL_SWITCH_FRAMEWORK **/
 #endif /** HALL_SWITCH_ARD_H_ **/

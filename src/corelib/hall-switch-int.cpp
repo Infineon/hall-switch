@@ -1,4 +1,12 @@
-#include "hall-switch.h"
+/** 
+ * @file        hall-switch-int.cpp
+ * @brief       Hall Switch Interrupt Handler
+ * @date        July 2019
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
+ */
+
 #include "hall-switch-int.h"
 
 HallSwitch*  HallSwitch::Interrupt::objPtrVector[GPIO_INT_PINS] = {NULL};

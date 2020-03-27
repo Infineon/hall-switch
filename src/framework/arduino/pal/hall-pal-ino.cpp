@@ -1,11 +1,10 @@
 /** 
- * @file        hall-switch-ard.cpp
- * @brief       Hall Switch Arduino GPIO Hardware Interface
- * 
- *  Wraps the Arduino GPIO Reference Language calls
- * 
+ * @file        hall-pal-ino.cpp
+ * @brief       Hall Switch Arduino PAL  
  * @date        July 2019
- * @copyright   Copyright (c) 2019 Infineon Technologies AG
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #include "hall-pal-ino.h"
@@ -14,11 +13,6 @@
 
 #include <Arduino.h>
 #include "../../../corelib/hall-switch-int.h"
-
-/**
- * @addtogroup hallgpioino
- * @{
- */
 
 /**
  * @brief GPIO Ino default constructor
@@ -168,13 +162,7 @@ inline HallSwitch::Error_t GPIOIno::disable()
     return HallSwitch::OK;
 }
 
-/** @} */
-
 #if (HALL_SPEED_ENABLED == 1)
-/**
- * @addtogroup halltimerino
- * @{
- */
 
 TimerIno::TimerIno() : curTime(0)
 {
@@ -254,8 +242,7 @@ inline HallSwitch::Error_t TimerIno::delay(uint32_t timeout)
 {
     delay(timeout);
     return HallSwitch::OK;
-} 
-/** @} */
+}
  
  #endif /** HALL_SPEED_ENABLED */
  #endif /** HALL_SWITCH_FRAMEWORK **/

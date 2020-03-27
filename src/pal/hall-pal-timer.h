@@ -3,6 +3,8 @@
  * @brief       Hall Switch Timer Platform Abstraction Layer
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
  */
 
 #ifndef HALL_PAL_TIMER_H_
@@ -12,6 +14,11 @@
 #if (HALL_SPEED_ENABLED == 1)
 
 #include "../corelib/hall-speed.h"
+
+/**
+ * @addtogroup hspal
+ * @{
+ */
 
 class HallSpeed::Timer
 {
@@ -67,6 +74,8 @@ class HallSpeed::Timer
          */
         virtual  HallSwitch::Error_t         delay   (uint32_t timeout) = 0;
 };
+
+/** @} */
 
 #endif /** HALL_SPEED_ENABLED **/
 #endif /** HALL_PAL_TIMER_H_ **/

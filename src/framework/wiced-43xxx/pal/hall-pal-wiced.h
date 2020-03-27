@@ -1,6 +1,20 @@
+/** 
+ * @file        hall-pal-wiced.h
+ * @brief       Hall Switch WICED PAL  
+ * @date        January 2020
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
+ */
+
 #include "../../../config/hall-conf.h"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
+
+/**
+ * @addtogroup hswicedpal
+ * @{
+ */
 
 class GPIOWiced : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
 {
@@ -25,5 +39,7 @@ class GPIOWiced : virtual public HallSwitch::GPIO, public HallSwitch::Interrupt
         Error_t       enable        ();
         Error_t       disable       ();
 };
+
+/** @} */
 
 #endif /** HALL_SWITCH_FRAMEWORK **/
