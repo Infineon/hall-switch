@@ -50,7 +50,7 @@ class HallSpeed: public HallSwitch
 
                     HallSpeed   ();
                     HallSpeed   (GPIO        *output,
-                                 Timer       *timer   = NULL,
+                                 Timer       *timer,
                                  uint8_t     polesNum = 1,
                                  SpeedUnit_t units    = HERTZ,
                                  CBackSpd_t  cBack    = NULL,

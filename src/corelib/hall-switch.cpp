@@ -33,16 +33,15 @@ HallSwitch::HallSwitch()
  * @brief       Hall Switch Constructor
  * 
  *   Mandatory arguments: 
- *      - sensor output GPIO pointer
+ *      - Sensor output GPIO pointer
  * 
  *   Optional  arguments: 
- *      - interrupt callback. By default NULL. Required to enable interrupt mode.
- *      - sensor power GPIO pointer (only for switch powered mode platform). By default it is NULL.
+ *      - Interrupt callback. By default NULL. Required to enable interrupt mode.
+ *      - Sensor power GPIO pointer (only for switch powered mode platform). By default it is NULL.
  * 
  * @param[in]   *output Sensor output GPIO interface pointer
  * @param[in]   cBack   Callback for interrupt mode. When passed, it enables interrupt mode
- * @param[in]   *power  Sensor switch poewr controller GPIO interface pointer. Default NULL will set power mode to MAIN
- *
+ * @param[in]   *power  Sensor switch power controller GPIO interface pointer. Default NULL will set power mode to MAIN
  * @pre    None
  */
 HallSwitch::HallSwitch(GPIO         *output,
@@ -71,7 +70,7 @@ HallSwitch::HallSwitch(GPIO         *output,
  *          Disables the sensor:
  *              - If "interrupt measuring mode" is enabled, the interrupt is disabled
  *              - If "switch power mode" is configured, the sensor power is disabled          
- * @pre    Call constructor HallSwitch()
+ * @pre    None
  */
 HallSwitch::~HallSwitch()
 {
@@ -83,6 +82,7 @@ HallSwitch::~HallSwitch()
 
 /**
  * @brief   Initializes the hardware interfaces
+ * @pre     None
  * @return  HallSwitch error code
  * @retval  OK if success
  * @retval  INTF_ERROR if hardware interface error
@@ -113,6 +113,8 @@ HallSwitch::Error_t  HallSwitch::init()
 
 /**
  * @brief   Deinitializes the hardware interfaces
+ * @pre     Instance has called init()
+ * @pre     Instance has called disable() if enable() was called
  * @return  HallSwitch error code
  * @retval  OK if success
  * @retval  INTF_ERROR if hardware interface error
@@ -147,6 +149,7 @@ HallSwitch::Error_t  HallSwitch::deinit()
  *          - If "switch power mode " is configured, the sensor is powered up
  *          - If "interrupt measuring mode" is configured, the interrupt is enabled
  * 
+ * @pre     Instance has called init()
  * @return  HallSwitch error code 
  * @retval  OK if success
  * @retval  INTF_ERROR if hardware interface error     
@@ -176,6 +179,8 @@ HallSwitch::Error_t  HallSwitch::enable()
  * @brief   Disables the sensor
  *              - If the "interrupt measuring mode" is configured, the interrupt is disabled 
  *              - If the "switch power mode" is configured, the sensor is powered off
+ 
+ * @pre     Instance has called enable()
  * @return  HallSwitch error code 
  * @retval  OK if success
  * @retval  INTF_ERROR if hardware interface error     
@@ -201,16 +206,17 @@ HallSwitch::Error_t  HallSwitch::disable()
 }
 
 /**
- * @brief   Reads the actual magnetic field value
+ * @brief   Updates object magnetic field value 
  * 
  *  - Magnetic field present if the GPIO voltage level is low
  *  - Mangnetic field not present if the GPIO voltage level is high
  * 
  *  The "bfieldVal" object member is updated with the read value.
  * 
- * @return  HallSwitch magnetic field value
- * @retval  B_FIELD_ON if magnetic field present
- * @retval  B_FIELD_OFF if magnetic field NOT present
+ * @pre     Instance has called enable()
+ * @return  HallSwitch error code 
+ * @retval  OK if success
+ * @retval  INTF_ERROR if hardware interface error     
  */
 HallSwitch::Error_t HallSwitch::updateBField()
 {
@@ -241,11 +247,13 @@ HallSwitch::Status_t HallSwitch::getStatus()
  * @brief   Gets magnetic field 
  * 
  *  This functions returns the last read value updated in the object member bfieldVal variable,
- *  either from a explicit readBField() call or due to an interrupt event.
+ *  either from a explicit updateBField() call or due to an interrupt event.
  * 
- *  If polling mode is used, readBField() has to be called preivously in order to get the actual value.
+ * @pre     If polling mode is used, updateBField() has to be called preivously in order to get the actual value.
  *  
- * @return  HallSwitch magnetic field result
+ * @return  HallSwitch magnetic field value
+ * @retval  B_FIELD_ON if magnetic field present
+ * @retval  B_FIELD_OFF if magnetic field NOT present
  */
 HallSwitch::Result_t HallSwitch::getBField()
 {
@@ -256,6 +264,7 @@ HallSwitch::Result_t HallSwitch::getBField()
  * @brief   Interrupt mode callback function
  *  
  *  The class updates on its own bfieldVal member to the when the interrupt occurs
+ *  Passed as interrupt callback handler.    
  * 
  * @return  void
  */

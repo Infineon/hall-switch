@@ -7,7 +7,7 @@
       "url":"https://github.com/Infineon/hall-switch.git",
       "branch":"master"
    },
-   "version":"1.1.1",
+   "version":"2.0.0",
    "license":"MIT",
    "frameworks":"arduino",
    "platforms":[  

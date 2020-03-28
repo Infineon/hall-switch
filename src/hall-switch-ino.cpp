@@ -14,7 +14,19 @@
 #include <Arduino.h>
 #include "framework/arduino/pal/hall-pal-ino.h"
 
-
+/**
+ * @brief           Hall Switch Ino Constructor 
+ *                  Mandatory arguments: 
+ *                      - Output pin
+ *                  Optional  arguments: 
+ *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
+ *                      - Power pin. By default not allocated 
+ *    
+ * @param[in]       outputPin   Sensor output pin
+ * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode
+ * @param[in]       powerPin    Sensor switch power controller pin  
+ * @pre             None         
+ */
 HallSwitchIno::HallSwitchIno(uint8_t               outputPin, 
                              HallSwitch::CBack_t   cBack,
                              uint8_t               powerPin)
@@ -23,15 +35,15 @@ HallSwitchIno::HallSwitchIno(uint8_t               outputPin,
     (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(outputPin, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
 
 /**
- * @brief           Hall switch ino instance constructor with predefined Arduino hardware platform
+ * @brief           Hall Switch Ino Constructor with predefined Arduino hardware platform
  *                  Mandatory arguments: 
  *                      - Hardware platform 
  *                  Optional  arguments: 
- *                      - interrupt callback. By default NULL. Required to enable interrupt mode.
+ *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
  *                  
- * @param[in]       hwPlatf     Predefined Arduino hardware platform.
- * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
- * @return          void         
+ * @param[in]       hwPlatf     Predefined Arduino hardware platform
+ * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode  
+ * @pre             None         
  */
 HallSwitchIno::HallSwitchIno(PlatformIno_t             hwPlatf,
                              HallSwitch::CBack_t       cBack)
@@ -39,11 +51,21 @@ HallSwitchIno::HallSwitchIno(PlatformIno_t             hwPlatf,
     cBack,
     (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
 
+/**
+ * @brief   Hall Switch Ino Destructor         
+ * @pre    None
+ */
 HallSwitchIno::~HallSwitchIno()
 {
     sw.~HallSwitch();
 }
 
+/**
+ * @brief   Begins the switch
+ * @pre     None
+ * @retval  0 if OK
+ * @retval  -1 if error
+ */
 int HallSwitchIno::begin()
 {
     int err = 0;
@@ -56,6 +78,12 @@ int HallSwitchIno::begin()
     return err;
 }
 
+/**
+ * @brief   Ends the switch
+ * @pre     Instance has called begin()
+ * @retval  0 if OK
+ * @retval  -1 if error
+ */
 int HallSwitchIno::end()
 {
     int err = 0;
@@ -68,11 +96,27 @@ int HallSwitchIno::end()
     return err;
 }
 
+/**
+ * @brief   Gets the switch output value
+ * @pre     Instance has called begin()
+ * @retval  1 if magnetic field present
+ * @retval  0 if magnetic field not present
+ * @retval  -1 if error
+ */
 int HallSwitchIno::getBField()
 {
-    sw.updateBField();
+    int bfield = 0;
+    
+    if(HallSwitch::OK != sw.updateBField())
+    {    
+        bfield = -1;
+    }
+    else
+    {
+        bfield = sw.getBField();
+    }
 
-    return (int)(sw.getBField());
+    return bfield;
 }
 
 #endif /** HALL_SWITCH_FRAMEWORK **/

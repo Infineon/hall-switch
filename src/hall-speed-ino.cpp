@@ -16,17 +16,21 @@
 #include "framework/arduino/pal/hall-pal-ino.h"
 
 /**
- * @brief           Hall speed ino instance constructor with Arduino pins
+ * @brief           Hall Speed Ino Constructor
  *                  Mandatory arguments: 
- *                      - sensor output pin
+ *                      - Sensor output pin
  *                  Optional  arguments: 
- *                      - interrupt callback. By default NULL. Required to enable interrupt mode.
- *                      - sensor power pin (only for switch powered mode platform). By default it is UNUSED.
+ *                      - Magnetic poles pair number. By default 1 pair
+ *                      - Speed units. By default Hertzs
+ *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
+ *                      - Sensor power pin (only for switch powered mode platform). By default it is UNUSED
  *                 
- * @param[in]       outputPin   Hall switch output pin
- * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
- * @param[in]       powerPin    Hall switch power pin. When passed, enabled the sensor switch controlled mode.
- * @return          void         
+ * @param[in]       outputPin   Sensor output pin
+ * @param[in]       polesMum    Number of magnetic poles pair of the rotating B field
+ * @param[in]       units       Speed units (RPM, Hertz, cps ...)
+ * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode  
+ * @param[in]       powerPin    Hall speed power pin. When passed, enabled the sensor switch controlled mode
+ * @pre             None       
  */
 HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
                            uint8_t     polesNum,
@@ -42,15 +46,19 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
 
 
 /**
- * @brief           Hall speed ino instance constructor with predefined Arduino hardware platform
+ * @brief           Hall Speed Ino Constructor with predefined Arduino hardware platform
  *                  Mandatory arguments: 
  *                      - Hardware platform 
- *                  Optional  arguments: 
- *                      - interrupt callback. By default NULL. Required to enable interrupt mode.
- *                  
- * @param[in]       hwPlatf     Predefined Arduino hardware platform.
- * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.  
- * @return          void         
+ *                  Optional  arguments:
+ *                      - Magnetic poles pair number. By default 1 pair
+ *                      - Speed units. By default Hertzs 
+ *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
+ * 
+ * @param[in]       hwPlatf     Predefined Arduino hardware platform
+ * @param[in]       polesMum    Number of magnetic poles pair of the rotating B field
+ * @param[in]       units       Speed units (RPM, Hertz, cps ...)                
+ * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode
+ * @pre             None        
  */
 HallSpeedIno::HallSpeedIno(PlatformIno_t  hwPlatf,
                            uint8_t        polesNum,
@@ -63,12 +71,21 @@ HallSpeedIno::HallSpeedIno(PlatformIno_t  hwPlatf,
     cBack,
     (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
 
-
+/**
+ * @brief   Hall Speed Ino Destructor         
+ * @pre     None
+ */
 HallSpeedIno::~HallSpeedIno()
 {
     sp.~HallSpeed();
 }
 
+/**
+ * @brief   Begins the speed sensor
+ * @pre     None
+ * @retval  0 if OK
+ * @retval  -1 if error
+ */
 int HallSpeedIno::begin()
 {
     int err = 0;
@@ -81,6 +98,12 @@ int HallSpeedIno::begin()
     return err;
 }
 
+/**
+ * @brief   Ends the speed sensor
+ * @pre     Instance has called begin()
+ * @retval  0 if OK
+ * @retval  -1 if error
+ */
 int HallSpeedIno::end()
 {
     int err = 0;
@@ -93,11 +116,26 @@ int HallSpeedIno::end()
     return err;
 }
 
+/**
+ * @brief   Gets the speed value
+ * @pre     Instance has called begin()
+ * @return  Speed in the configured units
+ * @retval  -1 if error
+ */
 double HallSpeedIno::getSpeed()
 {
-    sp.updateSpeed();
+    double speed = 0.0;
+
+    if(HallSwitch::OK != sp.updateSpeed())
+    {
+        speed = -1;
+    }
+    else
+    {
+        speed = sp.getSpeed();
+    }
     
-    return sp.getSpeed();
+    return speed;
 }
 
 #endif /** HALL_SPEED_ENABLED */
