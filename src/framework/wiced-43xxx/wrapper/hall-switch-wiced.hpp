@@ -1,5 +1,5 @@
 /** 
- * @file        hall-switch-wiced.h
+ * @file        hall-switch-wiced.hpp
  * @brief       Hall Switch WICED API
  * @date        January 2020
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
@@ -10,14 +10,14 @@
 #ifndef HALL_SWITCH_WICED_H_
 #define HALL_SWITCH_WICED_H_
 
-#include "../../../config/hall-conf.h"
+#include "../../../config/hall-conf.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
 #include <stdint.h>
-#include "hall-switch.h"
-#include "hall-platf-wiced.h"
-#include "wiced_platform.h"
+#include "hall-switch.hpp"
+#include "hall-platf-wiced.hpp"
+#include "wiced_platform.hpp"
 
 /**
  * @addtogroup hswicedapi
@@ -39,5 +39,4 @@ class HallSwitchWiced : public HallSwitch
 /** @} */
 
 #endif /** HALL_SWITCH_FRAMEWORK **/
-
-#endif
+#endif /** HALL_SWITCH_WICED_HPP_ **/

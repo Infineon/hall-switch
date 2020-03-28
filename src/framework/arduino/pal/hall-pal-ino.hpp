@@ -1,5 +1,5 @@
 /** 
- * @file        hall-pal-ino.h
+ * @file        hall-pal-ino.hpp
  * @brief       Hall Switch Arduino PAL 
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,15 +7,15 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_SWITCH_ARD_H_
-#define HALL_SWITCH_ARD_H_
+#ifndef HALL_SWITCH_ARD_HPP_
+#define HALL_SWITCH_ARD_HPP_
 
-#include "../../../config/hall-conf.h"
+#include "../../../config/hall-conf.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 
-#include "../../../pal/hall-pal-gpio.h"
-#include "../../../pal/hall-pal-timer.h"
+#include "../../../pal/hall-pal-gpio.hpp"
+#include "../../../pal/hall-pal-timer.hpp"
 
 /**
  * @addtogroup hsinopal

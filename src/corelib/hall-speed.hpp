@@ -1,5 +1,5 @@
 /** 
- * @file        hall-speed.h
+ * @file        hall-speed.hpp
  * @brief       Hall Speed Sensor
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,13 +7,13 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_SPEED_H_
-#define HALL_SPEED_H_
+#ifndef HALL_SPEED_HPP_
+#define HALL_SPEED_HPP_
 
-#include "../config/hall-conf.h"
+#include "../config/hall-conf.hpp"
 #if (HALL_SPEED_ENABLED == 1)
 
-#include "hall-switch.h"
+#include "hall-switch.hpp"
 
 /**
  * @addtogroup hscorelib
@@ -78,4 +78,4 @@ class HallSpeed: public HallSwitch
 /** @} */
 
 #endif /** HALL_SPEED_ENABLED */
-#endif /** HALL_SPEED_H_ **/
+#endif /** HALL_SPEED_HPP_ **/

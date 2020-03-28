@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <stdint.h>
-#include <hall-speed-ino.h>
+#include <hall-speed-ino.hpp>
 
 /**
  * Plug & Play hw platform --> TLE4922 Speed Sensor 2GoKit Output Pin

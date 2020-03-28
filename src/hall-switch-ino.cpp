@@ -7,12 +7,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-switch-ino.h"
+#include "hall-switch-ino.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 
 #include <Arduino.h>
-#include "framework/arduino/pal/hall-pal-ino.h"
+#include "framework/arduino/pal/hall-pal-ino.hpp"
 
 /**
  * @brief           Hall Switch Ino Constructor 

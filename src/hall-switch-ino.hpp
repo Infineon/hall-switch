@@ -1,5 +1,5 @@
 /** 
- * @file        hall-switch-ino.h
+ * @file        hall-switch-ino.hpp
  * @brief       Hall Switch Arduino API
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,15 +7,15 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_SWITCH_INO_H_
-#define HALL_SWITCH_INO_H_
+#ifndef HALL_SWITCH_INO_HPP_
+#define HALL_SWITCH_INO_HPP_
 
-#include "config/hall-conf.h"
+#include "config/hall-conf.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 
-#include "corelib/hall-switch.h"
-#include "framework/arduino/wrapper/hall-platf-ino.h"
+#include "corelib/hall-switch.hpp"
+#include "framework/arduino/wrapper/hall-platf-ino.hpp"
 
 /**
  * @addtogroup hsinoapi
@@ -45,4 +45,4 @@ class HallSwitchIno
 /** @} */
 
 #endif /** HALL_SWITCH_FRAMEWORK **/
-#endif /** HALL_SWITCH_INO_H_ **/
+#endif /** HALL_SWITCH_INO_HPP_ **/

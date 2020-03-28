@@ -7,7 +7,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-switch-int.h"
+#include "hall-switch-int.hpp"
 
 HallSwitch*  HallSwitch::Interrupt::objPtrVector[GPIO_INT_PINS] = {NULL};
 uint8_t      HallSwitch::Interrupt::idxNext    = 0;

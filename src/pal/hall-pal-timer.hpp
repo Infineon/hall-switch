@@ -1,5 +1,5 @@
 /** 
- * @file        hall-pal-timer.h
+ * @file        hall-pal-timer.hpp
  * @brief       Hall Switch Timer Platform Abstraction Layer
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,13 +7,13 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_PAL_TIMER_H_
-#define HALL_PAL_TIMER_H_
+#ifndef HALL_PAL_TIMER_HPP_
+#define HALL_PAL_TIMER_HPP_
 
-#include "../config/hall-conf.h"
+#include "../config/hall-conf.hpp"
 #if (HALL_SPEED_ENABLED == 1)
 
-#include "../corelib/hall-speed.h"
+#include "../corelib/hall-speed.hpp"
 
 /**
  * @addtogroup hspal
@@ -78,4 +78,4 @@ class HallSpeed::Timer
 /** @} */
 
 #endif /** HALL_SPEED_ENABLED **/
-#endif /** HALL_PAL_TIMER_H_ **/
+#endif /** HALL_PAL_TIMER_HPP_ **/

@@ -5,11 +5,11 @@
  * @copyright   Copyright (c) 2020 Infineon Technologies AG
  */
 
-#include "hall-pal-wiced.h"
+#include "hall-pal-wiced.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
-#include "hall-switch-int.h"
+#include "hall-switch-int.hpp"
 
 /**
  * @brief GPIO WICED default constructor

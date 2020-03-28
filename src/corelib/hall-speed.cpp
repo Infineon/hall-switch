@@ -7,12 +7,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-speed.h"
+#include "hall-speed.hpp"
 
 #if (HALL_SPEED_ENABLED == 1)
 
-#include "../pal/hall-pal-gpio.h"
-#include "../pal/hall-pal-timer.h"
+#include "../pal/hall-pal-gpio.hpp"
+#include "../pal/hall-pal-timer.hpp"
 
 double const HallSpeed::speedCoeff[] =
 {

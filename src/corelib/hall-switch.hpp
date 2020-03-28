@@ -1,5 +1,5 @@
 /** 
- * @file        hall-switch.h
+ * @file        hall-switch.hpp
  * @brief       Hall Switch API
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,8 +7,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_SWITCH_H_
-#define HALL_SWITCH_H_
+#ifndef HALL_SWITCH_HPP_
+#define HALL_SWITCH_HPP_
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -131,4 +131,4 @@ class HallSwitch
 
 /** @} */
 
-#endif /** HALL_SWTICH_H_ **/
+#endif /** HALL_SWTICH_HPP_ **/

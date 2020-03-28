@@ -1,5 +1,5 @@
 /** 
- * @file        hall-switch-int.h
+ * @file        hall-switch-int.hpp
  * @brief       Hall Switch Interrupt Handler
  * @date        July 2019
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,10 +7,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_SWITCH_INT_H_
-#define HALL_SWITCH_INT_H_
+#ifndef HALL_SWITCH_INT_HPP_
+#define HALL_SWITCH_INT_HPP_
 
-#include "hall-switch.h"
+#include "hall-switch.hpp"
 
 class HallSwitch::Interrupt
 {
@@ -27,4 +27,4 @@ class HallSwitch::Interrupt
         static void         *isrRegister(HallSwitch *objPtr);
 };
 
-#endif /** HALL_SWITCH_INT_H_ **/
+#endif /** HALL_SWITCH_INT_HPP_ **/

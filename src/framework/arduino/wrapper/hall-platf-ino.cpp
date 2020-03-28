@@ -7,7 +7,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-platf-ino.h"
+#include "hall-platf-ino.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 

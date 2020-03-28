@@ -1,5 +1,5 @@
 /** 
- * @file        hall-speed-ino.h
+ * @file        hall-speed-ino.hpp
  * @brief       Hall Speed Arduino API
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
@@ -7,16 +7,16 @@
  * SPDX-License-Identifier: MIT
  */
 
-#ifndef HALL_SPEED_INO_H_
-#define HALL_SPEED_INO_H_
+#ifndef HALL_SPEED_INO_HPP_
+#define HALL_SPEED_INO_HPP_
 
-#include "config/hall-conf.h"
+#include "config/hall-conf.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 #if (HALL_SPEED_ENABLED == 1)
 
-#include "corelib/hall-speed.h"
-#include "framework/arduino/wrapper/hall-platf-ino.h"
+#include "corelib/hall-speed.hpp"
+#include "framework/arduino/wrapper/hall-platf-ino.hpp"
 
 /**
  * @addtogroup hsinoapi
@@ -48,4 +48,4 @@ class HallSpeedIno
 
 #endif /** HALL_SPEED_ENABLED */
 #endif /** HALL_SWITCH_FRAMEWORK **/
-#endif /** HALL_SPEED_INO_H_ **/
+#endif /** HALL_SPEED_INO_HPP_ **/

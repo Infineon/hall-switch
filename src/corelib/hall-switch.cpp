@@ -7,8 +7,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-switch.h"
-#include "../pal/hall-pal-gpio.h"
+#include "hall-switch.hpp"
+#include "../pal/hall-pal-gpio.hpp"
 
 /**
  * @brief   Hall Switch Default Constructor

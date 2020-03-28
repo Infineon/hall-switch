@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <stdint.h>
-#include <hall-speed-ino.h>
+#include <hall-speed-ino.hpp>
 
 /**
  * Plug & Play hw platform --> XMC2Go with TLE4964-3M 2GoShield

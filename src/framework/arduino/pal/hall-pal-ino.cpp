@@ -7,12 +7,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-pal-ino.h"
+#include "hall-pal-ino.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 
 #include <Arduino.h>
-#include "../../../corelib/hall-switch-int.h"
+#include "../../../corelib/hall-switch-int.hpp"
 
 /**
  * @brief GPIO Ino default constructor

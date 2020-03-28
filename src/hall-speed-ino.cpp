@@ -7,13 +7,13 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-speed-ino.h"
+#include "hall-speed-ino.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_ARDUINO)
 #if (HALL_SPEED_ENABLED == 1)
 
 #include <Arduino.h>
-#include "framework/arduino/pal/hall-pal-ino.h"
+#include "framework/arduino/pal/hall-pal-ino.hpp"
 
 /**
  * @brief           Hall Speed Ino Constructor

@@ -7,7 +7,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hall-platf-wiced.h"
+#include "hall-platf-wiced.hpp"
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
