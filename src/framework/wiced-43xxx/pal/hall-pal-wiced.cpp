@@ -9,6 +9,8 @@
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
+#include "hall-switch-int.h"
+
 /**
  * @brief GPIO WICED default constructor
  */
@@ -30,16 +32,25 @@ GPIOWiced::GPIOWiced()
 }
 
 /**
+ * @brief GPIO WICED destructor
+ */
+GPIOWiced::~GPIOWiced()
+{
+    disable();
+    deinit();
+}
+
+/**
  * @brief   Initializes the WICED GPIO
  * @return  GPIO error code
  * @retval  OK if success
- * @retval  INIT_ERROR if initialization error
+ * @retval  INTF_ERROR if initialization error
  */
-inline GPIOWiced::Error_t GPIOWiced::init()
+inline HallSwitch::Error_t GPIOWiced::init()
 {   
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
     if(WICED_SUCCESS != wiced_gpio_init(pin, config))
-        err = INIT_ERROR;
+        err = HallSwitch::INTF_ERROR;
 
     return err;
 }
@@ -48,13 +59,13 @@ inline GPIOWiced::Error_t GPIOWiced::init()
  * @brief   Initializes the WICED GPIO
  * @return  GPIO error code
  * @retval  OK if success
- * @retval  INIT_ERROR if initialization error
+ * @retval  INTF_ERROR if deinitialization error
  */
-inline GPIOWiced::Error_t GPIOWiced::deinit()
+inline HallSwitch::Error_t GPIOWiced::deinit()
 {
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
     if(WICED_SUCCESS != wiced_gpio_deinit(pin))
-        err = INIT_ERROR;
+        err = HallSwitch::INTF_ERROR;
 
     return err;
 }
@@ -62,15 +73,15 @@ inline GPIOWiced::Error_t GPIOWiced::deinit()
 /**
  * @brief   Enables the WICED GPIO interrupt
  * @return  GPIO error code
- * @retval      OK if success
- * @retval      INIT_ERROR if initialization error
+ * @retval  OK if success
+ * @retval  INTF_ERROR if error
  */
-inline GPIOWiced::Error_t GPIOWiced::enableInt(HallSwitch *ptr)
+inline HallSwitch::Error_t GPIOWiced::enableInt(HallSwitch *ptr)
 {
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
 
     if(WICED_SUCCESS != wiced_gpio_input_irq_enable(pin,IRQ_TRIGGER_BOTH_EDGES, (wiced_gpio_irq_handler_t)(HallSwitch::Interrupt::isrRegister(ptr)),NULL))
-        err = INIT_ERROR;
+        err = HallSwitch::INTF_ERROR;
 
     return err;
 }
@@ -78,14 +89,15 @@ inline GPIOWiced::Error_t GPIOWiced::enableInt(HallSwitch *ptr)
 /**
  * @brief   Disables the WICED GPIO interrupt
  * @return  GPIO error code
- * @retval  OK always
+ * @retval  OK if success
+ * @retval  INTF_ERROR if error
  */
-inline GPIOWiced::Error_t GPIOWiced::disableInt()
+inline HallSwitch::Error_t GPIOWiced::disableInt()
 {
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
 
     if(WICED_SUCCESS != wiced_gpio_input_irq_disable(pin))
-        err = INIT_ERROR;
+        err = HallSwitch::INTF_ERROR;
 
     return err;
 }
@@ -129,72 +141,72 @@ inline GPIOWiced::VLevel_t GPIOWiced::read()
  * @param[in]   level  Voltage level
  * @return      GPIO error code
  * @retval      OK if success
- * @retval      WRITE_ERROR if write error
+ * @retval      INTF_ERROR if error
  */
-inline GPIOWiced::Error_t GPIOWiced::write(VLevel_t level)
+inline HallSwitch::Error_t GPIOWiced::write(VLevel_t level)
 {
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
 
     if(GPIO_LOW == level)
     {
         if(WICED_SUCCESS != wiced_gpio_output_low(pin))
-            err = WRITE_ERROR;
+            err = HallSwitch::INTF_ERROR;
     }
     else if(GPIO_HIGH == level)
     {
         if(WICED_SUCCESS != wiced_gpio_output_high(pin))
-            err = WRITE_ERROR;
+            err = HallSwitch::INTF_ERROR;
     }
 
     return err;
 }
 
 /**
- * @brief       Enables the Arduino GPIO output according to the GPIO logic
+ * @brief       Enables the WICED output according to the GPIO logic
  *              - Low if negative
  *              - High if positive
  * @return      GPIO interrupt event
  * @retval      OK if success
- * @retval      WRITE_ERROR if write error
+ * @retval      INTF_ERROR if error
  */
-inline GPIOWiced::Error_t GPIOWiced::enable()
+inline HallSwitch::Error_t GPIOWiced::enable()
 {
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
 
     if(this->logic == POSITIVE)
     {
         if(WICED_SUCCESS != wiced_gpio_output_high(pin))
-            err = WRITE_ERROR;
+            err = HallSwitch::INTF_ERROR;
     }
     else if(this->logic == NEGATIVE)
     {
         if(WICED_SUCCESS != wiced_gpio_output_low(pin))
-            err = WRITE_ERROR;
+            err = HallSwitch::INTF_ERROR;
     }
     return err;
 }
 
 /**
- * @brief       Disables the Arduino GPIO output according to the GPIO logic
+ * @brief       Disables the WICED output according to the GPIO logic
  *              - Low if positive
  *              - High if negative
  * @return      GPIO error code
  * @retval      OK if success
- * @retval      WRITE_ERROR if write error
+ * @retval      INTF_ERROR if error
  */
-inline GPIOWiced::Error_t GPIOWiced::disable()
+inline HallSwitch::Error_t GPIOWiced::disable()
 {
-    Error_t err = OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
 
     if(this->logic == POSITIVE)
     {
         if(WICED_SUCCESS != wiced_gpio_output_low(pin))
-            err = WRITE_ERROR;
+            err = HallSwitch::INTF_ERROR;
     }
     else if(this->logic == NEGATIVE)
     {
         if(WICED_SUCCESS != wiced_gpio_output_high(pin))
-            err = WRITE_ERROR;
+            err = HallSwitch::INTF_ERROR;
     }
     return err;
 }

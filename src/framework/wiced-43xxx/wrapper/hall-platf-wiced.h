@@ -11,6 +11,8 @@
 
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
+#include "hall-pal-wiced.h"
+
 /**
  * @addtogroup hswicedhw
  * @{

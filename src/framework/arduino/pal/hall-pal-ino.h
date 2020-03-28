@@ -25,7 +25,7 @@
 class GPIOIno : virtual public HallSwitch::GPIO 
 {
     private:
-        #define   UNUSED_PIN    0xFF    /**< Unused pin */
+        #define     UNUSED_PIN    0xFF  /**< Unused pin */
         uint8_t     pin;                /**< Pin number*/
         uint8_t     mode;               /**< Pin mode*/
         VLogic_t    logic;              /**< Pin logic */
@@ -35,6 +35,7 @@ class GPIOIno : virtual public HallSwitch::GPIO
                                 GPIOIno       (uint8_t pin, 
                                                uint8_t mode, 
                                                VLogic_t logic);
+                               ~GPIOIno       ();
         HallSwitch::Error_t     init          ();            
         HallSwitch::Error_t     deinit        ();
         HallSwitch::Error_t     enableInt     (HallSwitch *ptr);    

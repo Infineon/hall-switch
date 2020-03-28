@@ -35,6 +35,15 @@ GPIOIno::GPIOIno(uint8_t      pin,
 }
 
 /**
+ * @brief   GPIO Ino destructor
+ */
+GPIOIno::~GPIOIno()
+{
+
+}
+
+
+/**
  * @brief   Initializes the Arduino GPIO
  * @return  GPIO error code
  * @retval  OK always

@@ -16,6 +16,7 @@
 
 #include <stdint.h>
 #include "hall-switch.h"
+#include "hall-platf-wiced.h"
 #include "wiced_platform.h"
 
 /**
