@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.com/Infineon/hall-switch.svg?branch=master)](https://travis-ci.com/Infineon/hall-switch)
 
-C++ library of Infineon **single hall-effect switch** family for magnetic sensing applications
+C++ library of Infineon **single hall-effect switch** family for magnetic sensing applications.
 
 
 ### Supported Sensors Boards
@@ -24,7 +24,7 @@ C++ library of Infineon **single hall-effect switch** family for magnetic sensin
 
 ### Supported Frameworks
 
-<table>
+<table style="border: none">
 
 <tr>
 <td><img src="https://github.com/infineon/hall-switch/wiki/img/arduino-logo.png" width=200></td>
