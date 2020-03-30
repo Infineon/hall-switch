@@ -17,7 +17,7 @@
 #include <stdint.h>
 #include "hall-switch.hpp"
 #include "hall-platf-wiced.hpp"
-#include "wiced_platform.hpp"
+#include "wiced_platform.h"
 
 /**
  * @addtogroup hswicedapi
