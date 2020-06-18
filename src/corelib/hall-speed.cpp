@@ -31,7 +31,7 @@ HallSpeed::HallSpeed()
 {
     timer     = NULL;
     polesPair = 0;
-    sUnits    = 0;
+    sUnits    = HERTZ;
     speed     = 0.0;
 }
 

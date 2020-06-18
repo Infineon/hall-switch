@@ -30,7 +30,7 @@ typedef struct
 
 extern PlatformIno_t TLE4964_3M_S2Go_XMC2Go;        /**< TLE4964 3M Shield 2Go + XMC2Go Stack */
 extern PlatformIno_t TLE4964_3M_S2Go_ArduinoUno;    /**< TLE4964 3M Shield 2Go + MyIoT + Arduino Uno Form Factor */
-extern PlatformIno_t TLE4922_2GoKit_Pins;           /**< TLE4922 Kit 2Go  */
+extern PlatformIno_t TLE4922_2GoKit;                /**< TLE4922 Kit 2Go  */
 
 /** @} */
 

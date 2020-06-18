@@ -7,8 +7,9 @@
  */
 
 #define Q_OUTPUT_PIN    1   /**< TLE4922 2GoKit Output Pin  */
+#define VDD_PIN         0   /**< TLE4922 2GoKit VDD Pin */
 
-HallSpeedIno         hs(Q_OUTPUT_PIN,1,HallSpeed::RPM);   /**< Hall Speed object */
+HallSpeedIno         hs(Q_OUTPUT_PIN, 1, HallSpeed::RPM, NULL, VDD_PIN);   /**< Hall Speed object */
 double               speed = 0.0;                         
 
 /**

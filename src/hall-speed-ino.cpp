@@ -42,7 +42,7 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
     polesNum,
     units,
     cBack,
-    (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(outputPin, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
+    (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(powerPin, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
 
 
 /**

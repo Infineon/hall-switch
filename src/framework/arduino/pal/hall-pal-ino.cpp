@@ -71,7 +71,7 @@ HallSwitch::Error_t GPIOIno::deinit()
  */
 HallSwitch::Error_t GPIOIno::enableInt(HallSwitch *ptr)
 {
-    attachInterrupt(digitalPinToInterrupt(this->pin), HallSwitch::Interrupt::isrRegister(ptr), CHANGE);
+    attachInterrupt(digitalPinToInterrupt(this->pin), (interrupt_cb_t)HallSwitch::Interrupt::isrRegister(ptr), CHANGE);
     return HallSwitch::OK;
 }
 
