@@ -71,7 +71,7 @@ HallSwitch::Error_t GPIOIno::deinit()
  */
 HallSwitch::Error_t GPIOIno::enableInt(HallSwitch *ptr)
 {
-    attachInterrupt(digitalPinToInterrupt(this->pin), (interrupt_cb_t)HallSwitch::Interrupt::isrRegister(ptr), CHANGE);
+    attachInterrupt(digitalPinToInterrupt(this->pin), (void (*)())HallSwitch::Interrupt::isrRegister(ptr), CHANGE);
     return HallSwitch::OK;
 }
 
@@ -94,15 +94,19 @@ inline HallSwitch::Error_t GPIOIno::disableInt()
  */
 inline GPIOIno::IntEvent_t GPIOIno::intEvent()
 {
+    IntEvent_t edge = INT_FALLING_EDGE;
+    
     int val = digitalRead(this->pin);
     if(val == LOW)
     {
-        return INT_FALLING_EDGE;
+        edge = INT_FALLING_EDGE;
     }
     else if(val == HIGH) 
     {
-        return INT_RISING_EDGE;
+        edge = INT_RISING_EDGE;
     }
+
+    return edge;
 }
 
 /**

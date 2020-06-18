@@ -17,7 +17,7 @@
 
 PlatformIno_t TLE4964_3M_S2Go_XMC2Go     =  {9, UNUSED_PIN};    /**< TLE4964 3M Shield 2Go + XMC2Go Stack */
 PlatformIno_t TLE4964_3M_S2Go_ArduinoUno =  {3, UNUSED_PIN};    /**< TLE4964 3M Shield 2Go + MyIoT + Arduino Uno Form Factor */
-PlatformIno_t TLE4922_2GoKit             =  {1, 0};    /**< TLE4922 Kit 2Go  */
+PlatformIno_t TLE4922_2GoKit             =  {1, 0};             /**< TLE4922 Kit 2Go  */
 
 #endif /** HALL_SWITCH_FRAMEWORK **/
 /** @} */

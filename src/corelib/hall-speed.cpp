@@ -198,14 +198,17 @@ HallSwitch::Error_t HallSpeed::disable()
  */
 HallSwitch::Error_t HallSpeed::updateSpeed()
 {
+    Error_t err = OK;
     static bool waitingRisingEdge = true;
 
     if(waitingRisingEdge && (output->read() == GPIO::VLevel_t::GPIO_HIGH))
     {
         bfieldVal = B_FIELD_OFF;
         calculateSpeed();
-        timer->stop();
-        timer->start();
+        err = timer->stop();
+        if(err != OK) return err;
+        err = timer->start();
+        if(err != OK) return err;
         waitingRisingEdge = false;
     }
     else if(!waitingRisingEdge && (output->read() == GPIO::VLevel_t::GPIO_LOW))
@@ -213,6 +216,8 @@ HallSwitch::Error_t HallSpeed::updateSpeed()
         bfieldVal = B_FIELD_ON;
         waitingRisingEdge = true;
     }
+
+    return err;
 }
 
 /**
