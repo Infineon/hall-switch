@@ -5,8 +5,6 @@
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  */
 
-#include "hall-conf.hpp"
-
 #if (HALL_SWITCH_FRAMEWORK == HALL_SWITCH_FRMWK_WICED)
 
 #include <stdlib.h>
