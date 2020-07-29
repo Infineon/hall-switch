@@ -2,7 +2,7 @@
  * @file        hall-pal-wiced.cpp
  * @brief       Hall Switch WICED PAL 
  * @date        January 2020
- * @copyright   Copyright (c) 2020 Infineon Technologies AG
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  */
 
 #include "hall-pal-wiced.hpp"
