@@ -120,6 +120,6 @@ void application_start( )
         loop();
     }
 }
-
+//} /**< Uncomment for WICED missing _cplusplus guards workaround */
 #endif /** HALL_SWITCH_FRAMEWORK **/
 
