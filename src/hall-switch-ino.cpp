@@ -16,11 +16,12 @@
 
 /**
  * @brief           Hall Switch Ino Constructor 
- *                  Mandatory arguments: 
- *                      - Output pin
- *                  Optional  arguments: 
- *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
- *                      - Power pin. By default not allocated 
+ * 
+ * Mandatory arguments: 
+ *  - Output pin
+ * Optional  arguments: 
+ *  - Interrupt callback. By default NULL. Required to enable interrupt mode
+ *  - Power pin. By default not allocated 
  *    
  * @param[in]       outputPin   Sensor output pin
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode
@@ -36,10 +37,11 @@ HallSwitchIno::HallSwitchIno(uint8_t               outputPin,
 
 /**
  * @brief           Hall Switch Ino Constructor with predefined Arduino hardware platform
- *                  Mandatory arguments: 
- *                      - Hardware platform 
- *                  Optional  arguments: 
- *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
+ *                 
+ *  Mandatory arguments: 
+ *   - Hardware platform 
+ *  Optional  arguments: 
+ *   - Interrupt callback. By default NULL. Required to enable interrupt mode
  *                  
  * @param[in]       hwPlatf     Predefined Arduino hardware platform
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode  

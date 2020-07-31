@@ -206,12 +206,12 @@ HallSwitch::Error_t  HallSwitch::disable()
 }
 
 /**
- * @brief   Updates object magnetic field value 
+ * @brief   Updates instance magnetic field value 
  * 
  *  - Magnetic field present if the GPIO voltage level is low
  *  - Mangnetic field not present if the GPIO voltage level is high
  * 
- *  The "bfieldVal" object member is updated with the read value.
+ *  The "bfieldVal" object member is updated with the read GPIO value.
  * 
  * @pre     Instance has called enable()
  * @return  HallSwitch error code 
@@ -235,7 +235,7 @@ HallSwitch::Error_t HallSwitch::updateBField()
 }
 
 /**
- * @brief   Gets the status
+ * @brief   Gets the sensor status
  * @return  HallSwitch status
  */
 HallSwitch::Status_t HallSwitch::getStatus()
@@ -251,7 +251,7 @@ HallSwitch::Status_t HallSwitch::getStatus()
  * 
  * @pre     If polling mode is used, updateBField() has to be called preivously in order to get the actual value.
  *  
- * @return  HallSwitch magnetic field value
+ * @return  HallSwitch Result_t magnetic field value
  * @retval  B_FIELD_ON if magnetic field present
  * @retval  B_FIELD_OFF if magnetic field NOT present
  */
@@ -263,8 +263,9 @@ HallSwitch::Result_t HallSwitch::getBField()
 /**
  * @brief   Interrupt mode callback function
  *  
- *  The class updates on its own bfieldVal member to the when the interrupt occurs
- *  Passed as interrupt callback handler.    
+ *  The instance updates on its own bfieldVal member when the interrupt occurs.
+ * 
+ *  Additionally, the user callback function is executed. 
  * 
  * @return  void
  */

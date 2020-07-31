@@ -15,7 +15,7 @@
 
 
 /**
- * @addtogroup hscorelib
+ * @addtogroup hswapi
  * @{
  */
 

@@ -19,7 +19,7 @@
 #include "framework/arduino/wrapper/hall-platf-ino.hpp"
 
 /**
- * @addtogroup hsinoapi
+ * @addtogroup hspinoapi
  * @{
  */
 
@@ -27,7 +27,7 @@ class HallSpeedIno
 {
     public:
 
-                HallSpeedIno    (uint8_t                    outputPin, 
+                HallSpeedIno    (uint8_t                     outputPin, 
                                  uint8_t                     polesNum = 1,
                                  HallSpeed::SpeedUnit_t      units    = HallSpeed::HERTZ,
                                  HallSpeed::CBackSpd_t       cBack    = NULL,

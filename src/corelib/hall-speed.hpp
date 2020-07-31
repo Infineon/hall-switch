@@ -1,6 +1,6 @@
 /** 
  * @file        hall-speed.hpp
- * @brief       Hall Speed Sensor
+ * @brief       Hall Speed API
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  *
@@ -16,7 +16,7 @@
 #include "hall-switch.hpp"
 
 /**
- * @addtogroup hscorelib
+ * @addtogroup hspapi
  * @{
  */ 
 

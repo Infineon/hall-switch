@@ -1,6 +1,6 @@
 /** 
  * @file        hall-speed.cpp
- * @brief       Hall Switch Speed Sensor
+ * @brief       Hall Speed API
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  *
@@ -187,9 +187,9 @@ HallSwitch::Error_t HallSpeed::disable()
 }
 
 /**
- * @brief   Updates object speed value 
+ * @brief   Updates the instance speed value 
  * 
- *  The "speed" object member is updated with the read value.
+ *  The speed instance member is updated with the read value.
  * 
  * @pre     Instance has called enable()
  * @return  HallSwitch error code 

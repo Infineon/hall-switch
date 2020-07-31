@@ -13,11 +13,13 @@
 
  /**
  * @brief           Hall switch WICED instance constructor with WICED pins
- *                  Mandatory arguments:
- *                      - sensor output pin
- *                  Optional  arguments:
- *                      - interrupt callback. By default NULL. Required to enable interrupt mode.
- *                      - sensor power pin (only for switch powered mode platform). By default it is UNUSED.
+ * 
+ *  Mandatory arguments:
+ *   - sensor output pin
+ * 
+ *  Optional  arguments:
+ *   - interrupt callback. By default NULL. Required to enable interrupt mode.
+ *   - sensor power pin (only for switch powered mode platform). By default it is UNUSED.
  *
  * @param[in]       outputPin   Hall switch output pin
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.
@@ -33,10 +35,12 @@ HallSwitchWiced::HallSwitchWiced(wiced_gpio_t   outputPin,
 
 /**
  * @brief           Hall switch WICED instance constructor with predefined WICED hardware platform
- *                  Mandatory arguments:
- *                      - Hardware platform
- *                  Optional  arguments:
- *                      - interrupt callback. By default NULL. Required to enable interrupt mode.
+ * 
+ *  Mandatory arguments:
+ *   - hardware platform
+ *                  
+ *  Optional  arguments:
+ *   - interrupt callback. By default NULL. Required to enable interrupt mode.
  *
  * @param[in]       hwPlatf     Predefined WICED hardware platform.
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.

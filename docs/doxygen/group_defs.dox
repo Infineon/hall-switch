@@ -3,11 +3,13 @@
  * @{
  */
 
-/** @defgroup hspal         Platform Abstraction Layer */
+/** @defgroup hswapi        Hall Switch API */
+/** @defgroup hspapi        Hall Speed API */
+/** @defgroup hspal         Platform Abstraction Layer Interface */
 
 /** @} */
 
-/** @defgroup hsfrmw        Frameworks
+/** @defgroup hsfrmw        SW Frameworks
  *  @{
  */
 
@@ -15,7 +17,8 @@
  *  @{
  */
 
-/** @defgroup hsinoapi      API */
+/** @defgroup hsinoapi      Hall Switch API */
+/** @defgroup hspinoapi     Hall Speed API */
 /** @defgroup hsinopal      PAL */
 /** @defgroup hsinohw       HW Platforms */
 
@@ -25,12 +28,11 @@
  *  @{
  */
 
-/** @defgroup hswicedapi   API */
+/** @defgroup hswicedapi   Hall Switch API */
 /** @defgroup hswicedpal   PAL */
 /** @defgroup hswicedhw    HW Platforms */
 
 /** @} */
-
 /** @} */
 
 

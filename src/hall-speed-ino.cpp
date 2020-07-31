@@ -1,6 +1,6 @@
 /** 
  * @file        hall-speed-ino.cpp
- * @brief       Hall Speed Arduino Class
+ * @brief       Hall Speed Arduino API
  * @date        March 2020
  * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
  * 
@@ -17,13 +17,15 @@
 
 /**
  * @brief           Hall Speed Ino Constructor
- *                  Mandatory arguments: 
- *                      - Sensor output pin
- *                  Optional  arguments: 
- *                      - Magnetic poles pair number. By default 1 pair
- *                      - Speed units. By default Hertzs
- *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
- *                      - Sensor power pin (only for switch powered mode platform). By default it is UNUSED
+ *                  
+ * Mandatory arguments: 
+ *  - Sensor output pin
+ * 
+ * Optional  arguments: 
+ *  - Magnetic poles pair number. By default 1 pair
+ *  - Speed units. By default Hertzs
+ *  - Interrupt callback. By default NULL. Required to enable interrupt mode
+ *  - Sensor power pin (only for switch powered mode platform). By default it is UNUSED
  *                 
  * @param[in]       outputPin   Sensor output pin
  * @param[in]       polesMum    Number of magnetic poles pair of the rotating B field
@@ -47,12 +49,14 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
 
 /**
  * @brief           Hall Speed Ino Constructor with predefined Arduino hardware platform
- *                  Mandatory arguments: 
- *                      - Hardware platform 
- *                  Optional  arguments:
- *                      - Magnetic poles pair number. By default 1 pair
- *                      - Speed units. By default Hertzs 
- *                      - Interrupt callback. By default NULL. Required to enable interrupt mode
+ *                 
+ * Mandatory arguments: 
+ *  - Hardware platform 
+ * 
+ * Optional  arguments:
+ *  - Magnetic poles pair number. By default 1 pair
+ *  - Speed units. By default Hertzs 
+ *  - Interrupt callback. By default NULL. Required to enable interrupt mode
  * 
  * @param[in]       hwPlatf     Predefined Arduino hardware platform
  * @param[in]       polesMum    Number of magnetic poles pair of the rotating B field

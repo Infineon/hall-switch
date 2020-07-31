@@ -25,7 +25,7 @@ class HallSpeed::Timer
     public: 
 
         /**
-         * @brief   Initialiazes the timer
+         * @brief   Initializes the timer
          * @return  Timer error code
          * @retval  OK if success
          * @retval  INIT_ERROR if hardware interface error
@@ -33,7 +33,7 @@ class HallSpeed::Timer
         virtual  HallSwitch::Error_t         init    () = 0;
 
         /**
-         * @brief   Deinitialiazes the timer
+         * @brief   Deinitializes the timer
          * @return  Timer error code
          * @retval  OK if success
          * @retval  INIT_ERROR if hardware interface error
