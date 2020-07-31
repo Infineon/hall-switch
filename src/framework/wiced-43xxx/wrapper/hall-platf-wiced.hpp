@@ -30,7 +30,7 @@ typedef struct
     wiced_gpio_t power;      /**< Power pin */
 }PlatformWICED_t;
 
-extern PlatformWICED_t TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F;   /**< TLE4964 3M Shield 2Go + MyIOT Adapter + CYW943907AEVAL1F Eval Kit*/
+extern PlatformWICED_t TLE4964_3M_S2Go_CYW943907AEVAL1F;   /**< TLE4964 3M Shield 2Go + CYW943907AEVAL1F Eval Kit*/
 
 /** @} */
 

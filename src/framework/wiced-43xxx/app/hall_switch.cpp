@@ -20,19 +20,20 @@ HallSwitch::Result_t field = HallSwitch::Result_t::B_FIELD_UNDEF;
 
 HallSwitch::Status_t curStat  = stat;
 HallSwitch::Result_t curField = field;
+HallSwitch::Error_t  err = HallSwitch::OK;
 
 
 #define EXAMPLE_POLLING_ENABLED    0       /**< Polling mode example */
 #define EXAMPLE_INTERRUPT_ENABLED  1       /**< Interrupt mode example */
 
-#if ((EXAMPLE_POLLING_ENABLED ^ EXAMPLE_INTERRUPT_ENBLED) == 1)
+#if (EXAMPLE_POLLING_ENABLED == EXAMPLE_INTERRUPT_ENABLED)
 #error "Select either polling or interrupt example."
 #endif
 
 
 #if (EXAMPLE_POLLING_ENABLED == 1)
 
-HallSwitchWiced      hs(TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F);
+HallSwitchWiced      hs(TLE4964_3M_S2Go_CYW943907AEVAL1F);
 
 /**
  * Polling output in super loop
@@ -40,7 +41,8 @@ HallSwitchWiced      hs(TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F);
 void loop()
 {
     curStat  = hs.getStatus();
-    curField = hs.updateBField();
+    err      = hs.updateBField();
+    curField = hs.getBField();
 
     if (curStat != stat || curField != field)
     {
@@ -75,7 +77,7 @@ void IntCBack(HallSwitch::Result_t result)
     }
 }
 
-HallSwitchWiced hs(TLE4964_3M_S2Go_MyIoT_CYW943907AEVAL1F, IntCBack);
+HallSwitchWiced hs(TLE4964_3M_S2Go_CYW943907AEVAL1F, IntCBack);
 
 void loop()
 {
