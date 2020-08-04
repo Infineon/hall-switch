@@ -11,21 +11,7 @@
 
 #include <Arduino.h> 
 
-#ifdef XMC1100_XMC2GO
-#define LED1 14             /**< LED1 Pin Allocation for XMC2Go  */
-#else
-#define LED1 LED_BUILTIN
-#endif
-
-
-#ifdef XMC1100_XMC2GO 
 #define Q_OUTPUT_PIN    9   /**< Hall Switch Output Pin  */
-#elif ((XMC1100_Boot_Kit) ||  \
-      (XMC4700_Relax_Kit) ||  \
-      (ARDUINO_AVR_UNO))
-#define Q_OUTPUT_PIN    3   /**< Hall Switch Output Pin  */
-#endif
-
 int     value = HIGH;       /**< Output Value */
 
 void setup()
@@ -35,13 +21,12 @@ void setup()
     Serial.begin(115200);
     Serial.println("Serial Initialized");
     
-    pinMode(LED1, OUTPUT);
+    pinMode(LED_BUILTIN, OUTPUT);
     Serial.println("LED1 Initialized");
     
     pinMode(Q_OUTPUT_PIN, INPUT_PULLUP);
     Serial.println("Output Pin Initialized");
     Serial.println();
-    
 }
 
 int curValue = value;
@@ -55,12 +40,12 @@ void loop()
         if(value == LOW)
         {
             Serial.println("B Field ON");
-            digitalWrite(LED1, HIGH);
+            digitalWrite(LED_BUILTIN, HIGH);
         }
         else if(value == HIGH)
         {
             Serial.println("B Field OFF");
-            digitalWrite(LED1, LOW);
+            digitalWrite(LED_BUILTIN, LOW);
         }
     }
 }

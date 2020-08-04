@@ -7,12 +7,18 @@
 
 NAME := Lib_hall_switch
 
-GLOBAL_DEFINES   := HALL_SWITCH_WICED_PLATFORM_ENABLED
+GLOBAL_DEFINES   := HALL_SWITCH_FRAMEWORK=HALL_SWITCH_FRMWK_WICED
 
-GLOBAL_INCLUDES  := src/common 				\
-					src/pal/cypress/wiced-43xxx
+GLOBAL_INCLUDES  := src/config							\
+					src/corelib 				  		\
+					src/pal								\
+					src/framework/wiced-43xxx/pal 		\
+					src/framework/wiced-43xxx/wrapper
 
-$(NAME)_SOURCES  := src/common/hall-switch.cpp						    \
-					src/pal/cypress/wiced-43xxx/hall-switch-wiced.cpp	
+$(NAME)_SOURCES  := src/corelib/hall-switch.cpp						    	\
+					src/corelib/hall-switch-int.cpp							\
+					src/framework/wiced-43xxx/pal/hall-pal-wiced.cpp		\
+					src/framework/wiced-43xxx/wrapper/hall-switch-wiced.cpp	\
+					src/framework/wiced-43xxx/wrapper/hall-platf-wiced.cpp	
 
 VALID_PLATFORMS	 := CYW943907AEVAL1F
