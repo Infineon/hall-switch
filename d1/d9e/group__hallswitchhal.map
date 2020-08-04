@@ -1,7 +1,0 @@
-<map id="Hardware Abstraction Layer" name="Hardware Abstraction Layer">
-<area shape="rect" id="node1" href="$d8/db4/group__hallswitchinohal.html" title="Arduino API" alt="" coords="241,5,336,32"/>
-<area shape="rect" id="node2" href="$db/df5/group__hallswitchwicedhal.html" title="WICED API" alt="" coords="245,56,332,83"/>
-<area shape="rect" id="node3" href="$de/d64/group__hallswitchcpphal.html" title="API" alt="" coords="267,107,310,133"/>
-<area shape="rect" id="node5" href="$d7/d6a/group__hallswitchhwi.html" title="Hardware Interfaces" alt="" coords="213,157,364,184"/>
-<area shape="rect" id="node6" href="$df/d9e/group__hallswitchdatat.html" title="Data Types" alt="" coords="243,208,335,235"/>
-</map>

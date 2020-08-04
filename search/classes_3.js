@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['interrupt',['Interrupt',['../dc/dfd/classInterrupt.html',1,'']]],
-  ['interrupt',['Interrupt',['../d4/da3/classHallSwitch_1_1Interrupt.html',1,'HallSwitch']]]
+  ['platformino_5ft',['PlatformIno_t',['../d9/d80/structPlatformIno__t.html',1,'']]],
+  ['platformwiced_5ft',['PlatformWICED_t',['../d5/dc5/structPlatformWICED__t.html',1,'']]]
 ];

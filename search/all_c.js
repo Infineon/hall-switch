@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['read',['read',['../dd/d09/classHallSwitch_1_1GPIO.html#aa520ef68b52dda22ed27de43497e15db',1,'HallSwitch::GPIO::read()'],['../dd/d64/group__hallgpioino.html#gaa04da6642380e6ecb55861831ea45803',1,'GPIOIno::read()'],['../db/dbc/group__hallgpiowiced.html#gad79ab3f0d88c334335fb380b227c2eba',1,'GPIOWiced::read()']]],
-  ['read_5ferror',['READ_ERROR',['../dd/d09/classHallSwitch_1_1GPIO.html#a2b88f41c6209eeb845f2565bf91ef228ac87d86a7988020ce1c12f9920350c6b4',1,'HallSwitch::GPIO']]],
-  ['readbfield',['readBField',['../de/d64/group__hallswitchcpphal.html#gad4b88ec5eda3f56da89896cc16625348',1,'HallSwitch']]],
-  ['result_5ft',['Result_t',['../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4',1,'HallSwitch']]]
+  ['ok',['OK',['../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3',1,'HallSwitch']]],
+  ['output',['output',['../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0',1,'HallSwitch::output()'],['../d9/d80/structPlatformIno__t.html#a6590b8468ee4c841563d021bd0ad3d40',1,'PlatformIno_t::output()'],['../d5/dc5/structPlatformWICED__t.html#a8ba23c71e146c37ce32d6d93dbeced00',1,'PlatformWICED_t::output()']]]
 ];

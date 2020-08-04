@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['hallswitch',['HallSwitch',['../de/d64/group__hallswitchcpphal.html#ga3bf364ed4b3b817b43fcbaefaf09e669',1,'HallSwitch::HallSwitch()'],['../de/d64/group__hallswitchcpphal.html#ga1ebbf8e75dd873b1609b5e61126a3ecb',1,'HallSwitch::HallSwitch(GPIO *output, CBack_t cBack=NULL, GPIO *power=NULL)']]],
-  ['hallswitchino',['HallSwitchIno',['../d8/db4/group__hallswitchinohal.html#ga1e9665739bc4e19890a7a5b906a8914c',1,'HallSwitchIno::HallSwitchIno(uint8_t outputPin, CBack_t cBack=NULL, uint8_t powerPin=UNUSED_PIN)'],['../d8/db4/group__hallswitchinohal.html#ga9d326ef640cc75ba4d93c4d23dec64d5',1,'HallSwitchIno::HallSwitchIno(HwPlatf_t hwPlatf, CBack_t cBack=NULL)']]],
-  ['hallswitchwiced',['HallSwitchWiced',['../db/df5/group__hallswitchwicedhal.html#ga119f405041c944f3035de1cdeb992161',1,'HallSwitchWiced::HallSwitchWiced(wiced_gpio_t outputPin, CBack_t cBack=NULL, wiced_gpio_t powerPin=UNUSED_PIN)'],['../db/df5/group__hallswitchwicedhal.html#gac6c11d9661880d76ab43047b9c97eec4',1,'HallSwitchWiced::HallSwitchWiced(WICEDHwPlatf_t &amp;hwPlatf, CBack_t cBack=NULL)']]]
+  ['getbfield',['getBField',['../dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11',1,'HallSwitch::getBField()'],['../d8/d4c/classHallSwitchIno.html#ae335cd21264e0a733669a1bbebbac662',1,'HallSwitchIno::getBField()']]],
+  ['getspeed',['getSpeed',['../db/ddb/classHallSpeed.html#aef6f7b8d705f09f9522a537c4ff20507',1,'HallSpeed::getSpeed()'],['../d0/dee/classHallSpeedIno.html#a78822e4de03b503fcf3c84e9a4954be4',1,'HallSpeedIno::getSpeed()']]],
+  ['getstatus',['getStatus',['../dd/db6/classHallSwitch.html#a714e85075bc6ab10e0094261581465bc',1,'HallSwitch']]],
+  ['gpioino',['GPIOIno',['../d6/dfc/classGPIOIno.html#ac5ba8b56ce93a951fc19df8f8eca9924',1,'GPIOIno::GPIOIno()'],['../d6/dfc/classGPIOIno.html#a9770b7dad66e85857e42823617a83b78',1,'GPIOIno::GPIOIno(uint8_t pin, uint8_t mode, VLogic_t logic)']]],
+  ['gpiowiced',['GPIOWiced',['../dd/dcb/classGPIOWiced.html#a924336d48e68f74ee0281c9d2f36733d',1,'GPIOWiced::GPIOWiced(wiced_gpio_t pin, wiced_gpio_config_t config, VLogic_t logic)'],['../dd/dcb/classGPIOWiced.html#a8468a2b4ad013817ff872e86c7bc8c20',1,'GPIOWiced::GPIOWiced()']]]
 ];

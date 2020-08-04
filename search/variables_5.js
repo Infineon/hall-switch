@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['status',['status',['../dd/db6/classHallSwitch.html#a0d4780d9a0407c862f58caff6723bfe2',1,'HallSwitch']]]
+  ['measmode',['measMode',['../dd/db6/classHallSwitch.html#afc5e9ea8ccdcef24e87881d4d443b783',1,'HallSwitch']]]
 ];

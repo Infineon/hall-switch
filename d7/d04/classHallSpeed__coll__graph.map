@@ -1,0 +1,5 @@
+<map id="HallSpeed" name="HallSpeed">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html" title="HallSwitch" alt="" coords="25,109,112,136"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html" title="HallSwitch::GPIO" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node4" href="$d6/dc2/classHallSpeed_1_1Timer.html" title="HallSpeed::Timer" alt="" coords="137,109,267,136"/>
+</map>

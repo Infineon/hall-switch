@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../ifx_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hall Switch
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
    <div id="projectbrief">C++ library of Infineon single Hall-effect switch family for magnetic sensing applications</div>
   </td>
@@ -95,21 +95,22 @@ $(document).ready(function(){initNavTree('dd/db6/classHallSwitch.html','../../')
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../df/d64/classHallSwitch-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">HallSwitch Class Reference</div>  </div>
+<div class="title">HallSwitch Class Reference<div class="ingroups"><a class="el" href="../../db/d63/group__hscorelib.html">Core Library</a> &raquo; <a class="el" href="../../df/d09/group__hswapi.html">Hall Switch API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d3/dcd/hall-switch_8h_source.html">hall-switch.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../db/d3d/hall-switch_8hpp_source.html">hall-switch.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for HallSwitch:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d99/classHallSwitch__inherit__graph.png" border="0" usemap="#HallSwitch_inherit__map" alt="Inheritance graph"/></div>
 <map name="HallSwitch_inherit__map" id="HallSwitch_inherit__map">
-<area shape="rect" id="node2" href="../../d8/d4c/classHallSwitchIno.html" title="HallSwitchIno" alt="" coords="5,80,112,107"/>
-<area shape="rect" id="node3" href="../../d5/de5/classHallSwitchWiced.html" title="HallSwitchWiced" alt="" coords="137,80,261,107"/>
+<area shape="rect" id="node2" href="../../db/ddb/classHallSpeed.html" title="HallSpeed" alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="../../d5/de5/classHallSwitchWiced.html" title="HallSwitchWiced" alt="" coords="116,80,240,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -130,93 +131,644 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:gadf389645bdd9aa2f5da5fdbcd614dc4f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>) (<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>)</td></tr>
-<tr class="memdesc:gadf389645bdd9aa2f5da5fdbcd614dc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type for interrupt mode.  <a href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">More...</a><br /></td></tr>
-<tr class="separator:gadf389645bdd9aa2f5da5fdbcd614dc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf389645bdd9aa2f5da5fdbcd614dc4f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>) (<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>)</td></tr>
+<tr class="memdesc:adf389645bdd9aa2f5da5fdbcd614dc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type for interrupt mode.  <a href="#adf389645bdd9aa2f5da5fdbcd614dc4f">More...</a><br /></td></tr>
+<tr class="separator:adf389645bdd9aa2f5da5fdbcd614dc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Error codes</div></td></tr>
-<tr class="memitem:gaa2ee75b18a1d7ad9607f4cf820da6df8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggaa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3">OK</a> = 0, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggaa2ee75b18a1d7ad9607f4cf820da6df8a82fc09cef1a7837032c90280845e1f9e">INTF_ERROR</a> = -1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggaa2ee75b18a1d7ad9607f4cf820da6df8a46ecc715455ce7e51b466edbde2b922b">CONF_ERROR</a> = -2
+<tr class="memitem:aa2ee75b18a1d7ad9607f4cf820da6df8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3">OK</a> = 0, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a82fc09cef1a7837032c90280845e1f9e">INTF_ERROR</a> = -1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a46ecc715455ce7e51b466edbde2b922b">CONF_ERROR</a> = -2
  }</td></tr>
-<tr class="separator:gaa2ee75b18a1d7ad9607f4cf820da6df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aa2ee75b18a1d7ad9607f4cf820da6df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Power modes</div></td></tr>
-<tr class="memitem:gab19e46b782ea68c476e4d289ea0267ba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggab19e46b782ea68c476e4d289ea0267baa6c1a4c12c089f6a1a761374cd9cee333">MAIN</a> = 1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggab19e46b782ea68c476e4d289ea0267baa004f4ca764e7be02b39a55779a085a81">SWITCH</a> = 2
+<tr class="memitem:ab19e46b782ea68c476e4d289ea0267ba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267baa6c1a4c12c089f6a1a761374cd9cee333">MAIN</a> = 1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267baa004f4ca764e7be02b39a55779a085a81">SWITCH</a> = 2
  }</td></tr>
-<tr class="separator:gab19e46b782ea68c476e4d289ea0267ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ab19e46b782ea68c476e4d289ea0267ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Status</div></td></tr>
-<tr class="memitem:ga9c90f48d6c0b8a46810ed476b4f7d3f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0a1ae8de8ecaef9c0c311275b6d68485d8">UNINITED</a> = 0, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0acc83e034b234d0102e74edca06540fcd">INITED</a> = 1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0a9a29ee4fa5f1f9802251003c72bccfe4">POWER_ON</a> = 2, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0ae21a197cbb64d6886b6e08c5f1c0969d">POWER_OFF</a> = 3
+<tr class="memitem:a9c90f48d6c0b8a46810ed476b4f7d3f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0a1ae8de8ecaef9c0c311275b6d68485d8">UNINITED</a> = 0, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0acc83e034b234d0102e74edca06540fcd">INITED</a> = 1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0a9a29ee4fa5f1f9802251003c72bccfe4">POWER_ON</a> = 2, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0ae21a197cbb64d6886b6e08c5f1c0969d">POWER_OFF</a> = 3
  }</td></tr>
-<tr class="separator:ga9c90f48d6c0b8a46810ed476b4f7d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a9c90f48d6c0b8a46810ed476b4f7d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Measuring mode</div></td></tr>
-<tr class="memitem:gae3ecc0ebf1274a792afee40edc82049c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggae3ecc0ebf1274a792afee40edc82049ca5ef5f1169f27bf17fbef9a7124a3f899">POLLING</a> = 1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggae3ecc0ebf1274a792afee40edc82049ca17b48ef2fdc0c8aca8dc234d149afd89">INTERRUPT</a> = 2
+<tr class="memitem:ae3ecc0ebf1274a792afee40edc82049c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049ca5ef5f1169f27bf17fbef9a7124a3f899">POLLING</a> = 1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049ca17b48ef2fdc0c8aca8dc234d149afd89">INTERRUPT</a> = 2
  }</td></tr>
-<tr class="separator:gae3ecc0ebf1274a792afee40edc82049c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ae3ecc0ebf1274a792afee40edc82049c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Magnetic field value</div></td></tr>
-<tr class="memitem:ga6df6d463b8cc53a2a4a07c81717b0ee4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga6df6d463b8cc53a2a4a07c81717b0ee4ae69a12aae8eb0e6f4023f5ffce9c1c74">B_FIELD_UNDEF</a> = -1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga6df6d463b8cc53a2a4a07c81717b0ee4a7817c207d401745ae539c9490974df9d">B_FIELD_OFF</a> = 0, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga6df6d463b8cc53a2a4a07c81717b0ee4a4f64cdd3abd256a372b7ac0a31625b38">B_FIELD_ON</a> = 1
+<tr class="memitem:a6df6d463b8cc53a2a4a07c81717b0ee4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4ae69a12aae8eb0e6f4023f5ffce9c1c74">B_FIELD_UNDEF</a> = -1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4a7817c207d401745ae539c9490974df9d">B_FIELD_OFF</a> = 0, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4a4f64cdd3abd256a372b7ac0a31625b38">B_FIELD_ON</a> = 1
  }</td></tr>
-<tr class="separator:ga6df6d463b8cc53a2a4a07c81717b0ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a6df6d463b8cc53a2a4a07c81717b0ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ga3bf364ed4b3b817b43fcbaefaf09e669"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga3bf364ed4b3b817b43fcbaefaf09e669">HallSwitch</a> ()</td></tr>
-<tr class="memdesc:ga3bf364ed4b3b817b43fcbaefaf09e669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Default Constructor.  <a href="../../de/d64/group__hallswitchcpphal.html#ga3bf364ed4b3b817b43fcbaefaf09e669">More...</a><br /></td></tr>
-<tr class="separator:ga3bf364ed4b3b817b43fcbaefaf09e669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ebbf8e75dd873b1609b5e61126a3ecb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga1ebbf8e75dd873b1609b5e61126a3ecb">HallSwitch</a> (<a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0">output</a>, <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL, <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#ab724426c5f38fd6ef658cc003a13d7fa">power</a>=NULL)</td></tr>
-<tr class="memdesc:ga1ebbf8e75dd873b1609b5e61126a3ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Constructor.  <a href="../../de/d64/group__hallswitchcpphal.html#ga1ebbf8e75dd873b1609b5e61126a3ecb">More...</a><br /></td></tr>
-<tr class="separator:ga1ebbf8e75dd873b1609b5e61126a3ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab0bfbcaccf05a3c14e95836cebc6efb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gab0bfbcaccf05a3c14e95836cebc6efb3">~HallSwitch</a> ()</td></tr>
-<tr class="memdesc:gab0bfbcaccf05a3c14e95836cebc6efb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Destructor Disables the sensor:  <a href="../../de/d64/group__hallswitchcpphal.html#gab0bfbcaccf05a3c14e95836cebc6efb3">More...</a><br /></td></tr>
-<tr class="separator:gab0bfbcaccf05a3c14e95836cebc6efb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga767dbcd816b7fba5634c71a3a36fc271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga767dbcd816b7fba5634c71a3a36fc271">begin</a> ()</td></tr>
-<tr class="memdesc:ga767dbcd816b7fba5634c71a3a36fc271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the hardware interfaces.  <a href="../../de/d64/group__hallswitchcpphal.html#ga767dbcd816b7fba5634c71a3a36fc271">More...</a><br /></td></tr>
-<tr class="separator:ga767dbcd816b7fba5634c71a3a36fc271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac513ce35323eb0736ab43249e338ce63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gac513ce35323eb0736ab43249e338ce63">end</a> ()</td></tr>
-<tr class="memdesc:gac513ce35323eb0736ab43249e338ce63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the hardware interfaces.  <a href="../../de/d64/group__hallswitchcpphal.html#gac513ce35323eb0736ab43249e338ce63">More...</a><br /></td></tr>
-<tr class="separator:gac513ce35323eb0736ab43249e338ce63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad56a5b55491962caed6f0d24f56c5dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gaad56a5b55491962caed6f0d24f56c5dc">enable</a> ()</td></tr>
-<tr class="memdesc:gaad56a5b55491962caed6f0d24f56c5dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the sensor.  <a href="../../de/d64/group__hallswitchcpphal.html#gaad56a5b55491962caed6f0d24f56c5dc">More...</a><br /></td></tr>
-<tr class="separator:gaad56a5b55491962caed6f0d24f56c5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4285836961ea56bf8f2c60a2243236db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga4285836961ea56bf8f2c60a2243236db">disable</a> ()</td></tr>
-<tr class="memdesc:ga4285836961ea56bf8f2c60a2243236db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the sensor.  <a href="../../de/d64/group__hallswitchcpphal.html#ga4285836961ea56bf8f2c60a2243236db">More...</a><br /></td></tr>
-<tr class="separator:ga4285836961ea56bf8f2c60a2243236db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga714e85075bc6ab10e0094261581465bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">HallSwitch::Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga714e85075bc6ab10e0094261581465bc">getStatus</a> ()</td></tr>
-<tr class="memdesc:ga714e85075bc6ab10e0094261581465bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status.  <a href="../../de/d64/group__hallswitchcpphal.html#ga714e85075bc6ab10e0094261581465bc">More...</a><br /></td></tr>
-<tr class="separator:ga714e85075bc6ab10e0094261581465bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad4b88ec5eda3f56da89896cc16625348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">HallSwitch::Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gad4b88ec5eda3f56da89896cc16625348">readBField</a> ()</td></tr>
-<tr class="memdesc:gad4b88ec5eda3f56da89896cc16625348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the actual magnetic field value.  <a href="../../de/d64/group__hallswitchcpphal.html#gad4b88ec5eda3f56da89896cc16625348">More...</a><br /></td></tr>
-<tr class="separator:gad4b88ec5eda3f56da89896cc16625348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59f53cfeee84aa12f546ae20c4f22e11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">HallSwitch::Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga59f53cfeee84aa12f546ae20c4f22e11">getBField</a> ()</td></tr>
-<tr class="memdesc:ga59f53cfeee84aa12f546ae20c4f22e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets magnetic field.  <a href="../../de/d64/group__hallswitchcpphal.html#ga59f53cfeee84aa12f546ae20c4f22e11">More...</a><br /></td></tr>
-<tr class="separator:ga59f53cfeee84aa12f546ae20c4f22e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5dffab5504ae7cee6f35ef72370efeab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga5dffab5504ae7cee6f35ef72370efeab">callback</a> ()</td></tr>
-<tr class="memdesc:ga5dffab5504ae7cee6f35ef72370efeab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> mode callback function.  <a href="../../de/d64/group__hallswitchcpphal.html#ga5dffab5504ae7cee6f35ef72370efeab">More...</a><br /></td></tr>
-<tr class="separator:ga5dffab5504ae7cee6f35ef72370efeab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf364ed4b3b817b43fcbaefaf09e669"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a3bf364ed4b3b817b43fcbaefaf09e669">HallSwitch</a> ()</td></tr>
+<tr class="memdesc:a3bf364ed4b3b817b43fcbaefaf09e669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Default Constructor.  <a href="#a3bf364ed4b3b817b43fcbaefaf09e669">More...</a><br /></td></tr>
+<tr class="separator:a3bf364ed4b3b817b43fcbaefaf09e669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebbf8e75dd873b1609b5e61126a3ecb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a1ebbf8e75dd873b1609b5e61126a3ecb">HallSwitch</a> (<a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0">output</a>, <a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL, <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#ab724426c5f38fd6ef658cc003a13d7fa">power</a>=NULL)</td></tr>
+<tr class="memdesc:a1ebbf8e75dd873b1609b5e61126a3ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Constructor.  <a href="#a1ebbf8e75dd873b1609b5e61126a3ecb">More...</a><br /></td></tr>
+<tr class="separator:a1ebbf8e75dd873b1609b5e61126a3ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bfbcaccf05a3c14e95836cebc6efb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ab0bfbcaccf05a3c14e95836cebc6efb3">~HallSwitch</a> ()</td></tr>
+<tr class="memdesc:ab0bfbcaccf05a3c14e95836cebc6efb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Destructor Disables the sensor:  <a href="#ab0bfbcaccf05a3c14e95836cebc6efb3">More...</a><br /></td></tr>
+<tr class="separator:ab0bfbcaccf05a3c14e95836cebc6efb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c05d7f14b310b06e2132ecb95cb24b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b">init</a> ()</td></tr>
+<tr class="memdesc:a19c05d7f14b310b06e2132ecb95cb24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the hardware interfaces.  <a href="#a19c05d7f14b310b06e2132ecb95cb24b">More...</a><br /></td></tr>
+<tr class="separator:a19c05d7f14b310b06e2132ecb95cb24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc1baf88406ae2998d90b5100be6065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065">deinit</a> ()</td></tr>
+<tr class="memdesc:aebc1baf88406ae2998d90b5100be6065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the hardware interfaces.  <a href="#aebc1baf88406ae2998d90b5100be6065">More...</a><br /></td></tr>
+<tr class="separator:aebc1baf88406ae2998d90b5100be6065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad56a5b55491962caed6f0d24f56c5dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc">enable</a> ()</td></tr>
+<tr class="memdesc:aad56a5b55491962caed6f0d24f56c5dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the sensor.  <a href="#aad56a5b55491962caed6f0d24f56c5dc">More...</a><br /></td></tr>
+<tr class="separator:aad56a5b55491962caed6f0d24f56c5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4285836961ea56bf8f2c60a2243236db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db">disable</a> ()</td></tr>
+<tr class="memdesc:a4285836961ea56bf8f2c60a2243236db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the sensor.  <a href="#a4285836961ea56bf8f2c60a2243236db">More...</a><br /></td></tr>
+<tr class="separator:a4285836961ea56bf8f2c60a2243236db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714e85075bc6ab10e0094261581465bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a714e85075bc6ab10e0094261581465bc">getStatus</a> ()</td></tr>
+<tr class="memdesc:a714e85075bc6ab10e0094261581465bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the sensor status.  <a href="#a714e85075bc6ab10e0094261581465bc">More...</a><br /></td></tr>
+<tr class="separator:a714e85075bc6ab10e0094261581465bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24701141c099df49ee579ceece498cb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0">updateBField</a> ()</td></tr>
+<tr class="memdesc:a24701141c099df49ee579ceece498cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates instance magnetic field value.  <a href="#a24701141c099df49ee579ceece498cb0">More...</a><br /></td></tr>
+<tr class="separator:a24701141c099df49ee579ceece498cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f53cfeee84aa12f546ae20c4f22e11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11">getBField</a> ()</td></tr>
+<tr class="memdesc:a59f53cfeee84aa12f546ae20c4f22e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets magnetic field.  <a href="#a59f53cfeee84aa12f546ae20c4f22e11">More...</a><br /></td></tr>
+<tr class="separator:a59f53cfeee84aa12f546ae20c4f22e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5dffab5504ae7cee6f35ef72370efeab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a5dffab5504ae7cee6f35ef72370efeab">callback</a> ()</td></tr>
+<tr class="memdesc:a5dffab5504ae7cee6f35ef72370efeab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> mode callback function.  <a href="#a5dffab5504ae7cee6f35ef72370efeab">More...</a><br /></td></tr>
+<tr class="separator:a5dffab5504ae7cee6f35ef72370efeab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a0d4780d9a0407c862f58caff6723bfe2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a0d4780d9a0407c862f58caff6723bfe2">status</a></td></tr>
+<tr class="separator:a0d4780d9a0407c862f58caff6723bfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8d9332c6f28bf0da6d253795036b2a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0">output</a></td></tr>
 <tr class="separator:aa8d9332c6f28bf0da6d253795036b2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35856e349809bd1ae3336e3a07514225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a></td></tr>
+<tr class="memitem:ad1e562182cb8b261b755e8ca55a8c0ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ad1e562182cb8b261b755e8ca55a8c0ab">bfieldVal</a></td></tr>
+<tr class="separator:ad1e562182cb8b261b755e8ca55a8c0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35856e349809bd1ae3336e3a07514225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a></td></tr>
 <tr class="separator:a35856e349809bd1ae3336e3a07514225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc5e9ea8ccdcef24e87881d4d443b783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#afc5e9ea8ccdcef24e87881d4d443b783">measMode</a></td></tr>
+<tr class="memitem:afc5e9ea8ccdcef24e87881d4d443b783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#afc5e9ea8ccdcef24e87881d4d443b783">measMode</a></td></tr>
 <tr class="separator:afc5e9ea8ccdcef24e87881d4d443b783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab724426c5f38fd6ef658cc003a13d7fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ab724426c5f38fd6ef658cc003a13d7fa">power</a></td></tr>
 <tr class="separator:ab724426c5f38fd6ef658cc003a13d7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e166d15e3eb00132185acfb157b8e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#af2e166d15e3eb00132185acfb157b8e2">powerMode</a></td></tr>
+<tr class="memitem:af2e166d15e3eb00132185acfb157b8e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#af2e166d15e3eb00132185acfb157b8e2">powerMode</a></td></tr>
 <tr class="separator:af2e166d15e3eb00132185acfb157b8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d4780d9a0407c862f58caff6723bfe2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a0d4780d9a0407c862f58caff6723bfe2">status</a></td></tr>
-<tr class="separator:a0d4780d9a0407c862f58caff6723bfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1e562182cb8b261b755e8ca55a8c0ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ad1e562182cb8b261b755e8ca55a8c0ab">bfieldVal</a></td></tr>
-<tr class="separator:ad1e562182cb8b261b755e8ca55a8c0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="adf389645bdd9aa2f5da5fdbcd614dc4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* HallSwitch::CBack_t) (<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function type for interrupt mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Result_t</td><td>B field value. The interrupt read the B field value and will pass it to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aa2ee75b18a1d7ad9607f4cf820da6df8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3"></a>OK&#160;</td><td class="fielddoc">
+<p>No error </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa2ee75b18a1d7ad9607f4cf820da6df8a82fc09cef1a7837032c90280845e1f9e"></a>INTF_ERROR&#160;</td><td class="fielddoc">
+<p>Interface error </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa2ee75b18a1d7ad9607f4cf820da6df8a46ecc715455ce7e51b466edbde2b922b"></a>CONF_ERROR&#160;</td><td class="fielddoc">
+<p>Configuration error </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ab19e46b782ea68c476e4d289ea0267ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267ba">HallSwitch::PowerMode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab19e46b782ea68c476e4d289ea0267baa6c1a4c12c089f6a1a761374cd9cee333"></a>MAIN&#160;</td><td class="fielddoc">
+<p>Same as MCU VDD supply signal </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab19e46b782ea68c476e4d289ea0267baa004f4ca764e7be02b39a55779a085a81"></a>SWITCH&#160;</td><td class="fielddoc">
+<p>Switched controlled power from MCU </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a9c90f48d6c0b8a46810ed476b4f7d3f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">HallSwitch::Status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a9c90f48d6c0b8a46810ed476b4f7d3f0a1ae8de8ecaef9c0c311275b6d68485d8"></a>UNINITED&#160;</td><td class="fielddoc">
+<p>Not initialized </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9c90f48d6c0b8a46810ed476b4f7d3f0acc83e034b234d0102e74edca06540fcd"></a>INITED&#160;</td><td class="fielddoc">
+<p>Initialized (external interfaces initialized) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9c90f48d6c0b8a46810ed476b4f7d3f0a9a29ee4fa5f1f9802251003c72bccfe4"></a>POWER_ON&#160;</td><td class="fielddoc">
+<p>Power on </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9c90f48d6c0b8a46810ed476b4f7d3f0ae21a197cbb64d6886b6e08c5f1c0969d"></a>POWER_OFF&#160;</td><td class="fielddoc">
+<p>Power off </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ae3ecc0ebf1274a792afee40edc82049c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049c">HallSwitch::MeasMode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae3ecc0ebf1274a792afee40edc82049ca5ef5f1169f27bf17fbef9a7124a3f899"></a>POLLING&#160;</td><td class="fielddoc">
+<p>Polling mode </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3ecc0ebf1274a792afee40edc82049ca17b48ef2fdc0c8aca8dc234d149afd89"></a>INTERRUPT&#160;</td><td class="fielddoc">
+<p><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> mode </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a6df6d463b8cc53a2a4a07c81717b0ee4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">HallSwitch::Result_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a6df6d463b8cc53a2a4a07c81717b0ee4ae69a12aae8eb0e6f4023f5ffce9c1c74"></a>B_FIELD_UNDEF&#160;</td><td class="fielddoc">
+<p>Output default high. Undefined at initialization </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a6df6d463b8cc53a2a4a07c81717b0ee4a7817c207d401745ae539c9490974df9d"></a>B_FIELD_OFF&#160;</td><td class="fielddoc">
+<p>No magnetic field present. Off. Q output high </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a6df6d463b8cc53a2a4a07c81717b0ee4a4f64cdd3abd256a372b7ac0a31625b38"></a>B_FIELD_ON&#160;</td><td class="fielddoc">
+<p>Magnetic field present. On. Q output low </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3bf364ed4b3b817b43fcbaefaf09e669"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HallSwitch::HallSwitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hall Switch Default Constructor. </p>
+<ul>
+<li>Hardware interfaces pointers set to NULL</li>
+<li>Default modes polling (for measure mode) and main (for switch power mode) <dl class="section pre"><dt>Precondition</dt><dd>None </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a1ebbf8e75dd873b1609b5e61126a3ecb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HallSwitch::HallSwitch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td>
+          <td class="paramname"><em>cBack</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *&#160;</td>
+          <td class="paramname"><em>power</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hall Switch Constructor. </p>
+<p>Mandatory arguments:</p><ul>
+<li>Sensor output <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> pointer</li>
+</ul>
+<p>Optional arguments:</p><ul>
+<li><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> callback. By default NULL. Required to enable interrupt mode.</li>
+<li>Sensor power <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> pointer (only for switch powered mode platform). By default it is NULL.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*output</td><td>Sensor output <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> interface pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cBack</td><td>Callback for interrupt mode. When passed, it enables interrupt mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*power</td><td>Sensor switch power controller <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> interface pointer. Default NULL will set power mode to MAIN </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0bfbcaccf05a3c14e95836cebc6efb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HallSwitch::~HallSwitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hall Switch Destructor Disables the sensor: </p>
+<ul>
+<li>If "interrupt measuring mode" is enabled, the interrupt is disabled</li>
+<li>If "switch power mode" is configured, the sensor power is disabled <dl class="section pre"><dt>Precondition</dt><dd>None </dd></dl>
+</li>
+</ul>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_ab0bfbcaccf05a3c14e95836cebc6efb3_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_ab0bfbcaccf05a3c14e95836cebc6efb3_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_ab0bfbcaccf05a3c14e95836cebc6efb3_cgraph" id="dd/db6/classHallSwitch_ab0bfbcaccf05a3c14e95836cebc6efb3_cgraph">
+<area shape="rect" id="node2" href="../../dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db" title="Disables the sensor. " alt="" coords="224,56,364,83"/>
+<area shape="rect" id="node5" href="../../dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065" title="Deinitializes the hardware interfaces. " alt="" coords="229,107,359,133"/>
+<area shape="rect" id="node3" href="../../dd/d09/classHallSwitch_1_1GPIO.html#a7521e8f19e8438dd161e82bd437d861a" title="Disables the hardware interrupt. " alt="" coords="412,5,607,32"/>
+<area shape="rect" id="node4" href="../../dd/d09/classHallSwitch_1_1GPIO.html#a3ee4946c6927a987a2d29559813c6131" title="Disables the GPIO output according to the GPIO logic. " alt="" coords="420,56,599,83"/>
+<area shape="rect" id="node6" href="../../dd/d09/classHallSwitch_1_1GPIO.html#ad481d3d92fa6254de678efd7869b9e8c" title="Deinitializes the GPIO. " alt="" coords="425,107,594,133"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a19c05d7f14b310b06e2132ecb95cb24b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a> HallSwitch::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the hardware interfaces. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>None </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> error code </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OK</td><td>if success </td></tr>
+    <tr><td class="paramname">INTF_ERROR</td><td>if hardware interface error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_a19c05d7f14b310b06e2132ecb95cb24b_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_a19c05d7f14b310b06e2132ecb95cb24b_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_a19c05d7f14b310b06e2132ecb95cb24b_cgraph" id="dd/db6/classHallSwitch_a19c05d7f14b310b06e2132ecb95cb24b_cgraph">
+<area shape="rect" id="node2" href="../../dd/d09/classHallSwitch_1_1GPIO.html#ac4c88f091e85a3fa7ed0198372e96fec" title="Initializes the GPIO. " alt="" coords="168,5,321,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aebc1baf88406ae2998d90b5100be6065"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a> HallSwitch::deinit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deinitializes the hardware interfaces. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>Instance has called <a class="el" href="../../dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces. ">init()</a> </dd>
+<dd>
+Instance has called <a class="el" href="../../dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db" title="Disables the sensor. ">disable()</a> if <a class="el" href="../../dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor. ">enable()</a> was called </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> error code </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OK</td><td>if success </td></tr>
+    <tr><td class="paramname">INTF_ERROR</td><td>if hardware interface error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_aebc1baf88406ae2998d90b5100be6065_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_aebc1baf88406ae2998d90b5100be6065_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_aebc1baf88406ae2998d90b5100be6065_cgraph" id="dd/db6/classHallSwitch_aebc1baf88406ae2998d90b5100be6065_cgraph">
+<area shape="rect" id="node2" href="../../dd/d09/classHallSwitch_1_1GPIO.html#ad481d3d92fa6254de678efd7869b9e8c" title="Deinitializes the GPIO. " alt="" coords="184,5,353,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aad56a5b55491962caed6f0d24f56c5dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a> HallSwitch::enable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables the sensor. </p>
+<ul>
+<li>If "switch power mode " is configured, the sensor is powered up</li>
+<li>If "interrupt measuring mode" is configured, the interrupt is enabled</li>
+</ul>
+<dl class="section pre"><dt>Precondition</dt><dd>Instance has called <a class="el" href="../../dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces. ">init()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> error code </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OK</td><td>if success </td></tr>
+    <tr><td class="paramname">INTF_ERROR</td><td>if hardware interface error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_aad56a5b55491962caed6f0d24f56c5dc_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_aad56a5b55491962caed6f0d24f56c5dc_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_aad56a5b55491962caed6f0d24f56c5dc_cgraph" id="dd/db6/classHallSwitch_aad56a5b55491962caed6f0d24f56c5dc_cgraph">
+<area shape="rect" id="node2" href="../../dd/d09/classHallSwitch_1_1GPIO.html#a8bfbf5e354bafd81933c6542a15160a1" title="Enables the GPIO output according to the GPIO logic. " alt="" coords="200,5,377,32"/>
+<area shape="rect" id="node3" href="../../dd/d09/classHallSwitch_1_1GPIO.html#adf99b47a5a4784c1a7ec7014fa690176" title="Enables the hardware interrupt. " alt="" coords="192,56,385,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4285836961ea56bf8f2c60a2243236db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a> HallSwitch::disable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disables the sensor. </p>
+<ul>
+<li>If the "interrupt measuring mode" is configured, the interrupt is disabled</li>
+<li>If the "switch power mode" is configured, the sensor is powered off</li>
+</ul>
+<dl class="section pre"><dt>Precondition</dt><dd>Instance has called <a class="el" href="../../dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor. ">enable()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> error code </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OK</td><td>if success </td></tr>
+    <tr><td class="paramname">INTF_ERROR</td><td>if hardware interface error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_a4285836961ea56bf8f2c60a2243236db_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_a4285836961ea56bf8f2c60a2243236db_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_a4285836961ea56bf8f2c60a2243236db_cgraph" id="dd/db6/classHallSwitch_a4285836961ea56bf8f2c60a2243236db_cgraph">
+<area shape="rect" id="node2" href="../../dd/d09/classHallSwitch_1_1GPIO.html#a7521e8f19e8438dd161e82bd437d861a" title="Disables the hardware interrupt. " alt="" coords="193,5,388,32"/>
+<area shape="rect" id="node3" href="../../dd/d09/classHallSwitch_1_1GPIO.html#a3ee4946c6927a987a2d29559813c6131" title="Disables the GPIO output according to the GPIO logic. " alt="" coords="201,56,380,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a714e85075bc6ab10e0094261581465bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">HallSwitch::Status_t</a> HallSwitch::getStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the sensor status. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> status </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a24701141c099df49ee579ceece498cb0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a> HallSwitch::updateBField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates instance magnetic field value. </p>
+<ul>
+<li>Magnetic field present if the <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> voltage level is low</li>
+<li>Mangnetic field not present if the <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> voltage level is high</li>
+</ul>
+<p>The "bfieldVal" object member is updated with the read <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> value.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>Instance has called <a class="el" href="../../dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor. ">enable()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> error code </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OK</td><td>if success </td></tr>
+    <tr><td class="paramname">INTF_ERROR</td><td>if hardware interface error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_a24701141c099df49ee579ceece498cb0_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_a24701141c099df49ee579ceece498cb0_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_a24701141c099df49ee579ceece498cb0_cgraph" id="dd/db6/classHallSwitch_a24701141c099df49ee579ceece498cb0_cgraph">
+<area shape="rect" id="node2" href="../../dd/d09/classHallSwitch_1_1GPIO.html#aa520ef68b52dda22ed27de43497e15db" title="Reads the GPIO voltage level. " alt="" coords="231,5,393,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a59f53cfeee84aa12f546ae20c4f22e11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">HallSwitch::Result_t</a> HallSwitch::getBField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets magnetic field. </p>
+<p>This functions returns the last read value updated in the object member bfieldVal variable, either from a explicit <a class="el" href="../../dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value. ">updateBField()</a> call or due to an interrupt event.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>If polling mode is used, <a class="el" href="../../dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value. ">updateBField()</a> has to be called preivously in order to get the actual value.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> Result_t magnetic field value </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">B_FIELD_ON</td><td>if magnetic field present </td></tr>
+    <tr><td class="paramname">B_FIELD_OFF</td><td>if magnetic field NOT present </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5dffab5504ae7cee6f35ef72370efeab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HallSwitch::callback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> mode callback function. </p>
+<p>The instance updates on its own bfieldVal member when the interrupt occurs.</p>
+<p>Additionally, the user callback function is executed.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../db/ddb/classHallSpeed.html#ae5b56e505378988a839c9eb9735ee0db">HallSpeed</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/db6/classHallSwitch_a5dffab5504ae7cee6f35ef72370efeab_cgraph.png" border="0" usemap="#dd/db6/classHallSwitch_a5dffab5504ae7cee6f35ef72370efeab_cgraph" alt=""/></div>
+<map name="dd/db6/classHallSwitch_a5dffab5504ae7cee6f35ef72370efeab_cgraph" id="dd/db6/classHallSwitch_a5dffab5504ae7cee6f35ef72370efeab_cgraph">
+<area shape="rect" id="node2" href="../../dd/d09/classHallSwitch_1_1GPIO.html#a1031988865199f3d31d7cdf2f24c804c" title="Gets the latest interrupt event. " alt="" coords="200,5,387,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0d4780d9a0407c862f58caff6723bfe2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a> HallSwitch::status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Status </p>
+
+</div>
+</div>
 <a class="anchor" id="aa8d9332c6f28bf0da6d253795036b2a0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -238,6 +790,27 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad1e562182cb8b261b755e8ca55a8c0ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a> HallSwitch::bfieldVal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Magnetic field value </p>
+
+</div>
+</div>
 <a class="anchor" id="a35856e349809bd1ae3336e3a07514225"></a>
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +819,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> HallSwitch::cBack</td>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> HallSwitch::cBack</td>
         </tr>
       </table>
   </td>
@@ -267,7 +840,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a> HallSwitch::measMode</td>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a> HallSwitch::measMode</td>
         </tr>
       </table>
   </td>
@@ -309,7 +882,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a> HallSwitch::powerMode</td>
+          <td class="memname"><a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a> HallSwitch::powerMode</td>
         </tr>
       </table>
   </td>
@@ -322,50 +895,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0d4780d9a0407c862f58caff6723bfe2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a> HallSwitch::status</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Status </p>
-
-</div>
-</div>
-<a class="anchor" id="ad1e562182cb8b261b755e8ca55a8c0ab"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a> HallSwitch::bfieldVal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Magnetic field value </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d3/dcd/hall-switch_8h_source.html">hall-switch.h</a></li>
+<li><a class="el" href="../../db/d3d/hall-switch_8hpp_source.html">hall-switch.hpp</a></li>
 <li><a class="el" href="../../d8/d69/hall-switch_8cpp.html">hall-switch.cpp</a></li>
 </ul>
 </div><!-- contents -->

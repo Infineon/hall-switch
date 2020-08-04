@@ -1,4 +1,4 @@
 <map id="HallSwitch" name="HallSwitch">
-<area shape="rect" id="node2" href="$d8/d4c/classHallSwitchIno.html" title="HallSwitchIno" alt="" coords="5,80,112,107"/>
-<area shape="rect" id="node3" href="$d5/de5/classHallSwitchWiced.html" title="HallSwitchWiced" alt="" coords="137,80,261,107"/>
+<area shape="rect" id="node2" href="$db/ddb/classHallSpeed.html" title="HallSpeed" alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$d5/de5/classHallSwitchWiced.html" title="HallSwitchWiced" alt="" coords="116,80,240,107"/>
 </map>

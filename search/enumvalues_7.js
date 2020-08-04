@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['polling',['POLLING',['../df/d9e/group__hallswitchdatat.html#ggae3ecc0ebf1274a792afee40edc82049ca5ef5f1169f27bf17fbef9a7124a3f899',1,'HallSwitch']]],
-  ['positive',['POSITIVE',['../dd/d09/classHallSwitch_1_1GPIO.html#a23aefa877466806c670f5f520eae0013ae15f30fb6165875973c0f01da197f286',1,'HallSwitch::GPIO']]],
-  ['power_5foff',['POWER_OFF',['../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0ae21a197cbb64d6886b6e08c5f1c0969d',1,'HallSwitch']]],
-  ['power_5fon',['POWER_ON',['../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0a9a29ee4fa5f1f9802251003c72bccfe4',1,'HallSwitch']]]
+  ['ok',['OK',['../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3',1,'HallSwitch']]]
 ];

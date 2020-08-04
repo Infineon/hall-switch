@@ -1,11 +1,13 @@
 var annotated_dup =
 [
-    [ "ArdHwPlatfPins_t", "dd/db1/structArdHwPlatfPins__t.html", "dd/db1/structArdHwPlatfPins__t" ],
-    [ "GPIO", "d7/dde/classGPIO.html", null ],
     [ "GPIOIno", "d6/dfc/classGPIOIno.html", "d6/dfc/classGPIOIno" ],
     [ "GPIOWiced", "dd/dcb/classGPIOWiced.html", "dd/dcb/classGPIOWiced" ],
+    [ "HallSpeed", "db/ddb/classHallSpeed.html", "db/ddb/classHallSpeed" ],
+    [ "HallSpeedIno", "d0/dee/classHallSpeedIno.html", "d0/dee/classHallSpeedIno" ],
     [ "HallSwitch", "dd/db6/classHallSwitch.html", "dd/db6/classHallSwitch" ],
     [ "HallSwitchIno", "d8/d4c/classHallSwitchIno.html", "d8/d4c/classHallSwitchIno" ],
     [ "HallSwitchWiced", "d5/de5/classHallSwitchWiced.html", "d5/de5/classHallSwitchWiced" ],
-    [ "Interrupt", "dc/dfd/classInterrupt.html", null ]
+    [ "PlatformIno_t", "d9/d80/structPlatformIno__t.html", "d9/d80/structPlatformIno__t" ],
+    [ "PlatformWICED_t", "d5/dc5/structPlatformWICED__t.html", "d5/dc5/structPlatformWICED__t" ],
+    [ "TimerIno", "dd/d9b/classTimerIno.html", "dd/d9b/classTimerIno" ]
 ];

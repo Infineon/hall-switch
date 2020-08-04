@@ -1,14 +1,15 @@
 var classGPIOIno =
 [
-    [ "GPIOIno", "dd/d64/group__hallgpioino.html#gac5ba8b56ce93a951fc19df8f8eca9924", null ],
-    [ "GPIOIno", "dd/d64/group__hallgpioino.html#ga9770b7dad66e85857e42823617a83b78", null ],
-    [ "init", "dd/d64/group__hallgpioino.html#ga5485281864da935dbce964d9b9f67272", null ],
-    [ "deinit", "dd/d64/group__hallgpioino.html#ga6f1021e14fea8ebf6ccd3e123401c76b", null ],
-    [ "enableInt", "dd/d64/group__hallgpioino.html#ga2b6b2816da3e2e4d42f4d1a228f9c60b", null ],
-    [ "disableInt", "dd/d64/group__hallgpioino.html#gad009cd29bd9ce7ff1883c08c8cccd303", null ],
-    [ "intEvent", "dd/d64/group__hallgpioino.html#ga4009d03ad657755361720506526763c7", null ],
-    [ "read", "dd/d64/group__hallgpioino.html#gaa04da6642380e6ecb55861831ea45803", null ],
-    [ "write", "dd/d64/group__hallgpioino.html#ga5a2dd48905749cebcbc05d9ca43a5983", null ],
-    [ "enable", "dd/d64/group__hallgpioino.html#ga33f065c705688c66fd9eadcdc3fc50ad", null ],
-    [ "disable", "dd/d64/group__hallgpioino.html#gabb40811cf4fa1de56bf10d1bbd586986", null ]
+    [ "GPIOIno", "d6/dfc/classGPIOIno.html#ac5ba8b56ce93a951fc19df8f8eca9924", null ],
+    [ "GPIOIno", "d6/dfc/classGPIOIno.html#a9770b7dad66e85857e42823617a83b78", null ],
+    [ "~GPIOIno", "d6/dfc/classGPIOIno.html#a031ffcf24693de2072d4e87bbdf9fd04", null ],
+    [ "init", "d6/dfc/classGPIOIno.html#ab8459cb6a97701a664e570c9278b88f2", null ],
+    [ "deinit", "d6/dfc/classGPIOIno.html#aa9c559a60d843fd806796ff23adad797", null ],
+    [ "enableInt", "d6/dfc/classGPIOIno.html#afb72967fe8ffe94aee77359844544256", null ],
+    [ "disableInt", "d6/dfc/classGPIOIno.html#a1e7ff20e28d28e3a2ab0001d61def895", null ],
+    [ "intEvent", "d6/dfc/classGPIOIno.html#a4009d03ad657755361720506526763c7", null ],
+    [ "read", "d6/dfc/classGPIOIno.html#aa04da6642380e6ecb55861831ea45803", null ],
+    [ "write", "d6/dfc/classGPIOIno.html#a719ab9d66939ee6f3686eb1c58605962", null ],
+    [ "enable", "d6/dfc/classGPIOIno.html#a30948e61c23629b5121496ff085132ab", null ],
+    [ "disable", "d6/dfc/classGPIOIno.html#a77ab4a2d9cac12d0f0571efa9eab7d22", null ]
 ];

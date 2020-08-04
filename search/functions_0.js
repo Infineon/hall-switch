@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin',['begin',['../de/d64/group__hallswitchcpphal.html#ga767dbcd816b7fba5634c71a3a36fc271',1,'HallSwitch']]]
+  ['application_5fstart',['application_start',['../d4/de4/hall__switch_8cpp.html#a1b078eb11b33c0125c88261467908eb4',1,'hall_switch.cpp']]]
 ];

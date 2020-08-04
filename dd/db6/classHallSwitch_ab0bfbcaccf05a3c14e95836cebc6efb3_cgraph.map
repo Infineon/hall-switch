@@ -1,0 +1,7 @@
+<map id="HallSwitch::~HallSwitch" name="HallSwitch::~HallSwitch">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db" title="Disables the sensor. " alt="" coords="224,56,364,83"/>
+<area shape="rect" id="node5" href="$dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065" title="Deinitializes the hardware interfaces. " alt="" coords="229,107,359,133"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#a7521e8f19e8438dd161e82bd437d861a" title="Disables the hardware interrupt. " alt="" coords="412,5,607,32"/>
+<area shape="rect" id="node4" href="$dd/d09/classHallSwitch_1_1GPIO.html#a3ee4946c6927a987a2d29559813c6131" title="Disables the GPIO output according to the GPIO logic. " alt="" coords="420,56,599,83"/>
+<area shape="rect" id="node6" href="$dd/d09/classHallSwitch_1_1GPIO.html#ad481d3d92fa6254de678efd7869b9e8c" title="Deinitializes the GPIO. " alt="" coords="425,107,594,133"/>
+</map>

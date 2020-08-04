@@ -1,0 +1,5 @@
+<map id="HallSpeed::init" name="HallSpeed::init">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces. " alt="" coords="190,5,305,32"/>
+<area shape="rect" id="node4" href="$d6/dc2/classHallSpeed_1_1Timer.html#ace74cae617200854618cb3ce5fdabf9f" title="Initializes the timer. " alt="" coords="168,56,327,83"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#ac4c88f091e85a3fa7ed0198372e96fec" title="Initializes the GPIO. " alt="" coords="375,5,528,32"/>
+</map>

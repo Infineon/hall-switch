@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../ifx_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hall Switch
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
    <div id="projectbrief">C++ library of Infineon single Hall-effect switch family for magnetic sensing applications</div>
   </td>
@@ -92,15 +92,14 @@ $(document).ready(function(){initNavTree('d5/de5/classHallSwitchWiced.html','../
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d0/dce/classHallSwitchWiced-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">HallSwitchWiced Class Reference</div>  </div>
+<div class="title">HallSwitchWiced Class Reference<div class="ingroups"><a class="el" href="../../d7/d3b/group__hsfrmw.html">SW Frameworks</a> &raquo; <a class="el" href="../../d4/d52/group__hswiced.html">WICED</a> &raquo; <a class="el" href="../../d4/d80/group__hswicedapi.html">Hall Switch API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../de/da3/hall-switch-wiced_8h_source.html">hall-switch-wiced.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d1/d93/hall-switch-wiced_8hpp_source.html">hall-switch-wiced.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for HallSwitchWiced:</div>
 <div class="dyncontent">
@@ -119,103 +118,191 @@ Collaboration diagram for HallSwitchWiced:</div>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d70/structHallSwitchWiced_1_1WICEDHwPlatf__t.html">WICEDHwPlatf_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">WICED Hardware Platform.  <a href="../../d7/d70/structHallSwitchWiced_1_1WICEDHwPlatf__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ga119f405041c944f3035de1cdeb992161"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df5/group__hallswitchwicedhal.html#ga119f405041c944f3035de1cdeb992161">HallSwitchWiced</a> (wiced_gpio_t outputPin, <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL, wiced_gpio_t powerPin=UNUSED_PIN)</td></tr>
-<tr class="memdesc:ga119f405041c944f3035de1cdeb992161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall switch WICED instance constructor with WICED pins Mandatory arguments:  <a href="../../db/df5/group__hallswitchwicedhal.html#ga119f405041c944f3035de1cdeb992161">More...</a><br /></td></tr>
-<tr class="separator:ga119f405041c944f3035de1cdeb992161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac6c11d9661880d76ab43047b9c97eec4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df5/group__hallswitchwicedhal.html#gac6c11d9661880d76ab43047b9c97eec4">HallSwitchWiced</a> (<a class="el" href="../../d7/d70/structHallSwitchWiced_1_1WICEDHwPlatf__t.html">WICEDHwPlatf_t</a> &amp;hwPlatf, <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL)</td></tr>
-<tr class="memdesc:gac6c11d9661880d76ab43047b9c97eec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall switch WICED instance constructor with predefined WICED hardware platform Mandatory arguments:  <a href="../../db/df5/group__hallswitchwicedhal.html#gac6c11d9661880d76ab43047b9c97eec4">More...</a><br /></td></tr>
-<tr class="separator:gac6c11d9661880d76ab43047b9c97eec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119f405041c944f3035de1cdeb992161"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de5/classHallSwitchWiced.html#a119f405041c944f3035de1cdeb992161">HallSwitchWiced</a> (wiced_gpio_t outputPin, <a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL, wiced_gpio_t powerPin=UNUSED_PIN)</td></tr>
+<tr class="memdesc:a119f405041c944f3035de1cdeb992161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall switch WICED instance constructor with WICED pins.  <a href="#a119f405041c944f3035de1cdeb992161">More...</a><br /></td></tr>
+<tr class="separator:a119f405041c944f3035de1cdeb992161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37940b51935415c126390820302c25e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de5/classHallSwitchWiced.html#a37940b51935415c126390820302c25e2">HallSwitchWiced</a> (<a class="el" href="../../d5/dc5/structPlatformWICED__t.html">PlatformWICED_t</a> hwPlatf, <a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL)</td></tr>
+<tr class="memdesc:a37940b51935415c126390820302c25e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall switch WICED instance constructor with predefined WICED hardware platform.  <a href="#a37940b51935415c126390820302c25e2">More...</a><br /></td></tr>
+<tr class="separator:a37940b51935415c126390820302c25e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classHallSwitch"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classHallSwitch')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a></td></tr>
-<tr class="memitem:ga3bf364ed4b3b817b43fcbaefaf09e669 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga3bf364ed4b3b817b43fcbaefaf09e669">HallSwitch</a> ()</td></tr>
-<tr class="memdesc:ga3bf364ed4b3b817b43fcbaefaf09e669 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Default Constructor.  <a href="../../de/d64/group__hallswitchcpphal.html#ga3bf364ed4b3b817b43fcbaefaf09e669">More...</a><br /></td></tr>
-<tr class="separator:ga3bf364ed4b3b817b43fcbaefaf09e669 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ebbf8e75dd873b1609b5e61126a3ecb inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga1ebbf8e75dd873b1609b5e61126a3ecb">HallSwitch</a> (<a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0">output</a>, <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL, <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#ab724426c5f38fd6ef658cc003a13d7fa">power</a>=NULL)</td></tr>
-<tr class="memdesc:ga1ebbf8e75dd873b1609b5e61126a3ecb inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Constructor.  <a href="../../de/d64/group__hallswitchcpphal.html#ga1ebbf8e75dd873b1609b5e61126a3ecb">More...</a><br /></td></tr>
-<tr class="separator:ga1ebbf8e75dd873b1609b5e61126a3ecb inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab0bfbcaccf05a3c14e95836cebc6efb3 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gab0bfbcaccf05a3c14e95836cebc6efb3">~HallSwitch</a> ()</td></tr>
-<tr class="memdesc:gab0bfbcaccf05a3c14e95836cebc6efb3 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Destructor Disables the sensor:  <a href="../../de/d64/group__hallswitchcpphal.html#gab0bfbcaccf05a3c14e95836cebc6efb3">More...</a><br /></td></tr>
-<tr class="separator:gab0bfbcaccf05a3c14e95836cebc6efb3 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga767dbcd816b7fba5634c71a3a36fc271 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga767dbcd816b7fba5634c71a3a36fc271">begin</a> ()</td></tr>
-<tr class="memdesc:ga767dbcd816b7fba5634c71a3a36fc271 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the hardware interfaces.  <a href="../../de/d64/group__hallswitchcpphal.html#ga767dbcd816b7fba5634c71a3a36fc271">More...</a><br /></td></tr>
-<tr class="separator:ga767dbcd816b7fba5634c71a3a36fc271 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac513ce35323eb0736ab43249e338ce63 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gac513ce35323eb0736ab43249e338ce63">end</a> ()</td></tr>
-<tr class="memdesc:gac513ce35323eb0736ab43249e338ce63 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the hardware interfaces.  <a href="../../de/d64/group__hallswitchcpphal.html#gac513ce35323eb0736ab43249e338ce63">More...</a><br /></td></tr>
-<tr class="separator:gac513ce35323eb0736ab43249e338ce63 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad56a5b55491962caed6f0d24f56c5dc inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gaad56a5b55491962caed6f0d24f56c5dc">enable</a> ()</td></tr>
-<tr class="memdesc:gaad56a5b55491962caed6f0d24f56c5dc inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the sensor.  <a href="../../de/d64/group__hallswitchcpphal.html#gaad56a5b55491962caed6f0d24f56c5dc">More...</a><br /></td></tr>
-<tr class="separator:gaad56a5b55491962caed6f0d24f56c5dc inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4285836961ea56bf8f2c60a2243236db inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">HallSwitch::Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga4285836961ea56bf8f2c60a2243236db">disable</a> ()</td></tr>
-<tr class="memdesc:ga4285836961ea56bf8f2c60a2243236db inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the sensor.  <a href="../../de/d64/group__hallswitchcpphal.html#ga4285836961ea56bf8f2c60a2243236db">More...</a><br /></td></tr>
-<tr class="separator:ga4285836961ea56bf8f2c60a2243236db inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga714e85075bc6ab10e0094261581465bc inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">HallSwitch::Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga714e85075bc6ab10e0094261581465bc">getStatus</a> ()</td></tr>
-<tr class="memdesc:ga714e85075bc6ab10e0094261581465bc inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status.  <a href="../../de/d64/group__hallswitchcpphal.html#ga714e85075bc6ab10e0094261581465bc">More...</a><br /></td></tr>
-<tr class="separator:ga714e85075bc6ab10e0094261581465bc inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad4b88ec5eda3f56da89896cc16625348 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">HallSwitch::Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#gad4b88ec5eda3f56da89896cc16625348">readBField</a> ()</td></tr>
-<tr class="memdesc:gad4b88ec5eda3f56da89896cc16625348 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the actual magnetic field value.  <a href="../../de/d64/group__hallswitchcpphal.html#gad4b88ec5eda3f56da89896cc16625348">More...</a><br /></td></tr>
-<tr class="separator:gad4b88ec5eda3f56da89896cc16625348 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59f53cfeee84aa12f546ae20c4f22e11 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">HallSwitch::Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga59f53cfeee84aa12f546ae20c4f22e11">getBField</a> ()</td></tr>
-<tr class="memdesc:ga59f53cfeee84aa12f546ae20c4f22e11 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets magnetic field.  <a href="../../de/d64/group__hallswitchcpphal.html#ga59f53cfeee84aa12f546ae20c4f22e11">More...</a><br /></td></tr>
-<tr class="separator:ga59f53cfeee84aa12f546ae20c4f22e11 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5dffab5504ae7cee6f35ef72370efeab inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d64/group__hallswitchcpphal.html#ga5dffab5504ae7cee6f35ef72370efeab">callback</a> ()</td></tr>
-<tr class="memdesc:ga5dffab5504ae7cee6f35ef72370efeab inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> mode callback function.  <a href="../../de/d64/group__hallswitchcpphal.html#ga5dffab5504ae7cee6f35ef72370efeab">More...</a><br /></td></tr>
-<tr class="separator:ga5dffab5504ae7cee6f35ef72370efeab inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf364ed4b3b817b43fcbaefaf09e669 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a3bf364ed4b3b817b43fcbaefaf09e669">HallSwitch</a> ()</td></tr>
+<tr class="memdesc:a3bf364ed4b3b817b43fcbaefaf09e669 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Default Constructor.  <a href="#a3bf364ed4b3b817b43fcbaefaf09e669">More...</a><br /></td></tr>
+<tr class="separator:a3bf364ed4b3b817b43fcbaefaf09e669 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebbf8e75dd873b1609b5e61126a3ecb inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a1ebbf8e75dd873b1609b5e61126a3ecb">HallSwitch</a> (<a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0">output</a>, <a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a> <a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a>=NULL, <a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *<a class="el" href="../../dd/db6/classHallSwitch.html#ab724426c5f38fd6ef658cc003a13d7fa">power</a>=NULL)</td></tr>
+<tr class="memdesc:a1ebbf8e75dd873b1609b5e61126a3ecb inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Constructor.  <a href="#a1ebbf8e75dd873b1609b5e61126a3ecb">More...</a><br /></td></tr>
+<tr class="separator:a1ebbf8e75dd873b1609b5e61126a3ecb inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bfbcaccf05a3c14e95836cebc6efb3 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ab0bfbcaccf05a3c14e95836cebc6efb3">~HallSwitch</a> ()</td></tr>
+<tr class="memdesc:ab0bfbcaccf05a3c14e95836cebc6efb3 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hall Switch Destructor Disables the sensor:  <a href="#ab0bfbcaccf05a3c14e95836cebc6efb3">More...</a><br /></td></tr>
+<tr class="separator:ab0bfbcaccf05a3c14e95836cebc6efb3 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c05d7f14b310b06e2132ecb95cb24b inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b">init</a> ()</td></tr>
+<tr class="memdesc:a19c05d7f14b310b06e2132ecb95cb24b inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the hardware interfaces.  <a href="#a19c05d7f14b310b06e2132ecb95cb24b">More...</a><br /></td></tr>
+<tr class="separator:a19c05d7f14b310b06e2132ecb95cb24b inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc1baf88406ae2998d90b5100be6065 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065">deinit</a> ()</td></tr>
+<tr class="memdesc:aebc1baf88406ae2998d90b5100be6065 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the hardware interfaces.  <a href="#aebc1baf88406ae2998d90b5100be6065">More...</a><br /></td></tr>
+<tr class="separator:aebc1baf88406ae2998d90b5100be6065 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad56a5b55491962caed6f0d24f56c5dc inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc">enable</a> ()</td></tr>
+<tr class="memdesc:aad56a5b55491962caed6f0d24f56c5dc inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the sensor.  <a href="#aad56a5b55491962caed6f0d24f56c5dc">More...</a><br /></td></tr>
+<tr class="separator:aad56a5b55491962caed6f0d24f56c5dc inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4285836961ea56bf8f2c60a2243236db inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db">disable</a> ()</td></tr>
+<tr class="memdesc:a4285836961ea56bf8f2c60a2243236db inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the sensor.  <a href="#a4285836961ea56bf8f2c60a2243236db">More...</a><br /></td></tr>
+<tr class="separator:a4285836961ea56bf8f2c60a2243236db inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714e85075bc6ab10e0094261581465bc inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a714e85075bc6ab10e0094261581465bc">getStatus</a> ()</td></tr>
+<tr class="memdesc:a714e85075bc6ab10e0094261581465bc inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the sensor status.  <a href="#a714e85075bc6ab10e0094261581465bc">More...</a><br /></td></tr>
+<tr class="separator:a714e85075bc6ab10e0094261581465bc inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24701141c099df49ee579ceece498cb0 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0">updateBField</a> ()</td></tr>
+<tr class="memdesc:a24701141c099df49ee579ceece498cb0 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates instance magnetic field value.  <a href="#a24701141c099df49ee579ceece498cb0">More...</a><br /></td></tr>
+<tr class="separator:a24701141c099df49ee579ceece498cb0 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f53cfeee84aa12f546ae20c4f22e11 inherit pub_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11">getBField</a> ()</td></tr>
+<tr class="memdesc:a59f53cfeee84aa12f546ae20c4f22e11 inherit pub_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets magnetic field.  <a href="#a59f53cfeee84aa12f546ae20c4f22e11">More...</a><br /></td></tr>
+<tr class="separator:a59f53cfeee84aa12f546ae20c4f22e11 inherit pub_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classHallSwitch"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classHallSwitch')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a></td></tr>
-<tr class="memitem:gadf389645bdd9aa2f5da5fdbcd614dc4f inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>) (<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>)</td></tr>
-<tr class="memdesc:gadf389645bdd9aa2f5da5fdbcd614dc4f inherit pub_types_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type for interrupt mode.  <a href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">More...</a><br /></td></tr>
-<tr class="separator:gadf389645bdd9aa2f5da5fdbcd614dc4f inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2ee75b18a1d7ad9607f4cf820da6df8 inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gaa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggaa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3">OK</a> = 0, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggaa2ee75b18a1d7ad9607f4cf820da6df8a82fc09cef1a7837032c90280845e1f9e">INTF_ERROR</a> = -1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggaa2ee75b18a1d7ad9607f4cf820da6df8a46ecc715455ce7e51b466edbde2b922b">CONF_ERROR</a> = -2
+<tr class="memitem:adf389645bdd9aa2f5da5fdbcd614dc4f inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>) (<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>)</td></tr>
+<tr class="memdesc:adf389645bdd9aa2f5da5fdbcd614dc4f inherit pub_types_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type for interrupt mode.  <a href="#adf389645bdd9aa2f5da5fdbcd614dc4f">More...</a><br /></td></tr>
+<tr class="separator:adf389645bdd9aa2f5da5fdbcd614dc4f inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ee75b18a1d7ad9607f4cf820da6df8 inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8">Error_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a7172c92fa4f0fde888c460d2143f00d3">OK</a> = 0, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a82fc09cef1a7837032c90280845e1f9e">INTF_ERROR</a> = -1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#aa2ee75b18a1d7ad9607f4cf820da6df8a46ecc715455ce7e51b466edbde2b922b">CONF_ERROR</a> = -2
  }</td></tr>
-<tr class="separator:gaa2ee75b18a1d7ad9607f4cf820da6df8 inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab19e46b782ea68c476e4d289ea0267ba inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggab19e46b782ea68c476e4d289ea0267baa6c1a4c12c089f6a1a761374cd9cee333">MAIN</a> = 1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggab19e46b782ea68c476e4d289ea0267baa004f4ca764e7be02b39a55779a085a81">SWITCH</a> = 2
+<tr class="separator:aa2ee75b18a1d7ad9607f4cf820da6df8 inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19e46b782ea68c476e4d289ea0267ba inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267baa6c1a4c12c089f6a1a761374cd9cee333">MAIN</a> = 1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267baa004f4ca764e7be02b39a55779a085a81">SWITCH</a> = 2
  }</td></tr>
-<tr class="separator:gab19e46b782ea68c476e4d289ea0267ba inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c90f48d6c0b8a46810ed476b4f7d3f0 inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0a1ae8de8ecaef9c0c311275b6d68485d8">UNINITED</a> = 0, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0acc83e034b234d0102e74edca06540fcd">INITED</a> = 1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0a9a29ee4fa5f1f9802251003c72bccfe4">POWER_ON</a> = 2, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga9c90f48d6c0b8a46810ed476b4f7d3f0ae21a197cbb64d6886b6e08c5f1c0969d">POWER_OFF</a> = 3
+<tr class="separator:ab19e46b782ea68c476e4d289ea0267ba inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c90f48d6c0b8a46810ed476b4f7d3f0 inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0a1ae8de8ecaef9c0c311275b6d68485d8">UNINITED</a> = 0, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0acc83e034b234d0102e74edca06540fcd">INITED</a> = 1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0a9a29ee4fa5f1f9802251003c72bccfe4">POWER_ON</a> = 2, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0ae21a197cbb64d6886b6e08c5f1c0969d">POWER_OFF</a> = 3
  }</td></tr>
-<tr class="separator:ga9c90f48d6c0b8a46810ed476b4f7d3f0 inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae3ecc0ebf1274a792afee40edc82049c inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggae3ecc0ebf1274a792afee40edc82049ca5ef5f1169f27bf17fbef9a7124a3f899">POLLING</a> = 1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#ggae3ecc0ebf1274a792afee40edc82049ca17b48ef2fdc0c8aca8dc234d149afd89">INTERRUPT</a> = 2
+<tr class="separator:a9c90f48d6c0b8a46810ed476b4f7d3f0 inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ecc0ebf1274a792afee40edc82049c inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049ca5ef5f1169f27bf17fbef9a7124a3f899">POLLING</a> = 1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049ca17b48ef2fdc0c8aca8dc234d149afd89">INTERRUPT</a> = 2
  }</td></tr>
-<tr class="separator:gae3ecc0ebf1274a792afee40edc82049c inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6df6d463b8cc53a2a4a07c81717b0ee4 inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a> { <a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga6df6d463b8cc53a2a4a07c81717b0ee4ae69a12aae8eb0e6f4023f5ffce9c1c74">B_FIELD_UNDEF</a> = -1, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga6df6d463b8cc53a2a4a07c81717b0ee4a7817c207d401745ae539c9490974df9d">B_FIELD_OFF</a> = 0, 
-<a class="el" href="../../df/d9e/group__hallswitchdatat.html#gga6df6d463b8cc53a2a4a07c81717b0ee4a4f64cdd3abd256a372b7ac0a31625b38">B_FIELD_ON</a> = 1
+<tr class="separator:ae3ecc0ebf1274a792afee40edc82049c inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df6d463b8cc53a2a4a07c81717b0ee4 inherit pub_types_classHallSwitch"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a> { <a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4ae69a12aae8eb0e6f4023f5ffce9c1c74">B_FIELD_UNDEF</a> = -1, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4a7817c207d401745ae539c9490974df9d">B_FIELD_OFF</a> = 0, 
+<a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4a4f64cdd3abd256a372b7ac0a31625b38">B_FIELD_ON</a> = 1
  }</td></tr>
-<tr class="separator:ga6df6d463b8cc53a2a4a07c81717b0ee4 inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a6df6d463b8cc53a2a4a07c81717b0ee4 inherit pub_types_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classHallSwitch"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classHallSwitch')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a></td></tr>
+<tr class="memitem:a5dffab5504ae7cee6f35ef72370efeab inherit pro_methods_classHallSwitch"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a5dffab5504ae7cee6f35ef72370efeab">callback</a> ()</td></tr>
+<tr class="memdesc:a5dffab5504ae7cee6f35ef72370efeab inherit pro_methods_classHallSwitch"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html">Interrupt</a> mode callback function.  <a href="#a5dffab5504ae7cee6f35ef72370efeab">More...</a><br /></td></tr>
+<tr class="separator:a5dffab5504ae7cee6f35ef72370efeab inherit pro_methods_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classHallSwitch"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classHallSwitch')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a></td></tr>
+<tr class="memitem:a0d4780d9a0407c862f58caff6723bfe2 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a0d4780d9a0407c862f58caff6723bfe2">status</a></td></tr>
+<tr class="separator:a0d4780d9a0407c862f58caff6723bfe2 inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8d9332c6f28bf0da6d253795036b2a0 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#aa8d9332c6f28bf0da6d253795036b2a0">output</a></td></tr>
 <tr class="separator:aa8d9332c6f28bf0da6d253795036b2a0 inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35856e349809bd1ae3336e3a07514225 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gadf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a></td></tr>
+<tr class="memitem:ad1e562182cb8b261b755e8ca55a8c0ab inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ad1e562182cb8b261b755e8ca55a8c0ab">bfieldVal</a></td></tr>
+<tr class="separator:ad1e562182cb8b261b755e8ca55a8c0ab inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35856e349809bd1ae3336e3a07514225 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a35856e349809bd1ae3336e3a07514225">cBack</a></td></tr>
 <tr class="separator:a35856e349809bd1ae3336e3a07514225 inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc5e9ea8ccdcef24e87881d4d443b783 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#afc5e9ea8ccdcef24e87881d4d443b783">measMode</a></td></tr>
+<tr class="memitem:afc5e9ea8ccdcef24e87881d4d443b783 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#ae3ecc0ebf1274a792afee40edc82049c">MeasMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#afc5e9ea8ccdcef24e87881d4d443b783">measMode</a></td></tr>
 <tr class="separator:afc5e9ea8ccdcef24e87881d4d443b783 inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab724426c5f38fd6ef658cc003a13d7fa inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d09/classHallSwitch_1_1GPIO.html">GPIO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ab724426c5f38fd6ef658cc003a13d7fa">power</a></td></tr>
 <tr class="separator:ab724426c5f38fd6ef658cc003a13d7fa inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e166d15e3eb00132185acfb157b8e2 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#gab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#af2e166d15e3eb00132185acfb157b8e2">powerMode</a></td></tr>
+<tr class="memitem:af2e166d15e3eb00132185acfb157b8e2 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267ba">PowerMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#af2e166d15e3eb00132185acfb157b8e2">powerMode</a></td></tr>
 <tr class="separator:af2e166d15e3eb00132185acfb157b8e2 inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d4780d9a0407c862f58caff6723bfe2 inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0">Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#a0d4780d9a0407c862f58caff6723bfe2">status</a></td></tr>
-<tr class="separator:a0d4780d9a0407c862f58caff6723bfe2 inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1e562182cb8b261b755e8ca55a8c0ab inherit pro_attribs_classHallSwitch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d9e/group__hallswitchdatat.html#ga6df6d463b8cc53a2a4a07c81717b0ee4">Result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db6/classHallSwitch.html#ad1e562182cb8b261b755e8ca55a8c0ab">bfieldVal</a></td></tr>
-<tr class="separator:ad1e562182cb8b261b755e8ca55a8c0ab inherit pro_attribs_classHallSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a119f405041c944f3035de1cdeb992161"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HallSwitchWiced::HallSwitchWiced </td>
+          <td>(</td>
+          <td class="paramtype">wiced_gpio_t&#160;</td>
+          <td class="paramname"><em>outputPin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td>
+          <td class="paramname"><em>cBack</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wiced_gpio_t&#160;</td>
+          <td class="paramname"><em>powerPin</em> = <code>UNUSED_PIN</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hall switch WICED instance constructor with WICED pins. </p>
+<p>Mandatory arguments:</p><ul>
+<li>sensor output pin</li>
+</ul>
+<p>Optional arguments:</p><ul>
+<li>interrupt callback. By default NULL. Required to enable interrupt mode.</li>
+<li>sensor power pin (only for switch powered mode platform). By default it is UNUSED.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputPin</td><td>Hall switch output pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cBack</td><td>Callback for interrupt mode. When passed, it enables interrupt mode. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">powerPin</td><td>Hall switch power pin. When passed, enabled the sensor switch controlled mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37940b51935415c126390820302c25e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HallSwitchWiced::HallSwitchWiced </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dc5/structPlatformWICED__t.html">PlatformWICED_t</a>&#160;</td>
+          <td class="paramname"><em>hwPlatf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db6/classHallSwitch.html#adf389645bdd9aa2f5da5fdbcd614dc4f">CBack_t</a>&#160;</td>
+          <td class="paramname"><em>cBack</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hall switch WICED instance constructor with predefined WICED hardware platform. </p>
+<p>Mandatory arguments:</p><ul>
+<li>hardware platform</li>
+</ul>
+<p>Optional arguments:</p><ul>
+<li>interrupt callback. By default NULL. Required to enable interrupt mode.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hwPlatf</td><td>Predefined WICED hardware platform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cBack</td><td>Callback for interrupt mode. When passed, it enables interrupt mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../de/da3/hall-switch-wiced_8h_source.html">hall-switch-wiced.h</a></li>
+<li><a class="el" href="../../d1/d93/hall-switch-wiced_8hpp_source.html">hall-switch-wiced.hpp</a></li>
 <li><a class="el" href="../../db/d2d/hall-switch-wiced_8cpp.html">hall-switch-wiced.cpp</a></li>
 </ul>
 </div><!-- contents -->

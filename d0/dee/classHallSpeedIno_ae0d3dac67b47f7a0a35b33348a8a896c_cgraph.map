@@ -1,0 +1,11 @@
+<map id="HallSpeedIno::end" name="HallSpeedIno::end">
+<area shape="rect" id="node2" href="$db/ddb/classHallSpeed.html#aad9dc37fdba051efac20da3324a8e1cc" title="Disables the sensor. " alt="" coords="192,56,332,83"/>
+<area shape="rect" id="node7" href="$db/ddb/classHallSpeed.html#a662eb1948fed4ca91e27c2036fc57940" title="Deinitializes the hardware interfaces. " alt="" coords="197,107,327,133"/>
+<area shape="rect" id="node3" href="$d6/dc2/classHallSpeed_1_1Timer.html#a901a5abacc68561d601a1135b1449f1d" title="Stops the timer. " alt="" coords="384,5,551,32"/>
+<area shape="rect" id="node4" href="$dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db" title="Disables the sensor. " alt="" coords="397,56,537,83"/>
+<area shape="rect" id="node5" href="$dd/d09/classHallSwitch_1_1GPIO.html#a7521e8f19e8438dd161e82bd437d861a" title="Disables the hardware interrupt. " alt="" coords="603,5,797,32"/>
+<area shape="rect" id="node6" href="$dd/d09/classHallSwitch_1_1GPIO.html#a3ee4946c6927a987a2d29559813c6131" title="Disables the GPIO output according to the GPIO logic. " alt="" coords="611,56,789,83"/>
+<area shape="rect" id="node8" href="$dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065" title="Deinitializes the hardware interfaces. " alt="" coords="402,107,533,133"/>
+<area shape="rect" id="node10" href="$d6/dc2/classHallSpeed_1_1Timer.html#a8c6b820feb28299dc4e526bbd03ec52f" title="Deinitializes the timer. " alt="" coords="380,157,555,184"/>
+<area shape="rect" id="node9" href="$dd/d09/classHallSwitch_1_1GPIO.html#ad481d3d92fa6254de678efd7869b9e8c" title="Deinitializes the GPIO. " alt="" coords="615,107,785,133"/>
+</map>

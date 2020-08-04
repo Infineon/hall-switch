@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../ifx_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hall Switch
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
    <div id="projectbrief">C++ library of Infineon single Hall-effect switch family for magnetic sensing applications</div>
   </td>
@@ -95,25 +95,16 @@ $(document).ready(function(){initNavTree('d4/da3/classHallSwitch_1_1Interrupt.ht
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d6/d20/classHallSwitch_1_1Interrupt-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">HallSwitch::Interrupt Class Reference<div class="ingroups"><a class="el" href="../../d1/d9e/group__hallswitchhal.html">Hardware Abstraction Layer</a> &raquo; <a class="el" href="../../d7/d6a/group__hallswitchhwi.html">Hardware Interfaces</a></div></div>  </div>
+<div class="title">HallSwitch::Interrupt Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d3/dcd/hall-switch_8h_source.html">hall-switch.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for HallSwitch::Interrupt:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/d20/classHallSwitch_1_1Interrupt__inherit__graph.png" border="0" usemap="#HallSwitch_1_1Interrupt_inherit__map" alt="Inheritance graph"/></div>
-<map name="HallSwitch_1_1Interrupt_inherit__map" id="HallSwitch_1_1Interrupt_inherit__map">
-<area shape="rect" id="node2" href="../../d6/dfc/classGPIOIno.html" title="GPIOIno" alt="" coords="5,80,77,107"/>
-<area shape="rect" id="node3" href="../../dd/dcb/classGPIOWiced.html" title="GPIOWiced" alt="" coords="101,80,192,107"/>
-</map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="../../dd/d8a/hall-switch-int_8hpp_source.html">hall-switch-int.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7dd13f77984e34110398862d8a5e373e"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da3/classHallSwitch_1_1Interrupt.html#a7dd13f77984e34110398862d8a5e373e">isrRegister</a> (<a class="el" href="../../dd/db6/classHallSwitch.html">HallSwitch</a> *objPtr)</td></tr>
-<tr class="memdesc:a7dd13f77984e34110398862d8a5e373e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a hardware interrupt on the argument hall switch object.  <a href="#a7dd13f77984e34110398862d8a5e373e">More...</a><br /></td></tr>
+<tr class="memdesc:a7dd13f77984e34110398862d8a5e373e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a hardware interrupt for the hall switch object passed by argument.  <a href="#a7dd13f77984e34110398862d8a5e373e">More...</a><br /></td></tr>
 <tr class="separator:a7dd13f77984e34110398862d8a5e373e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -139,20 +130,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Register a hardware interrupt on the argument hall switch object. </p>
+<p>Register a hardware interrupt for the hall switch object passed by argument. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">*objPtr</td><td>Hall switch object pointer </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to allocated the interrupt function handler </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to allocate the interrupt function handler </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="../../d3/dcd/hall-switch_8h_source.html">hall-switch.h</a></li>
-<li><a class="el" href="../../d8/d69/hall-switch_8cpp.html">hall-switch.cpp</a></li>
+<li><a class="el" href="../../dd/d8a/hall-switch-int_8hpp_source.html">hall-switch-int.hpp</a></li>
+<li><a class="el" href="../../d8/d72/hall-switch-int_8cpp.html">hall-switch-int.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

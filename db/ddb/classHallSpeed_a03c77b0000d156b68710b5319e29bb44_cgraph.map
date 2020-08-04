@@ -1,0 +1,6 @@
+<map id="HallSpeed::enable" name="HallSpeed::enable">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor. " alt="" coords="207,31,346,57"/>
+<area shape="rect" id="node5" href="$d6/dc2/classHallSpeed_1_1Timer.html#a1ff993f131e3cdb416ec81ca3a0a2cd3" title="Starts the timer. " alt="" coords="192,81,361,108"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#a8bfbf5e354bafd81933c6542a15160a1" title="Enables the GPIO output according to the GPIO logic. " alt="" coords="417,5,595,32"/>
+<area shape="rect" id="node4" href="$dd/d09/classHallSwitch_1_1GPIO.html#adf99b47a5a4784c1a7ec7014fa690176" title="Enables the hardware interrupt. " alt="" coords="409,56,603,83"/>
+</map>

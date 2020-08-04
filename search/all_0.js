@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['ardhwplatfpins_5ft',['ArdHwPlatfPins_t',['../dd/db1/structArdHwPlatfPins__t.html',1,'']]],
-  ['arduino_20gpio',['Arduino GPIO',['../dd/d64/group__hallgpioino.html',1,'']]],
-  ['api',['API',['../de/d64/group__hallswitchcpphal.html',1,'']]],
-  ['arduino_20api',['Arduino API',['../d8/db4/group__hallswitchinohal.html',1,'']]]
+  ['application_5fstart',['application_start',['../d4/de4/hall__switch_8cpp.html#a1b078eb11b33c0125c88261467908eb4',1,'hall_switch.cpp']]],
+  ['arduino',['Arduino',['../db/d65/group__hsino.html',1,'']]]
 ];

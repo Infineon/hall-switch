@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['status_5ft',['Status_t',['../df/d9e/group__hallswitchdatat.html#ga9c90f48d6c0b8a46810ed476b4f7d3f0',1,'HallSwitch']]]
+  ['vlevel_5ft',['VLevel_t',['../dd/d09/classHallSwitch_1_1GPIO.html#a4467bc383f495fde8c96412a8189292e',1,'HallSwitch::GPIO']]],
+  ['vlogic_5ft',['VLogic_t',['../dd/d09/classHallSwitch_1_1GPIO.html#a23aefa877466806c670f5f520eae0013',1,'HallSwitch::GPIO']]]
 ];

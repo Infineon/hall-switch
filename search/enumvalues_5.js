@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['negative',['NEGATIVE',['../dd/d09/classHallSwitch_1_1GPIO.html#a23aefa877466806c670f5f520eae0013ae899a8cb3d7fffef115fdf8bbd33584c',1,'HallSwitch::GPIO']]]
+  ['main',['MAIN',['../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267baa6c1a4c12c089f6a1a761374cd9cee333',1,'HallSwitch']]]
 ];

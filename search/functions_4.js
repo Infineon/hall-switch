@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['getbfield',['getBField',['../de/d64/group__hallswitchcpphal.html#ga59f53cfeee84aa12f546ae20c4f22e11',1,'HallSwitch']]],
-  ['getstatus',['getStatus',['../de/d64/group__hallswitchcpphal.html#ga714e85075bc6ab10e0094261581465bc',1,'HallSwitch']]],
-  ['gpioino',['GPIOIno',['../dd/d64/group__hallgpioino.html#gac5ba8b56ce93a951fc19df8f8eca9924',1,'GPIOIno::GPIOIno()'],['../dd/d64/group__hallgpioino.html#ga9770b7dad66e85857e42823617a83b78',1,'GPIOIno::GPIOIno(uint8_t pin, uint8_t mode, VLogic_t logic)']]],
-  ['gpiowiced',['GPIOWiced',['../db/dbc/group__hallgpiowiced.html#ga924336d48e68f74ee0281c9d2f36733d',1,'GPIOWiced::GPIOWiced(wiced_gpio_t pin, wiced_gpio_config_t config, VLogic_t logic)'],['../db/dbc/group__hallgpiowiced.html#ga8468a2b4ad013817ff872e86c7bc8c20',1,'GPIOWiced::GPIOWiced()']]]
+  ['elapsed',['elapsed',['../dd/d9b/classTimerIno.html#a30e931551ccf374b1813f90f67bfa4d8',1,'TimerIno::elapsed()'],['../d6/dc2/classHallSpeed_1_1Timer.html#a2e3e04d5c418822dcf2348f1e1547d65',1,'HallSpeed::Timer::elapsed()']]],
+  ['enable',['enable',['../db/ddb/classHallSpeed.html#a03c77b0000d156b68710b5319e29bb44',1,'HallSpeed::enable()'],['../dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc',1,'HallSwitch::enable()'],['../d6/dfc/classGPIOIno.html#a30948e61c23629b5121496ff085132ab',1,'GPIOIno::enable()'],['../dd/dcb/classGPIOWiced.html#aa086b710c6deed1af4cea9a455f8cbec',1,'GPIOWiced::enable()'],['../dd/d09/classHallSwitch_1_1GPIO.html#a8bfbf5e354bafd81933c6542a15160a1',1,'HallSwitch::GPIO::enable()']]],
+  ['enableint',['enableInt',['../d6/dfc/classGPIOIno.html#afb72967fe8ffe94aee77359844544256',1,'GPIOIno::enableInt()'],['../dd/dcb/classGPIOWiced.html#ac3988024a5c6dd3a7dffe953e486625a',1,'GPIOWiced::enableInt()'],['../dd/d09/classHallSwitch_1_1GPIO.html#adf99b47a5a4784c1a7ec7014fa690176',1,'HallSwitch::GPIO::enableInt()']]],
+  ['end',['end',['../d0/dee/classHallSpeedIno.html#ae0d3dac67b47f7a0a35b33348a8a896c',1,'HallSpeedIno::end()'],['../d8/d4c/classHallSwitchIno.html#aa15f28998c23e0a3dfab6155b0f1bed9',1,'HallSwitchIno::end()']]]
 ];

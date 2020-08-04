@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7ehallswitch',['~HallSwitch',['../de/d64/group__hallswitchcpphal.html#gab0bfbcaccf05a3c14e95836cebc6efb3',1,'HallSwitch']]]
+  ['vlevel_5ft',['VLevel_t',['../dd/d09/classHallSwitch_1_1GPIO.html#a4467bc383f495fde8c96412a8189292e',1,'HallSwitch::GPIO']]],
+  ['vlogic_5ft',['VLogic_t',['../dd/d09/classHallSwitch_1_1GPIO.html#a23aefa877466806c670f5f520eae0013',1,'HallSwitch::GPIO']]]
 ];

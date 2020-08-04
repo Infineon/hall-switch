@@ -1,4 +1,0 @@
-<map id="HallSwitch::enable" name="HallSwitch::enable">
-<area shape="rect" id="node2" href="$dd/d09/classHallSwitch_1_1GPIO.html#a7c7ef32eca2388e9d87c2839162e603f" title="Enables the GPIO output according to the GPIO logic. " alt="" coords="200,5,377,32"/>
-<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#ac7408e2ee12bb06dbcafa53786bdebc3" title="Enables the hardware interrupt. " alt="" coords="192,56,385,83"/>
-</map>

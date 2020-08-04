@@ -1,0 +1,6 @@
+<map id="WICED" name="WICED">
+<area shape="rect" id="node1" href="$d4/d4d/group__hswicedpal.html" title="PAL" alt="" coords="321,5,367,32"/>
+<area shape="rect" id="node2" href="$d9/d31/group__hswicedhw.html" title="HW Platforms" alt="" coords="290,56,398,83"/>
+<area shape="rect" id="node3" href="$d7/d3b/group__hsfrmw.html" title="SW Frameworks" alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node5" href="$d4/d80/group__hswicedapi.html" title="Hall Switch API" alt="" coords="287,107,401,133"/>
+</map>

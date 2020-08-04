@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['powermode_5ft',['PowerMode_t',['../df/d9e/group__hallswitchdatat.html#gab19e46b782ea68c476e4d289ea0267ba',1,'HallSwitch']]]
+  ['result_5ft',['Result_t',['../dd/db6/classHallSwitch.html#a6df6d463b8cc53a2a4a07c81717b0ee4',1,'HallSwitch']]]
 ];

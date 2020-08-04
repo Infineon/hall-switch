@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['gpio',['GPIO',['../d7/dde/classGPIO.html',1,'']]],
-  ['gpio',['GPIO',['../dd/d09/classHallSwitch_1_1GPIO.html',1,'HallSwitch']]],
-  ['gpioino',['GPIOIno',['../d6/dfc/classGPIOIno.html',1,'']]],
-  ['gpiowiced',['GPIOWiced',['../dd/dcb/classGPIOWiced.html',1,'']]]
+  ['hallspeed',['HallSpeed',['../db/ddb/classHallSpeed.html',1,'']]],
+  ['hallspeedino',['HallSpeedIno',['../d0/dee/classHallSpeedIno.html',1,'']]],
+  ['hallswitch',['HallSwitch',['../dd/db6/classHallSwitch.html',1,'']]],
+  ['hallswitchino',['HallSwitchIno',['../d8/d4c/classHallSwitchIno.html',1,'']]],
+  ['hallswitchwiced',['HallSwitchWiced',['../d5/de5/classHallSwitchWiced.html',1,'']]]
 ];

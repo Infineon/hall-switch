@@ -1,0 +1,7 @@
+<map id="IntCBack" name="IntCBack">
+<area shape="rect" id="node2" href="$d4/de4/hall__switch_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="loop" alt="" coords="132,56,181,83"/>
+<area shape="rect" id="node3" href="$dd/db6/classHallSwitch.html#a714e85075bc6ab10e0094261581465bc" title="Gets the sensor status. " alt="" coords="239,5,397,32"/>
+<area shape="rect" id="node4" href="$dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value. " alt="" coords="229,56,407,83"/>
+<area shape="rect" id="node6" href="$dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11" title="Gets magnetic field. " alt="" coords="241,107,395,133"/>
+<area shape="rect" id="node5" href="$dd/d09/classHallSwitch_1_1GPIO.html#aa520ef68b52dda22ed27de43497e15db" title="Reads the GPIO voltage level. " alt="" coords="455,56,617,83"/>
+</map>

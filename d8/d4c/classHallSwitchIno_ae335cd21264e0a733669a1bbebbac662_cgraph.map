@@ -1,0 +1,5 @@
+<map id="HallSwitchIno::getBField" name="HallSwitchIno::getBField">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value. " alt="" coords="225,5,403,32"/>
+<area shape="rect" id="node4" href="$dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11" title="Gets magnetic field. " alt="" coords="237,56,391,83"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#aa520ef68b52dda22ed27de43497e15db" title="Reads the GPIO voltage level. " alt="" coords="451,5,613,32"/>
+</map>

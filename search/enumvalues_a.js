@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tle4964_5f3m_5fs2go',['TLE4964_3M_S2Go',['../d8/db4/group__hallswitchinohal.html#gga0c039da32597ecb8da4192c34a304e84a701d589543414a20c2283a9bd9fa8d20',1,'HallSwitchIno']]]
+  ['switch',['SWITCH',['../dd/db6/classHallSwitch.html#ab19e46b782ea68c476e4d289ea0267baa004f4ca764e7be02b39a55779a085a81',1,'HallSwitch']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hwplatf_5ft',['HwPlatf_t',['../d8/db4/group__hallswitchinohal.html#ga0c039da32597ecb8da4192c34a304e84',1,'HallSwitchIno']]]
+  ['intevent_5ft',['IntEvent_t',['../dd/d09/classHallSwitch_1_1GPIO.html#a8512737e7351dbd93f9a459f04a374b1',1,'HallSwitch::GPIO']]]
 ];

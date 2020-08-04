@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_20types',['Data Types',['../df/d9e/group__hallswitchdatat.html',1,'']]]
+  ['core_20library',['Core Library',['../db/d63/group__hscorelib.html',1,'']]]
 ];
