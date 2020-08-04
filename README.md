@@ -12,9 +12,9 @@ C++ library of Infineon **single hall-effect switch** family for magnetic sensin
         <td align="center"><img src="https://github.com/infineon/hall-switch/wiki/img/tle496x-xm-sot23.png" width=200></td>
     </tr>
     <tr>
-        <td style="text-align: center"><a href="https://github.com/infineon/hall-switch/wiki/Supported-Hardware#tle4964-3m-shield-2go">TLE4964-3M Shield 2GO</a></td>
-        <td style="text-align: center"><a href="https://github.com/infineon/hall-switch/wiki/Supported-Hardware#tle4922-speed-sensor-kit-2go">TLE4922 Speed 2GO Kit</a></td>
-        <td style="text-align: center"><a href="https://github.com/infineon/hall-switch/wiki/Supported-Hardware#other-hall-sensors">Other Hall Sensors</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hardware-Platforms#tle4964-3m-shield-2go">TLE4964-3M Shield 2GO</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hardware-Platforms#tle4922-speed-sensor-kit-2go">TLE4922 Speed 2GO Kit</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hardware-Platforms#other-hall-sensors">Other Hall Sensors</a></td>
     </tr>
 </table>
 
@@ -23,18 +23,23 @@ C++ library of Infineon **single hall-effect switch** family for magnetic sensin
 <table>
     <tr>
         <td><img src="https://github.com/infineon/hall-switch/wiki/img/arduino-logo.png" width=200></td>
-        <!-- <td><img src="https://github.com/infineon/hall-switch/wiki/img/wiced-logo.png" width=200></td> -->
+        <td><img src="https://github.com/infineon/hall-switch/wiki/img/wiced-logo.png" width=200></td>
         <td><img src="https://github.com/infineon/hall-switch/wiki/img/cross-platform.png" width=200></td>
     </tr>
     <tr>
-        <td style="text-align: center"><a href="">Arduino API</a></td>
-        <!--<td style="text-align: center"><a href="">WICED API</a></td>-->
-        <td style="text-align: center"><a href="">Hall Switch API</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Arduino-API">Arduino API</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/WICED-API">WICED API</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hall-Switch-API">Hall Switch API</a></td>
+    </tr>
+        <tr>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hall-Speed-API">Hall Speed API</a></td>
     </tr>
     <tr>
-        <td style="text-align: center"><a href="">Getting Started</a></td>
-        <!--<td style="text-align: center"></td>-->
-        <td style="text-align: center"><a href="">Porting Guide</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Ino-Getting-Started">Getting Started</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/CW-Getting-Started">Getting Started</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Porting-Guide">Porting Guide</a></td>
     </tr>
 </table>
 
