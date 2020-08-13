@@ -4,8 +4,8 @@
 
 //#define HALL_SWITCH_FRAMEWORK HALL_SWITCH_FRMWK_RPI
 
-HallSwitchRpi    hallSwitch();
+HallSwitchRpi    hallSwitch;
 
 int main() {
-  hallSwitch.begin();
+	hallSwitch.init();
 }

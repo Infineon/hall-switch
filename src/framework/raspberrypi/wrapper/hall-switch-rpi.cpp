@@ -26,12 +26,15 @@
  * @param[in]       powerPin    Hall switch power pin. When passed, enabled the sensor switch controlled mode.
  * @return          void
  */
-HallSwitchRpi::HallSwitchRpi(wiced_gpio_t   outputPin,
+
+//HallSwitchRpi::HallSwitchRpi() {}
+/*
+HallSwitchRpi::HallSwitchRpi(uint8_t   outputPin,
                                  CBack_t        cBack,
-                                 wiced_gpio_t   powerPin)
+                                 uint8_t   powerPin)
 :HallSwitch(new GPIORpi(outputPin, INPUT_PULL_UP, GPIO::VLogic_t::POSITIVE),
             cBack,
-            (powerPin == (wiced_gpio_t)UNUSED_PIN) ? NULL : new GPIORpi(outputPin, OUTPUT_PUSH_PULL, GPIO::VLogic_t::POSITIVE)){ }
+            (powerPin == UNUSED_PIN) ? NULL : new GPIORpi(outputPin, OUTPUT_PUSH_PULL, GPIO::VLogic_t::POSITIVE)){ }
 
 /**
  * @brief           Hall switch Raspberry Pi instance constructor with predefined Raspberry Pi hardware platform
@@ -46,25 +49,29 @@ HallSwitchRpi::HallSwitchRpi(wiced_gpio_t   outputPin,
  * @param[in]       cBack       Callback for interrupt mode. When passed, it enables interrupt mode.
  * @return          void
  */
-HallSwitchRpi::HallSwitchRpi(PlatformRPI_t hwPlatf,
+
+
+HallSwitchRpi::HallSwitchRpi(){}
+
+HallSwitchRpi::HallSwitchRpi(PlatformRpi_t hwPlatf,
                                  CBack_t         cBack)
 {
 
-    this->output    = new GPIORpi(hwPlatf.output, INPUT_PULL_UP, GPIO::VLogic_t::POSITIVE);
+    this->output    = new GPIORpi(hwPlatf.output, 0, GPIO::VLogic_t::POSITIVE);
     this->cBack     = cBack;
     if(this->cBack == NULL)
         this->measMode  = POLLING;
     else
         this->measMode = INTERRUPT;
 
-    if(hwPlatf.power == (wiced_gpio_t)UNUSED_PIN)
+    if(hwPlatf.power == UNUSED_PIN)
     {
         this->power     = NULL;
         this->powerMode = MAIN;
     }
     else
     {
-        this->power  =   new GPIORpi(hwPlatf.power, OUTPUT_PUSH_PULL, GPIO::VLogic_t::POSITIVE);
+        this->power  =   new GPIORpi(hwPlatf.power, 0, GPIO::VLogic_t::POSITIVE);
         this->powerMode = SWITCH;
     }
 }

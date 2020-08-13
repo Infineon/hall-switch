@@ -29,11 +29,8 @@ class HallSwitchRpi : public HallSwitch
 
         HallSwitchRpi();
         
-        /*HallSwitchRpi(wiced_gpio_t    outputPin,
-                        CBack_t         cBack      = NULL,
-                        wiced_gpio_t    powerPin   = UNUSED_PIN);
         HallSwitchRpi(PlatformRpi_t hwPlatf,
-                        CBack_t         cBack      = NULL);*/
+                        CBack_t         cBack      = NULL);
 
 };
 
