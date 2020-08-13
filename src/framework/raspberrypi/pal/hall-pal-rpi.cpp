@@ -17,7 +17,7 @@
  * @brief GPIO Rpi default constructor
  */
 GPIORpi::GPIORpi()
-: pin(0), mode(0), logic(POSITIVE)
+: pin(0), mode(INPUT), logic(POSITIVE)
 {
 
 }
@@ -49,7 +49,10 @@ GPIORpi::~GPIORpi()
  */
 HallSwitch::Error_t GPIORpi::init()
 {   
-    //pinMode(this->pin, this->mode);
+    if (wiringPiSetup() == -1) return HallSwitch::CONF_ERROR;
+
+    pinMode(this->pin, this->mode);
+
     return HallSwitch::OK;
 }
 
@@ -117,8 +120,7 @@ inline GPIORpi::IntEvent_t GPIORpi::intEvent()
  */
 inline GPIORpi::VLevel_t GPIORpi::read()
 {
-    //return (VLevel_t) digitalRead(this->pin);
-    return (VLevel_t) 0;
+    return (VLevel_t) digitalRead(this->pin);
 }
 
 /**
@@ -130,7 +132,7 @@ inline GPIORpi::VLevel_t GPIORpi::read()
  */
 inline HallSwitch::Error_t GPIORpi::write(VLevel_t level)
 {
-    //digitalWrite(this->pin, level);
+    digitalWrite(this->pin, level);
     return HallSwitch::OK;
 }
 
@@ -144,14 +146,14 @@ inline HallSwitch::Error_t GPIORpi::write(VLevel_t level)
  */
 inline HallSwitch::Error_t GPIORpi::enable()
 {
-    /*if(this->logic == POSITIVE)
+    if(this->logic == POSITIVE)
     {
         digitalWrite(this->pin, GPIO_HIGH);
     }
     else if(this->logic == NEGATIVE)
     {
         digitalWrite(this->pin, GPIO_LOW);
-    }*/
+    }
     return HallSwitch::OK;
 }
 
@@ -165,14 +167,14 @@ inline HallSwitch::Error_t GPIORpi::enable()
  */
 inline HallSwitch::Error_t GPIORpi::disable()
 {
-   /*if(this->logic == POSITIVE)
+   if(this->logic == POSITIVE)
     {
         digitalWrite(this->pin, GPIO_LOW);
     }
     else if(this->logic == NEGATIVE)
     {
         digitalWrite(this->pin, GPIO_HIGH);
-    }*/
+    }
     return HallSwitch::OK;
 }
 

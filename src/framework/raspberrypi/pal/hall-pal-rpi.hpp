@@ -16,6 +16,7 @@
 
 #include "../../../pal/hall-pal-gpio.hpp"
 #include "../../../pal/hall-pal-timer.hpp"
+#include <wiringPi.h>
 
 /**
  * @addtogroup hsrpipal

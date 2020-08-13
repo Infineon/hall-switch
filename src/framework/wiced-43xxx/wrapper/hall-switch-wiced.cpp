@@ -1,4 +1,4 @@
-/** 
+:q/** 
  * @file        hall-switch-wiced.cpp
  * @brief       Hall Switch WICED API
  * @date        January 2020
