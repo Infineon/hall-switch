@@ -17,7 +17,7 @@
  * @brief GPIO Rpi default constructor
  */
 GPIORpi::GPIORpi()
-: pin(0), mode(INPUT_PULLUP), logic(POSITIVE)
+: pin(0), mode(0), logic(POSITIVE)
 {
 
 }
@@ -36,7 +36,7 @@ GPIORpi::GPIORpi(uint8_t      pin,
 /**
  * @brief   GPIO Rpi destructor
  */
-GPIOIno::~GPIORpi()
+GPIORpi::~GPIORpi()
 {
 
 }
@@ -91,7 +91,7 @@ inline HallSwitch::Error_t GPIORpi::disableInt()
  * @retval  INT_FALLING_EDGE if falling edge event
  * @retval  INT_RISING_EDGE if rising edge event
  */
-inline GPIOIno::IntEvent_t GPIORpi::intEvent()
+inline GPIORpi::IntEvent_t GPIORpi::intEvent()
 {
     /*IntEvent_t edge = INT_FALLING_EDGE;
     
@@ -106,7 +106,7 @@ inline GPIOIno::IntEvent_t GPIORpi::intEvent()
     }
 
     return edge;*/
-    return 0;
+    return (IntEvent_t) 0;
 }
 
 /**
@@ -115,10 +115,10 @@ inline GPIOIno::IntEvent_t GPIORpi::intEvent()
  * @retval      GPIO_LOW if voltage low
  * @retval      GPIO_HIGH if voltage high
  */
-inline GPIOIno::VLevel_t GPIORpi::read()
+inline GPIORpi::VLevel_t GPIORpi::read()
 {
     //return (VLevel_t) digitalRead(this->pin);
-    return 0;
+    return (VLevel_t) 0;
 }
 
 /**
