@@ -16,8 +16,10 @@
 /**
  * @brief GPIO Rpi default constructor
  */
-GPIORpi::GPIORpi()
-: pin(0), mode(INPUT), logic(POSITIVE)
+GPIORpi::GPIORpi(   uint8_t     pin,
+                    uint8_t     mode,
+                    VLogic_t    logic)
+: pin(pin), mode(mode), logic(logic)
 {
 
 }
@@ -25,10 +27,8 @@ GPIORpi::GPIORpi()
 /**
  * @brief   GPIO Rpi constructor
  */
-GPIORpi::GPIORpi(uint8_t      pin, 
-                 uint8_t      mode, 
-                 VLogic_t     logic) 
-: pin(pin), mode(mode), logic(logic) 
+GPIORpi::GPIORpi() 
+: pin(4), mode(INPUT), logic(POSITIVE) 
 {
 
 }
@@ -48,12 +48,14 @@ GPIORpi::~GPIORpi()
  * @retval  OK always
  */
 HallSwitch::Error_t GPIORpi::init()
-{   
-    if (wiringPiSetup() == -1) return HallSwitch::CONF_ERROR;
+{
+    HallSwitch::Error_t err = HallSwitch::OK;
+    if (wiringPiSetup() < 0)
+        err = HallSwitch::INTF_ERROR;
 
     pinMode(this->pin, this->mode);
 
-    return HallSwitch::OK;
+    return err;
 }
 
 /**
@@ -73,8 +75,12 @@ HallSwitch::Error_t GPIORpi::deinit()
  */
 HallSwitch::Error_t GPIORpi::enableInt(HallSwitch *ptr)
 {
-    //attachInterrupt(digitalPinToInterrupt(this->pin), (void (*)())HallSwitch::Interrupt::isrRegister(ptr), CHANGE);
-    return HallSwitch::OK;
+    HallSwitch::Error_t err = HallSwitch::OK;
+    if (0 > wiringPiISR(this->pin, INT_EDGE_BOTH, (void (*)())HallSwitch::Interrupt::isrRegister(ptr)))
+        err = HallSwitch::INTF_ERROR;
+
+    this->isrAttached = err >= 0;
+    return err;
 }
 
 /**
@@ -84,7 +90,7 @@ HallSwitch::Error_t GPIORpi::enableInt(HallSwitch *ptr)
  */
 inline HallSwitch::Error_t GPIORpi::disableInt()
 {
-    //detachInterrupt(digitalPinToInterrupt(this->pin));
+    this->isrAttached = false;
     return HallSwitch::OK;
 }
 
@@ -96,7 +102,8 @@ inline HallSwitch::Error_t GPIORpi::disableInt()
  */
 inline GPIORpi::IntEvent_t GPIORpi::intEvent()
 {
-    /*IntEvent_t edge = INT_FALLING_EDGE;
+    if (!this->isrAttached) return (IntEvent_t) 2;
+    IntEvent_t edge = INT_FALLING_EDGE;
     
     int val = digitalRead(this->pin);
     if(val == LOW)
@@ -108,8 +115,7 @@ inline GPIORpi::IntEvent_t GPIORpi::intEvent()
         edge = INT_RISING_EDGE;
     }
 
-    return edge;*/
-    return (IntEvent_t) 0;
+    return edge;
 }
 
 /**
@@ -219,7 +225,7 @@ inline  HallSwitch::Error_t TimerRpi::deinit()
  */
 inline HallSwitch::Error_t TimerRpi::start()
 {
-    //curTime = millis();
+    curTime = millis();
     return HallSwitch::OK;
 }
 
@@ -231,7 +237,7 @@ inline HallSwitch::Error_t TimerRpi::start()
  */
 inline HallSwitch::Error_t TimerRpi::elapsed(uint32_t &elapsed)
 {
-    //elapsed = (millis() - curTime);
+    elapsed = (millis() - curTime);
     return HallSwitch::OK;
 }
 
@@ -256,7 +262,7 @@ inline HallSwitch::Error_t TimerRpi::stop()
  */
 inline HallSwitch::Error_t TimerRpi::delay(uint32_t timeout)
 {
-    //delay(timeout);
+    delay(timeout);
     return HallSwitch::OK;
 }
  

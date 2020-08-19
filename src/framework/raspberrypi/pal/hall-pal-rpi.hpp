@@ -30,6 +30,7 @@ class GPIORpi : virtual public HallSwitch::GPIO
         uint8_t     pin;                /**< Pin number*/
         uint8_t     mode;               /**< Pin mode*/
         VLogic_t    logic;              /**< Pin logic */
+        bool        isrAttached = false;/**< Interrupt attached flag */
 
     public:
                                 GPIORpi       ();

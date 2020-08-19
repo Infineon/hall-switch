@@ -27,14 +27,12 @@
  * @return          void
  */
 
-//HallSwitchRpi::HallSwitchRpi() {}
-/*
-HallSwitchRpi::HallSwitchRpi(uint8_t   outputPin,
-                                 CBack_t        cBack,
-                                 uint8_t   powerPin)
-:HallSwitch(new GPIORpi(outputPin, INPUT_PULL_UP, GPIO::VLogic_t::POSITIVE),
+HallSwitchRpi::HallSwitchRpi(   uint8_t     outputPin,
+                                CBack_t     cBack,
+                                uint8_t     powerPin)
+:HallSwitch(new GPIORpi(outputPin, INPUT, GPIO::VLogic_t::POSITIVE),
             cBack,
-            (powerPin == UNUSED_PIN) ? NULL : new GPIORpi(outputPin, OUTPUT_PUSH_PULL, GPIO::VLogic_t::POSITIVE)){ }
+            (powerPin == UNUSED_PIN) ? NULL : new GPIORpi(outputPin, OUTPUT, GPIO::VLogic_t::POSITIVE)){ }
 
 /**
  * @brief           Hall switch Raspberry Pi instance constructor with predefined Raspberry Pi hardware platform
@@ -50,14 +48,11 @@ HallSwitchRpi::HallSwitchRpi(uint8_t   outputPin,
  * @return          void
  */
 
-
-HallSwitchRpi::HallSwitchRpi(){}
-
 HallSwitchRpi::HallSwitchRpi(PlatformRpi_t hwPlatf,
                                  CBack_t         cBack)
 {
 
-    this->output    = new GPIORpi(hwPlatf.output, 0, GPIO::VLogic_t::POSITIVE);
+    this->output    = new GPIORpi(hwPlatf.output, INPUT, GPIO::VLogic_t::POSITIVE);
     this->cBack     = cBack;
     if(this->cBack == NULL)
         this->measMode  = POLLING;
@@ -71,7 +66,7 @@ HallSwitchRpi::HallSwitchRpi(PlatformRpi_t hwPlatf,
     }
     else
     {
-        this->power  =   new GPIORpi(hwPlatf.power, 0, GPIO::VLogic_t::POSITIVE);
+        this->power  =   new GPIORpi(hwPlatf.power, OUTPUT, GPIO::VLogic_t::POSITIVE);
         this->powerMode = SWITCH;
     }
 }

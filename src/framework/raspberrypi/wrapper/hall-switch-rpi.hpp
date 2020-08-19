@@ -27,7 +27,9 @@ class HallSwitchRpi : public HallSwitch
 {
     public:
 
-        HallSwitchRpi();
+        HallSwitchRpi(  uint8_t         outputPin,
+                        CBack_t         cBack      = NULL,
+                        uint8_t         powerPin   = UNUSED_PIN);
         
         HallSwitchRpi(PlatformRpi_t hwPlatf,
                         CBack_t         cBack      = NULL);
