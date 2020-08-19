@@ -9,7 +9,7 @@
 
 //#define HALL_SWITCH_FRAMEWORK HALL_SWITCH_FRMWK_RPI
 
-HallSwitchRpi    hs( TLE4964_3M_S2Go_Rpi4 );
+HallSwitchRpi    hs( TLE4964_3M_S2Go_Rpi2 );
 
 int main() {
 	int err = 0;

@@ -28,7 +28,7 @@ typedef struct
     uint8_t power;      /**< Power pin */
 }PlatformRpi_t;
 
-extern PlatformRpi_t TLE4964_3M_S2Go_Rpi4;        /**< Raspberry Pi 4 with Shield2Go Adapter and Hall Switch Shield2Go. */
+extern PlatformRpi_t TLE4964_3M_S2Go_Rpi2;        /**< Raspberry Pi >=2 with Shield2Go Adapter and Hall Switch Shield2Go. */
 
 /** @} */
 

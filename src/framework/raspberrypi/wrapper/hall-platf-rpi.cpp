@@ -15,7 +15,7 @@
  * @addtogroup hsrpihw
  */
 
-PlatformRpi_t TLE4964_3M_S2Go_Rpi4     =  {4, UNUSED_PIN};    /**< Raspberry Pi 4 with Shield2Go Adapter and Hall Switch Shield2Go. */
+PlatformRpi_t TLE4964_3M_S2Go_Rpi2     =  {4, UNUSED_PIN};    /**< Raspberry Pi >= 2 with Shield2Go Adapter and Hall Switch Shield2Go. */
 
 #endif /** HALL_SWITCH_FRAMEWORK **/
 /** @} */
