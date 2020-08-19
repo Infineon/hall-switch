@@ -3,13 +3,21 @@
 #include <stdio.h>
 #include "hall-switch-rpi.hpp"
 
+/**
+ * Minimal example: Read B field with Raspberry Pi.
+ */
+
 //#define HALL_SWITCH_FRAMEWORK HALL_SWITCH_FRMWK_RPI
 
 HallSwitchRpi    hs( TLE4964_3M_S2Go_Rpi4 );
 
 int main() {
-	printf( "Setup status: %d\n", hs.init() );
-	
+	int err = 0;
+	err = hs.init();
+	if (0 > err) printf( "Hall Switch init error: %d\n", err );
+
+	printf("Hall Switch started.\n");
+
 	while (true) {
 		hs.updateBField();
 		printf( "Hall switch status: %d\n", hs.getBField() );
