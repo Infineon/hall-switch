@@ -17,7 +17,7 @@
 #endif
 
 #ifndef HALL_SWITCH_FRAMEWORK 
-#define HALL_SWITCH_FRAMEWORK       HALL_SWITCH_FRMWK_RPI
+#define HALL_SWITCH_FRAMEWORK       HALL_SWITCH_FRMWK_ARDUINO
 #endif
 
 #include "hall-conf-dfl.hpp"
