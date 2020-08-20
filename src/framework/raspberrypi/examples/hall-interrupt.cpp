@@ -22,7 +22,7 @@ void IntCBack(HallSwitch::Result_t result)
 	}
 }
 
-HallSwitchRpi hs( TLE4964_3M_S2Go_Rpi2, IntCBack );
+HallSwitchRpi hs( TLE4964_3M_S2Go_Rpi_Adapter_Slot_1, IntCBack );
 
 int main() {
 	int err = 0;

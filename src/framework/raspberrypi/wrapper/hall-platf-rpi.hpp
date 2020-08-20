@@ -26,9 +26,11 @@ typedef struct
 {
     uint8_t output;     /**< Output pin */
     uint8_t power;      /**< Power pin */
-}PlatformRpi_t;
+} PlatformRpi_t;
 
-extern PlatformRpi_t TLE4964_3M_S2Go_Rpi2;        /**< Raspberry Pi >=2 with Shield2Go Adapter and Hall Switch Shield2Go. */
+extern PlatformRpi_t TLE4964_3M_S2Go_Rpi_Adapter_Slot_1;            /**< Raspberry Pi >=2 with Shield2Go Adapter and Hall Switch Shield2Go on Slot 1. */
+extern PlatformRpi_t TLE4964_3M_S2Go_Rpi_Adapter_Slot_2;            /**< Raspberry Pi >=2 with Shield2Go Adapter and Hall Switch Shield2Go on Slot 2. */
+extern PlatformRpi_t TLE4964_3M_S2Go_Rpi_Adapter_Slot_3;            /**< Raspberry Pi >=2 with Shield2Go Adapter and Hall Switch Shield2Go on Slot 3. */
 
 /** @} */
 

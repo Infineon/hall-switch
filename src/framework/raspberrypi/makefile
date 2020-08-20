@@ -1,6 +1,6 @@
 FLAGS=
 
-all: clean example/lib-polling
+all: clean example/hall-polling
 
 lib:
 	mkdir -p ../../../build
@@ -11,13 +11,13 @@ lib:
 	g++ -c $(FLAGS) -o ../../../build/hall-platf-rpi.o wrapper/hall-platf-rpi.cpp
 	g++ -c $(FLAGS) -o ../../../build/hall-switch-rpi.o wrapper/hall-switch-rpi.cpp -I../../corelib
 	
-example/lib-polling: lib
-	g++ -c $(FLAGS) -o ../../../build/lib-polling.o examples/lib-polling.cpp -Iwrapper/ -I../../corelib
-	g++ $(FLAGS) -o ../../../build/lib-polling ../../../build/*.o -I/usr/local/include -L/usr/local/lib -lwiringPi
+examples/hall-polling: lib
+	g++ -c $(FLAGS) -o ../../../build/hall-polling.o examples/hall-polling.cpp -Iwrapper/ -I../../corelib
+	g++ $(FLAGS) -o ../../../build/hall-polling ../../../build/*.o -I/usr/local/include -L/usr/local/lib -lwiringPi
 	
-example/lib-interrupt: lib
-	g++ -c $(FLAGS) -o ../../../build/lib-interrupt.o examples/lib-interrupt.cpp -Iwrapper/ -I../../corelib
-	g++ $(FLAGS) -o ../../../build/lib-interrupt ../../../build/*.o -I/usr/local/include -L/usr/local/lib -lwiringPi
+examples/hall-interrupt: lib
+	g++ -c $(FLAGS) -o ../../../build/hall-interrupt.o examples/hall-interrupt.cpp -Iwrapper/ -I../../corelib
+	g++ $(FLAGS) -o ../../../build/hall-interrupt ../../../build/*.o -I/usr/local/include -L/usr/local/lib -lwiringPi
 
 clean:
 	rm -f ../../../build/*

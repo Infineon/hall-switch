@@ -10,7 +10,7 @@
  * in src/config/hall-conf.hpp.
  */
 
-HallSwitchRpi    hs( TLE4964_3M_S2Go_Rpi2 );
+HallSwitchRpi    hs( TLE4964_3M_S2Go_Rpi_Adapter_Slot_1 );
 
 int main() {
 	int err = 0;
