@@ -45,7 +45,8 @@ GPIORpi::~GPIORpi()
 /**
  * @brief   Initializes the Raspberry Pi GPIO
  * @return  GPIO error code
- * @retval  OK always
+ * @retval  OK if success
+ * @retval  INTF_ERROR if initialization error
  */
 HallSwitch::Error_t GPIORpi::init()
 {
@@ -71,27 +72,27 @@ HallSwitch::Error_t GPIORpi::deinit()
 /**
  * @brief   Enables the Raspberry Pi GPIO interrupt
  * @return  GPIO error code
- * @retval  OK always
+ * @retval  OK if success
+ * @retval  INTF_ERROR if error
  */
 HallSwitch::Error_t GPIORpi::enableInt(HallSwitch *ptr)
 {
     HallSwitch::Error_t err = HallSwitch::OK;
     if (0 > wiringPiISR(this->pin, INT_EDGE_BOTH, (void (*)())HallSwitch::Interrupt::isrRegister(ptr)))
         err = HallSwitch::INTF_ERROR;
-
-    this->isrAttached = err >= 0;
+    
     return err;
 }
 
 /**
  * @brief   Disables the Raspberry Pi GPIO interrupt
+ * @note    Not supported by low level framework.
  * @return  GPIO error code
- * @retval  OK always
+ * @retval  INTF Error always
  */
 inline HallSwitch::Error_t GPIORpi::disableInt()
 {
-    this->isrAttached = false;
-    return HallSwitch::OK;
+    return HallSwitch::INTF_ERROR;
 }
 
 /**
@@ -102,7 +103,6 @@ inline HallSwitch::Error_t GPIORpi::disableInt()
  */
 inline GPIORpi::IntEvent_t GPIORpi::intEvent()
 {
-    if (!this->isrAttached) return (IntEvent_t) 2;
     IntEvent_t edge = INT_FALLING_EDGE;
     
     int val = digitalRead(this->pin);
@@ -133,8 +133,7 @@ inline GPIORpi::VLevel_t GPIORpi::read()
  * @brief       Writes the Raspberry Pi GPIO output voltage level
  * @param[in]   level  Voltage level
  * @return      GPIO error code
- * @retval      OK if success
- * @retval      WRITE_ERROR if write error
+ * @retval      OK always
  */
 inline HallSwitch::Error_t GPIORpi::write(VLevel_t level)
 {
@@ -147,8 +146,7 @@ inline HallSwitch::Error_t GPIORpi::write(VLevel_t level)
  *              - Low if negative
  *              - High if positive
  * @return      GPIO interrupt event
- * @retval      OK if success
- * @retval      WRITE_ERROR if write error
+ * @retval      OK always
  */
 inline HallSwitch::Error_t GPIORpi::enable()
 {
@@ -168,8 +166,7 @@ inline HallSwitch::Error_t GPIORpi::enable()
  *              - Low if positive
  *              - High if negative
  * @return      GPIO error code
- * @retval      OK if success
- * @retval      WRITE_ERROR if write error
+ * @retval      OK always
  */
 inline HallSwitch::Error_t GPIORpi::disable()
 {
@@ -184,87 +181,4 @@ inline HallSwitch::Error_t GPIORpi::disable()
     return HallSwitch::OK;
 }
 
-#if (HALL_SPEED_ENABLED == 1)
-
-TimerRpi::TimerRpi() : curTime(0)
-{
-
-}
-
-TimerRpi::~TimerRpi()
-{
-    curTime = 0;
-}
-
-/**
- * @brief   Initialiazes the timer
- * @return  Timer error code
- * @retval  OK if success (always)
- */
-inline  HallSwitch::Error_t TimerRpi::init()
-{
-    curTime = 0;
-    return HallSwitch::OK;
-}
-
-/**
- * @brief   Deinitialiazes the timer
- * @return  Timer error code
- * @retval  OK if success (always)
- */
-inline  HallSwitch::Error_t TimerRpi::deinit()
-{
-    curTime = 0;
-    return HallSwitch::OK;
-}
-
-/**
- * @brief   Starts the timer
- * @return  Timer error code
- * @retval  OK if success (always)
- */
-inline HallSwitch::Error_t TimerRpi::start()
-{
-    curTime = millis();
-    return HallSwitch::OK;
-}
-
-/**
- * @brief       Elapsed time since the timer was started 
- * @param[out]  elapsed Time in milliseconds 
- * @return      Timer error code
- * @retval      OK if success (always)
- */
-inline HallSwitch::Error_t TimerRpi::elapsed(uint32_t &elapsed)
-{
-    elapsed = (millis() - curTime);
-    return HallSwitch::OK;
-}
-
-/**
- * @brief   Stops the timer
- * @return  Timer error code
- * @retval  OK if success
- * @retval  OK if success (always)
- */
-inline HallSwitch::Error_t TimerRpi::stop()
-{
-    //Nothing
-     return HallSwitch::OK;
-}
-
-/**
- * @brief       Introduces a delay during the specified time    
- * @param[in]   timeout    Delay time in milliseconds   
- * @return      Timer error code
- * @retval      OK if success
- * @retval      OK if success (always)
- */
-inline HallSwitch::Error_t TimerRpi::delay(uint32_t timeout)
-{
-    delay(timeout);
-    return HallSwitch::OK;
-}
- 
- #endif /** HALL_SPEED_ENABLED */
- #endif /** HALL_SWITCH_FRAMEWORK **/
+#endif /** HALL_SWITCH_FRAMEWORK **/

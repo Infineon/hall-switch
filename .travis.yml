@@ -10,6 +10,7 @@ sudo: required
         
 branches:
     - master
+    - feature/rpi4-platform
     - /^v.*$/
 
 # Builds Test
@@ -34,7 +35,6 @@ jobs:
   include:   
     - stage: "Deploy" 
       name: "GitHub Pages Deployment"
-      if: tag IS present
       addons:
         apt:
             packages:
