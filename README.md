@@ -24,16 +24,28 @@ C++ library of Infineon **single hall-effect switch** family for magnetic sensin
     <tr>
         <td><img src="https://github.com/infineon/hall-switch/wiki/img/arduino-logo.png" width=200></td>
         <td><img src="https://github.com/infineon/hall-switch/wiki/img/wiced-logo.png" width=200></td>
-        <td><img src="https://github.com/infineon/hall-switch/wiki/img/cross-platform.png" width=200></td>
+        <td><img src="https://github.com/infineon/hall-switch/wiki/img/rpi-logo.png" width=200></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Arduino-API">Arduino API</a></td>
         <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/WICED-API">WICED API</a></td>
-        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hall-Switch-API">Hall Switch API</a><br><a href="https://github.com/Infineon/hall-switch/wiki/Hall-Speed-API">Hall Speed API</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/RPi-API">RPi API</a></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Ino-Getting-Started">Getting Started</a></td>
         <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/CW-Getting-Started">Getting Started</a></td>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/RPi-Getting-Started">Getting Started</a></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+       <td><img src="https://github.com/infineon/hall-switch/wiki/img/cross-platform.png" width=200></td>
+    </tr>
+    <tr>
+        <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Hall-Switch-API">Hall Switch API</a><br><a href="https://github.com/Infineon/hall-switch/wiki/Hall-Speed-API">Hall Speed API</a></td>
+    </tr>
+    <tr>
         <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Porting-Guide">Porting Guide</a></td>
     </tr>
 </table>
