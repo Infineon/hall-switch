@@ -24,7 +24,7 @@ C++ library of Infineon **single hall-effect switch** family for magnetic sensin
     <tr>
         <td><img src="https://github.com/infineon/hall-switch/wiki/img/arduino-logo.png" width=200></td>
         <td><img src="https://github.com/infineon/hall-switch/wiki/img/wiced-logo.png" width=200></td>
-        <td><img src="https://github.com/infineon/hall-switch/wiki/img/rpi-logo.png" width=200></td>
+        <td><img src="https://github.com/infineon/hall-switch/wiki/img/rpi-logo.png" width=120></td>
     </tr>
     <tr>
         <td style="text-align: center"><a href="https://github.com/Infineon/hall-switch/wiki/Arduino-API">Arduino API</a></td>
