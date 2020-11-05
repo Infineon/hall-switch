@@ -13,6 +13,16 @@
  *  @{
  */
 
+/** @defgroup hsrpi         Raspberry Pi
+ *  @{
+ */
+
+/** @defgroup hsrpiapi      Hall Switch API */
+/** @defgroup hsrpipal      PAL */
+/** @defgroup hsrpihw       HW Platforms */
+
+/** @} */
+
 /** @defgroup hsino         Arduino 
  *  @{
  */
