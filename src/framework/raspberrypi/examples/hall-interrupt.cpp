@@ -1,3 +1,11 @@
+/** 
+ * @file        hall-interrupt.cpp
+ * @brief       Hall Switch Interrupt Raspberry Pi Example
+ * @date        November 2020
+ * @copyright   Copyright (c) 2019-2020 Infineon Technologies AG
+ * 
+ * SPDX-License-Identifier: MIT
+ */
 #include <stdint.h>
 #include <stdio.h>
 #include "hall-switch-rpi.hpp"
