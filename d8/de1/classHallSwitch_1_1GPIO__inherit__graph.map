@@ -1,4 +1,5 @@
 <map id="HallSwitch::GPIO" name="HallSwitch::GPIO">
 <area shape="rect" id="node2" href="$d6/dfc/classGPIOIno.html" title="GPIOIno" alt="" coords="5,80,77,107"/>
-<area shape="rect" id="node3" href="$dd/dcb/classGPIOWiced.html" title="GPIOWiced" alt="" coords="101,80,192,107"/>
+<area shape="rect" id="node3" href="$d9/d95/classGPIORpi.html" title="GPIORpi" alt="" coords="101,80,173,107"/>
+<area shape="rect" id="node4" href="$dd/dcb/classGPIOWiced.html" title="GPIOWiced" alt="" coords="197,80,288,107"/>
 </map>

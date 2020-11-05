@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces. " alt="" coords="120,5,235,32"/>
+<area shape="rect" id="node4" href="$dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor. " alt="" coords="108,56,247,83"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#ac4c88f091e85a3fa7ed0198372e96fec" title="Initializes the GPIO. " alt="" coords="315,5,468,32"/>
+<area shape="rect" id="node5" href="$dd/d09/classHallSwitch_1_1GPIO.html#a8bfbf5e354bafd81933c6542a15160a1" title="Enables the GPIO output according to the GPIO logic. " alt="" coords="303,56,480,83"/>
+<area shape="rect" id="node6" href="$dd/d09/classHallSwitch_1_1GPIO.html#adf99b47a5a4784c1a7ec7014fa690176" title="Enables the hardware interrupt. " alt="" coords="295,107,488,133"/>
+</map>

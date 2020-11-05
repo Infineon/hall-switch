@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dd/d09/classHallSwitch_1_1GPIO.html" title="HallSwitch::GPIO" alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node1" href="$dd/d09/classHallSwitch_1_1GPIO.html" title="HallSwitch::GPIO" alt="" coords="5,56,132,83"/>
 <area shape="rect" id="node2" href="$d6/dfc/classGPIOIno.html" title="GPIOIno" alt="" coords="189,5,261,32"/>
-<area shape="rect" id="node3" href="$dd/dcb/classGPIOWiced.html" title="GPIOWiced" alt="" coords="180,56,271,83"/>
+<area shape="rect" id="node3" href="$d9/d95/classGPIORpi.html" title="GPIORpi" alt="" coords="189,56,261,83"/>
+<area shape="rect" id="node4" href="$dd/dcb/classGPIOWiced.html" title="GPIOWiced" alt="" coords="180,107,271,133"/>
 </map>

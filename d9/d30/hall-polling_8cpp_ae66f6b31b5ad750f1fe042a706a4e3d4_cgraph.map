@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces. " alt="" coords="139,5,254,32"/>
+<area shape="rect" id="node4" href="$dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value. " alt="" coords="108,56,285,83"/>
+<area shape="rect" id="node6" href="$dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11" title="Gets magnetic field. " alt="" coords="120,107,273,133"/>
+<area shape="rect" id="node3" href="$dd/d09/classHallSwitch_1_1GPIO.html#ac4c88f091e85a3fa7ed0198372e96fec" title="Initializes the GPIO. " alt="" coords="338,5,491,32"/>
+<area shape="rect" id="node5" href="$dd/d09/classHallSwitch_1_1GPIO.html#aa520ef68b52dda22ed27de43497e15db" title="Reads the GPIO voltage level. " alt="" coords="333,56,496,83"/>
+</map>

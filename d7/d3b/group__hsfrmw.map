@@ -1,4 +1,5 @@
 <map id="SW Frameworks" name="SW Frameworks">
-<area shape="rect" id="node1" href="$db/d65/group__hsino.html" title="Arduino" alt="" coords="176,5,247,32"/>
-<area shape="rect" id="node3" href="$d4/d52/group__hswiced.html" title="WICED" alt="" coords="180,56,243,83"/>
+<area shape="rect" id="node1" href="$db/d65/group__hsino.html" title="Arduino" alt="" coords="191,5,262,32"/>
+<area shape="rect" id="node3" href="$d4/d52/group__hswiced.html" title="WICED" alt="" coords="195,56,258,83"/>
+<area shape="rect" id="node4" href="$d2/d06/group__hsrpi.html" title="Raspberry Pi" alt="" coords="176,107,277,133"/>
 </map>

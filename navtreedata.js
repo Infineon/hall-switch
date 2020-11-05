@@ -28,7 +28,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"dd/dc8/hall-speed-ino_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

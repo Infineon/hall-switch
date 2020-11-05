@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wiced',['WICED',['../d4/d52/group__hswiced.html',1,'']]]
+  ['sw_20frameworks',['SW Frameworks',['../d7/d3b/group__hsfrmw.html',1,'']]]
 ];

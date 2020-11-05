@@ -1,0 +1,6 @@
+<map id="Raspberry Pi" name="Raspberry Pi">
+<area shape="rect" id="node1" href="$d7/d3b/group__hsfrmw.html" title="SW Frameworks" alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node2" href="$d3/d1a/group__hsrpipal.html" title="PAL" alt="" coords="360,5,405,32"/>
+<area shape="rect" id="node4" href="$d2/dc1/group__hsrpihw.html" title="HW Platforms" alt="" coords="329,56,437,83"/>
+<area shape="rect" id="node5" href="$db/dac/group__hsrpiapi.html" title="Hall Switch API" alt="" coords="325,107,440,133"/>
+</map>
