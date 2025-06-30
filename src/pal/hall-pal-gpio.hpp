@@ -17,7 +17,7 @@
  * @{
  */
 
-class HallSwitch::GPIO
+class HallSwitch::Hall_GPIO
 {    
     public:  
         

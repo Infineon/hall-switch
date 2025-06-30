@@ -22,7 +22,7 @@
  * @{
  */
 
-class GPIOIno : virtual public HallSwitch::GPIO 
+class GPIOIno : virtual public HallSwitch::Hall_GPIO
 {
     private:
         #define     UNUSED_PIN    0xFF  /**< Unused pin */
