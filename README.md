@@ -1,6 +1,6 @@
 # Hall-Switch
 
-[![Build Status](https://travis-ci.com/Infineon/hall-switch.svg?branch=master)](https://travis-ci.com/Infineon/hall-switch)
+[![Compile examples](https://github.com/Infineon/hall-switch/actions/workflows/compile_examples.yml/badge.svg?branch=devops%2Fadd-build-checks)](https://github.com/Infineon/hall-switch/actions/workflows/compile_examples.yml)
 
 C++ library of Infineon **single hall-effect switch** family for magnetic sensing applications.
 
