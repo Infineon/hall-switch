@@ -39,12 +39,12 @@ HallSpeedIno::HallSpeedIno(uint8_t     outputPin,
                            HallSpeed::SpeedUnit_t units,
                            HallSpeed::CBackSpd_t  cBack,
                            uint8_t     powerPin)
-:sp(new GPIOIno(outputPin, INPUT_PULLUP, HallSwitch::GPIO::VLogic_t::POSITIVE), 
+:sp(new GPIOIno(outputPin, INPUT_PULLUP, HallSwitch::Hall_GPIO::VLogic_t::POSITIVE), 
     new TimerIno(),
     polesNum,
     units,
     cBack,
-    (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(powerPin, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
+    (powerPin == UNUSED_PIN) ? NULL : new GPIOIno(powerPin, OUTPUT, HallSwitch::Hall_GPIO::VLogic_t::POSITIVE)){}
 
 
 /**
@@ -68,12 +68,12 @@ HallSpeedIno::HallSpeedIno(PlatformIno_t  hwPlatf,
                            uint8_t        polesNum,
                            HallSpeed::SpeedUnit_t    units,
                            HallSpeed::CBackSpd_t     cBack)
-:sp(new GPIOIno(hwPlatf.output, INPUT_PULLUP, HallSwitch::GPIO::VLogic_t::POSITIVE), 
+:sp(new GPIOIno(hwPlatf.output, INPUT_PULLUP, HallSwitch::Hall_GPIO::VLogic_t::POSITIVE), 
     new TimerIno(),
     polesNum,
     units,
     cBack,
-    (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, HallSwitch::GPIO::VLogic_t::POSITIVE)){}
+    (hwPlatf.power == UNUSED_PIN) ? NULL : new GPIOIno(hwPlatf.power, OUTPUT, HallSwitch::Hall_GPIO::VLogic_t::POSITIVE)){}
 
 /**
  * @brief   Hall Speed Ino Destructor         

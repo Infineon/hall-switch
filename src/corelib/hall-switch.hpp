@@ -93,7 +93,7 @@ class HallSwitch
         /**
          * @brief   GPIO Hardware Interface
          */
-        class GPIO;
+        class Hall_GPIO;
 
         /**
          * @brief   Interrupt Handler
@@ -101,9 +101,9 @@ class HallSwitch
         class Interrupt;
 
                     HallSwitch   ();
-                    HallSwitch   (GPIO        *output,
+                    HallSwitch   (Hall_GPIO        *output,
                                   CBack_t     cBack   = NULL,
-                                  GPIO        *power  = NULL);
+                                  Hall_GPIO        *power  = NULL);
                    ~HallSwitch   ();
         Error_t     init         ();
         Error_t     deinit       ();
@@ -116,13 +116,13 @@ class HallSwitch
     protected:
 
         Status_t    status;             /**< Status */
-        GPIO        *output;            /**< Output GPIO hardware interface pointer */
+        Hall_GPIO        *output;            /**< Output GPIO hardware interface pointer */
         Result_t    bfieldVal;          /**< Magnetic field value */
         
         CBack_t     cBack;              /**< Interrupt mode callback function  */
         MeasMode_t  measMode;           /**< Measuring mode */
-        
-        GPIO        *power;             /**< Power switch controller mode GPIO hardware interface pointer */
+
+        Hall_GPIO        *power;             /**< Power switch controller mode GPIO hardware interface pointer */
         PowerMode_t powerMode;          /**< Power mode */
 
         virtual void callback   ();

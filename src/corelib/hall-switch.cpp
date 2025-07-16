@@ -44,9 +44,9 @@ HallSwitch::HallSwitch()
  * @param[in]   *power  Sensor switch power controller GPIO interface pointer. Default NULL will set power mode to MAIN
  * @pre    None
  */
-HallSwitch::HallSwitch(GPIO         *output,
+HallSwitch::HallSwitch(Hall_GPIO         *output,
                        CBack_t      cBack,
-                       GPIO         *power)
+                       Hall_GPIO         *power)
 {
     status              = UNINITED;
     this->output        = output;
@@ -220,13 +220,13 @@ HallSwitch::Error_t  HallSwitch::disable()
  */
 HallSwitch::Error_t HallSwitch::updateBField()
 {
-	GPIO::VLevel_t gpiolevel = output->read();   
+	Hall_GPIO::VLevel_t gpiolevel = output->read();   
 
-	if(gpiolevel == GPIO::VLevel_t::GPIO_LOW)
+	if(gpiolevel == Hall_GPIO::VLevel_t::GPIO_LOW)
     {
         bfieldVal = B_FIELD_ON;
 	}
-    else if(gpiolevel == GPIO::VLevel_t::GPIO_HIGH)
+    else if(gpiolevel == Hall_GPIO::VLevel_t::GPIO_HIGH)
     {
         bfieldVal = B_FIELD_OFF;
 	}
@@ -271,13 +271,13 @@ HallSwitch::Result_t HallSwitch::getBField()
  */
 void HallSwitch::callback()
 {
-    GPIO::IntEvent_t event = output->intEvent();
+    Hall_GPIO::IntEvent_t event = output->intEvent();
 
-    if(event == GPIO::IntEvent_t::INT_FALLING_EDGE)
+    if(event == Hall_GPIO::IntEvent_t::INT_FALLING_EDGE)
     {
         bfieldVal = B_FIELD_ON;
     }
-    else if(event == GPIO::IntEvent_t::INT_RISING_EDGE)
+    else if(event == Hall_GPIO::IntEvent_t::INT_RISING_EDGE)
     {
        bfieldVal = B_FIELD_OFF;
     }

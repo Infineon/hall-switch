@@ -56,12 +56,12 @@ HallSpeed::HallSpeed()
  * 
  * @pre None
  */
-HallSpeed::HallSpeed(GPIO       *output,
+HallSpeed::HallSpeed(Hall_GPIO       *output,
                     Timer       *timer,
                     uint8_t     polesNum,
                     SpeedUnit_t units,
                     CBackSpd_t  cBack,
-                    GPIO        *power                               
+                    Hall_GPIO        *power                               
 ) : HallSwitch(output, (HallSwitch::CBack_t)cBack, power)
 {
     this->timer = timer;
@@ -201,7 +201,7 @@ HallSwitch::Error_t HallSpeed::updateSpeed()
     Error_t err = OK;
     static bool waitingRisingEdge = true;
 
-    if(waitingRisingEdge && (output->read() == GPIO::VLevel_t::GPIO_HIGH))
+    if(waitingRisingEdge && (output->read() == Hall_GPIO::VLevel_t::GPIO_HIGH))
     {
         bfieldVal = B_FIELD_OFF;
         calculateSpeed();
@@ -211,7 +211,7 @@ HallSwitch::Error_t HallSpeed::updateSpeed()
         if(err != OK) return err;
         waitingRisingEdge = false;
     }
-    else if(!waitingRisingEdge && (output->read() == GPIO::VLevel_t::GPIO_LOW))
+    else if(!waitingRisingEdge && (output->read() == Hall_GPIO::VLevel_t::GPIO_LOW))
     {
         bfieldVal = B_FIELD_ON;
         waitingRisingEdge = true;
@@ -244,16 +244,16 @@ double HallSpeed::getSpeed()
  */
 void HallSpeed::callback()
 {
-    GPIO::IntEvent_t event = output->intEvent();
+   Hall_GPIO::IntEvent_t event = output->intEvent();
 
-    if(event == GPIO::IntEvent_t::INT_RISING_EDGE)
+    if(event == Hall_GPIO::IntEvent_t::INT_RISING_EDGE)
     {
         bfieldVal = B_FIELD_OFF;
         calculateSpeed();
         timer->stop();
         timer->start();
     }
-    else if(event == GPIO::IntEvent_t::INT_FALLING_EDGE)
+    else if(event == Hall_GPIO::IntEvent_t::INT_FALLING_EDGE)
     {
        bfieldVal = B_FIELD_ON;
     }

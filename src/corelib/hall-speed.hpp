@@ -49,12 +49,12 @@ class HallSpeed: public HallSwitch
         class Timer;
 
                     HallSpeed   ();
-                    HallSpeed   (GPIO        *output,
+                    HallSpeed   (Hall_GPIO        *output,
                                  Timer       *timer,
                                  uint8_t     polesNum = 1,
                                  SpeedUnit_t units    = HERTZ,
                                  CBackSpd_t  cBack    = NULL,
-                                 GPIO        *power   = NULL);
+                                 Hall_GPIO        *power   = NULL);
                    ~HallSpeed   ();
         Error_t     init        ();
         Error_t     deinit      ();
