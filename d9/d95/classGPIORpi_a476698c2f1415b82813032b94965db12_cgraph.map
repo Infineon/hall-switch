@@ -1,0 +1,5 @@
+<map id="GPIORpi::enableInt" name="GPIORpi::enableInt">
+<area shape="rect" id="Node000001" title="Enables the Raspberry Pi GPIO interrupt." alt="" coords="5,13,149,38"/>
+<area shape="rect" id="Node000002" href="$d4/da3/classHallSwitch_1_1Interrupt.html#a7dd13f77984e34110398862d8a5e373e" title="Register a hardware interrupt for the hall switch object passed by argument." alt="" coords="197,5,352,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,23,184,23,184,28,149,28"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="HallSwitch::callback" name="HallSwitch::callback">
+<area shape="rect" id="Node000001" title="Interrupt mode callback function." alt="" coords="5,13,159,38"/>
+<area shape="rect" id="Node000002" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#aa7442e9412326a32b2cc9d731abf4bf1" title="Gets the latest interrupt event." alt="" coords="207,5,371,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,23,193,23,193,28,159,28"/>
+</map>

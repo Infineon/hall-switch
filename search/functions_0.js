@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['application_5fstart_0',['application_start',['../d4/de4/hall__switch_8cpp.html#a1b078eb11b33c0125c88261467908eb4',1,'hall_switch.cpp']]]
+];

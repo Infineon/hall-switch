@@ -1,0 +1,5 @@
+<map id="HallSpeed::calculateSpeed" name="HallSpeed::calculateSpeed">
+<area shape="rect" id="Node000001" title="Calculates the speed in the configured units." alt="" coords="5,5,200,31"/>
+<area shape="rect" id="Node000002" href="$d6/dc2/classHallSpeed_1_1Timer.html#a2e3e04d5c418822dcf2348f1e1547d65" title="Elapsed time since the timer was started." alt="" coords="248,5,441,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,15,235,15,235,21,200,21"/>
+</map>

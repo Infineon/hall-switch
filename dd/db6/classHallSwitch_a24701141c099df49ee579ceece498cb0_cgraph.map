@@ -1,0 +1,5 @@
+<map id="HallSwitch::updateBField" name="HallSwitch::updateBField">
+<area shape="rect" id="Node000001" title="Updates instance magnetic field value." alt="" coords="5,13,189,38"/>
+<area shape="rect" id="Node000002" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a1a4428929373b19bd1a1af1354c668ee" title="Reads the GPIO voltage level." alt="" coords="237,5,401,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,23,224,23,224,28,190,28"/>
+</map>

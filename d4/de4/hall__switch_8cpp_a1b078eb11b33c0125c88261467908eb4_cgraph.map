@@ -1,0 +1,26 @@
+<map id="application_start" name="application_start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,136,131"/>
+<area shape="rect" id="Node000002" href="$d4/de4/hall__switch_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="188,68,239,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,103,174,88,175,93,120,108"/>
+<area shape="rect" id="Node000007" href="$d4/de4/hall__switch_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="184,129,243,155"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="137,126,171,132,170,137,136,132"/>
+<area shape="rect" id="Node000003" href="$dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11" title="Gets magnetic field." alt="" coords="303,5,463,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,65,290,40,311,32,313,37,292,44,238,70"/>
+<area shape="rect" id="Node000004" href="$dd/db6/classHallSwitch.html#a714e85075bc6ab10e0094261581465bc" title="Gets the sensor status." alt="" coords="302,104,463,129"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="239,83,310,98,309,104,238,89"/>
+<area shape="rect" id="Node000005" href="$dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value." alt="" coords="291,55,475,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="239,76,277,73,277,78,239,81"/>
+<area shape="rect" id="Node000006" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a1a4428929373b19bd1a1af1354c668ee" title="Reads the GPIO voltage level." alt="" coords="523,33,687,73"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="475,59,509,56,509,62,475,64"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="243,135,288,128,289,133,243,140"/>
+<area shape="rect" id="Node000008" href="$dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor." alt="" coords="311,153,454,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="243,143,298,151,297,157,243,149"/>
+<area shape="rect" id="Node000011" href="$dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces." alt="" coords="323,225,443,251"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="236,153,292,188,345,217,343,221,289,192,233,157"/>
+<area shape="rect" id="Node000009" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a9a2d5c81a34b1121ec817f50693afa01" title="Enables the GPIO output according to the GPIO logic." alt="" coords="523,97,687,137"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="440,151,508,135,510,140,441,156"/>
+<area shape="rect" id="Node000010" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#ae745b95548cd13301e66bb029376e89e" title="Enables the hardware interrupt." alt="" coords="523,161,687,201"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="454,168,509,172,509,177,454,173"/>
+<area shape="rect" id="Node000012" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a68cc947f1e5b29fd5f679f41615d0f07" title="Initializes the GPIO." alt="" coords="523,225,687,265"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="443,237,509,239,509,244,443,242"/>
+</map>

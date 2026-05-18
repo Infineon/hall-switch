@@ -1,0 +1,17 @@
+<map id="HallSpeedIno::getSpeed" name="HallSpeedIno::getSpeed">
+<area shape="rect" id="Node000001" title="Gets the speed value." alt="" coords="5,68,183,93"/>
+<area shape="rect" id="Node000002" href="$db/ddb/classHallSpeed.html#aef6f7b8d705f09f9522a537c4ff20507" title="Gets speed value." alt="" coords="243,43,400,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,68,229,63,230,68,183,73"/>
+<area shape="rect" id="Node000003" href="$db/ddb/classHallSpeed.html#a1c521d9b00c3baeff56c51de258fc232" title="Updates the instance speed value." alt="" coords="231,92,412,117"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,87,217,91,217,96,183,93"/>
+<area shape="rect" id="Node000004" href="$db/ddb/classHallSpeed.html#a21f7bb728a3a4958b9f9039113b2a70e" title="Calculates the speed in the configured units." alt="" coords="460,5,655,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="379,89,411,77,434,59,459,41,479,32,482,37,461,46,438,63,413,82,381,94"/>
+<area shape="rect" id="Node000006" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a1a4428929373b19bd1a1af1354c668ee" title="Reads the GPIO voltage level." alt="" coords="475,55,639,95"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="412,91,461,85,462,90,413,96"/>
+<area shape="rect" id="Node000007" href="$d6/dc2/classHallSpeed_1_1Timer.html#a1ff993f131e3cdb416ec81ca3a0a2cd3" title="Starts the timer." alt="" coords="471,120,643,145"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="413,113,458,118,457,124,412,118"/>
+<area shape="rect" id="Node000008" href="$d6/dc2/classHallSpeed_1_1Timer.html#a901a5abacc68561d601a1135b1449f1d" title="Stops the timer." alt="" coords="472,169,643,195"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="354,115,461,154,492,163,490,168,459,159,353,120"/>
+<area shape="rect" id="Node000005" href="$d6/dc2/classHallSpeed_1_1Timer.html#a2e3e04d5c418822dcf2348f1e1547d65" title="Elapsed time since the timer was started." alt="" coords="703,5,896,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="655,15,689,15,689,21,655,21"/>
+</map>

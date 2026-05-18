@@ -1,0 +1,5 @@
+<map id="HallSwitch::init" name="HallSwitch::init">
+<area shape="rect" id="Node000001" title="Initializes the hardware interfaces." alt="" coords="5,13,125,38"/>
+<area shape="rect" id="Node000002" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a68cc947f1e5b29fd5f679f41615d0f07" title="Initializes the GPIO." alt="" coords="173,5,337,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,23,160,23,160,28,125,28"/>
+</map>

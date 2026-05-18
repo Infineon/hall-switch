@@ -1,0 +1,9 @@
+<map id="HallSpeed::deinit" name="HallSpeed::deinit">
+<area shape="rect" id="Node000001" title="Deinitializes the hardware interfaces." alt="" coords="5,38,139,63"/>
+<area shape="rect" id="Node000002" href="$dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065" title="Deinitializes the hardware interfaces." alt="" coords="208,13,344,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,40,194,33,195,38,139,45"/>
+<area shape="rect" id="Node000004" href="$d6/dc2/classHallSpeed_1_1Timer.html#a8c6b820feb28299dc4e526bbd03ec52f" title="Deinitializes the timer." alt="" coords="187,62,365,87"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,56,174,60,173,65,138,61"/>
+<area shape="rect" id="Node000003" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a788ecd6941826c6b7934c47a3b554cf0" title="Deinitializes the GPIO." alt="" coords="413,5,577,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,23,399,23,399,28,344,28"/>
+</map>

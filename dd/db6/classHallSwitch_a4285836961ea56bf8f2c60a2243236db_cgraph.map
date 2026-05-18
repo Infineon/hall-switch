@@ -1,0 +1,7 @@
+<map id="HallSwitch::disable" name="HallSwitch::disable">
+<area shape="rect" id="Node000001" title="Disables the sensor." alt="" coords="5,45,152,70"/>
+<area shape="rect" id="Node000002" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#acf0ddb40dce606ba5827243ce4cd5c6f" title="Disables the GPIO output according to the GPIO logic." alt="" coords="200,5,364,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,43,186,38,187,43,153,48"/>
+<area shape="rect" id="Node000003" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#acdfb884b8b59d0dc751a84ee678973f7" title="Disables the hardware interrupt." alt="" coords="200,69,364,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,66,187,72,186,77,152,72"/>
+</map>

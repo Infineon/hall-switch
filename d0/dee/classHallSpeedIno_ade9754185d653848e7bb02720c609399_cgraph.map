@@ -1,0 +1,21 @@
+<map id="HallSpeedIno::begin" name="HallSpeedIno::begin">
+<area shape="rect" id="Node000001" title="Begins the speed sensor." alt="" coords="5,134,157,159"/>
+<area shape="rect" id="Node000002" href="$db/ddb/classHallSpeed.html#a03c77b0000d156b68710b5319e29bb44" title="Enables the sensor." alt="" coords="205,109,345,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,134,191,130,192,135,158,139"/>
+<area shape="rect" id="Node000007" href="$db/ddb/classHallSpeed.html#ae7920e3909d6cd7a2b4b435106d086cf" title="Initializes the hardware interfaces." alt="" coords="217,158,334,183"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="158,153,203,159,203,164,157,159"/>
+<area shape="rect" id="Node000003" href="$dd/db6/classHallSwitch.html#aad56a5b55491962caed6f0d24f56c5dc" title="Enables the sensor." alt="" coords="408,59,551,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,106,412,85,414,91,329,111"/>
+<area shape="rect" id="Node000006" href="$d6/dc2/classHallSpeed_1_1Timer.html#a1ff993f131e3cdb416ec81ca3a0a2cd3" title="Starts the timer." alt="" coords="393,109,565,134"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="345,119,380,119,380,124,345,124"/>
+<area shape="rect" id="Node000004" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a9a2d5c81a34b1121ec817f50693afa01" title="Enables the GPIO output according to the GPIO logic." alt="" coords="613,5,777,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="538,57,599,43,600,49,540,62"/>
+<area shape="rect" id="Node000005" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#ae745b95548cd13301e66bb029376e89e" title="Enables the hardware interrupt." alt="" coords="613,69,777,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="551,75,600,79,599,84,551,80"/>
+<area shape="rect" id="Node000008" href="$dd/db6/classHallSwitch.html#a19c05d7f14b310b06e2132ecb95cb24b" title="Initializes the hardware interfaces." alt="" coords="419,158,539,183"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="334,168,406,168,406,173,334,173"/>
+<area shape="rect" id="Node000010" href="$d6/dc2/classHallSpeed_1_1Timer.html#ace74cae617200854618cb3ce5fdabf9f" title="Initializes the timer." alt="" coords="398,207,561,233"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="329,181,414,201,412,207,328,186"/>
+<area shape="rect" id="Node000009" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a68cc947f1e5b29fd5f679f41615d0f07" title="Initializes the GPIO." alt="" coords="613,151,777,191"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="540,168,599,168,599,173,540,173"/>
+</map>

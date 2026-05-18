@@ -1,0 +1,7 @@
+<map id="HallSwitchWiced" name="HallSwitchWiced">
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,183,153,208"/>
+<area shape="rect" id="Node000002" href="$dd/db6/classHallSwitch.html" title=" " alt="" coords="42,108,133,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,148,90,182,85,182,85,148"/>
+<area shape="rect" id="Node000003" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html" title=" " alt="" coords="5,5,169,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,45,90,108,85,108,85,45"/>
+</map>

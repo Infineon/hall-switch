@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['polespair_0',['polesPair',['../db/ddb/classHallSpeed.html#ad90f4ede9cd120b497679dba28b72f13',1,'HallSpeed']]],
+  ['power_1',['power',['../dd/db6/classHallSwitch.html#ab8f5aac71059d4a096c8581aaf61f933',1,'HallSwitch::power'],['../d9/d80/structPlatformIno__t.html#a5b311935a0bb5836112f1dafb93b23ca',1,'PlatformIno_t::power'],['../d0/dce/structPlatformRpi__t.html#a91e02ac4db9c53d69fe5c66df94b0de0',1,'PlatformRpi_t::power'],['../d5/dc5/structPlatformWICED__t.html#a9eccd6aff8cd1844b1c984a59dbaa802',1,'PlatformWICED_t::power']]],
+  ['powermode_2',['powerMode',['../dd/db6/classHallSwitch.html#af2e166d15e3eb00132185acfb157b8e2',1,'HallSwitch']]]
+];

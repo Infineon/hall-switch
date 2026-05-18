@@ -1,0 +1,11 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,56,80"/>
+<area shape="rect" id="Node000002" href="$dd/db6/classHallSwitch.html#a59f53cfeee84aa12f546ae20c4f22e11" title="Gets magnetic field." alt="" coords="116,5,276,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,56,103,39,130,32,131,37,105,45,57,61"/>
+<area shape="rect" id="Node000003" href="$dd/db6/classHallSwitch.html#a714e85075bc6ab10e0094261581465bc" title="Gets the sensor status." alt="" coords="115,55,277,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,65,101,65,101,70,56,70"/>
+<area shape="rect" id="Node000004" href="$dd/db6/classHallSwitch.html#a24701141c099df49ee579ceece498cb0" title="Updates instance magnetic field value." alt="" coords="104,104,288,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="57,73,105,89,135,98,134,103,103,94,56,78"/>
+<area shape="rect" id="Node000005" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a1a4428929373b19bd1a1af1354c668ee" title="Reads the GPIO voltage level." alt="" coords="336,97,500,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="288,114,322,114,322,119,288,119"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="HallSpeed::~HallSpeed" name="HallSpeed::~HallSpeed">
+<area shape="rect" id="Node000001" title="Hall Speed Destructor Disables the sensor:" alt="" coords="5,87,179,113"/>
+<area shape="rect" id="Node000002" href="$db/ddb/classHallSpeed.html#a662eb1948fed4ca91e27c2036fc57940" title="Deinitializes the hardware interfaces." alt="" coords="231,62,365,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,87,217,82,218,87,179,92"/>
+<area shape="rect" id="Node000006" href="$db/ddb/classHallSpeed.html#aad9dc37fdba051efac20da3324a8e1cc" title="Disables the sensor." alt="" coords="227,111,369,137"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="179,107,213,111,213,117,179,113"/>
+<area shape="rect" id="Node000003" href="$dd/db6/classHallSwitch.html#aebc1baf88406ae2998d90b5100be6065" title="Deinitializes the hardware interfaces." alt="" coords="439,13,575,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="352,59,439,39,440,44,353,65"/>
+<area shape="rect" id="Node000005" href="$d6/dc2/classHallSpeed_1_1Timer.html#a8c6b820feb28299dc4e526bbd03ec52f" title="Deinitializes the timer." alt="" coords="417,62,596,87"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="365,72,404,72,404,77,365,77"/>
+<area shape="rect" id="Node000004" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#a788ecd6941826c6b7934c47a3b554cf0" title="Deinitializes the GPIO." alt="" coords="644,5,808,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="575,23,630,23,630,28,575,28"/>
+<area shape="rect" id="Node000007" href="$dd/db6/classHallSwitch.html#a4285836961ea56bf8f2c60a2243236db" title="Disables the sensor." alt="" coords="433,111,580,137"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="370,121,419,121,419,127,370,127"/>
+<area shape="rect" id="Node000010" href="$d6/dc2/classHallSpeed_1_1Timer.html#a901a5abacc68561d601a1135b1449f1d" title="Stops the timer." alt="" coords="421,161,592,186"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="353,134,440,155,439,160,352,139"/>
+<area shape="rect" id="Node000008" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#acf0ddb40dce606ba5827243ce4cd5c6f" title="Disables the GPIO output according to the GPIO logic." alt="" coords="644,87,808,127"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="580,116,630,112,631,117,580,121"/>
+<area shape="rect" id="Node000009" href="$df/d81/classHallSwitch_1_1Hall__GPIO.html#acdfb884b8b59d0dc751a84ee678973f7" title="Disables the hardware interrupt." alt="" coords="644,151,808,191"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="568,134,631,148,630,153,567,139"/>
+</map>
